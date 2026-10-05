@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>GombApp projektterv</title>
+  <style>
+    body {
+      width: 66.66%;
+      margin: 40px auto;
+      font-family: sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #333;
+      padding-bottom: 8px;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      color: #1a4d2e;
+      border-left: 4px solid #1a4d2e;
+      padding-left: 8px;
+    }
+
+    /* Változó méretű térközök a címek és bekezdések körül */
+    h1 + p {
+      margin-bottom: 36px;
+    }
+
+    h2.tagok {
+      margin-top: 30px;
+      margin-bottom: 12px;
+    }
+
+    h2.fejlesztes {
+      margin-top: 48px;
+      margin-bottom: 20px;
+    }
+
+    h2.eszkozok {
+      margin-top: 35px;
+      margin-bottom: 10px;
+    }
+
+    h2.produktumok {
+      margin-top: 50px;
+      margin-bottom: 24px;
+    }
+
+    h2.teszteles {
+      margin-top: 25px;
+      margin-bottom: 14px;
+    }
+
+    h2.szallitas {
+      margin-top: 42px;
+      margin-bottom: 18px;
+    }
+
+    h2.forrasok {
+      margin-top: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    p.extra-hezag {
+      margin-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>GombApp projektterv</h1>
+
+  <p>A GombApp egy olyan mobilalkalmazás, amely segít a gombák biztonságos felismerésében, megelőzve a mérgezéseket, az app nemcsak fajmeghatározó, a gombákhoz tartoznak részletes információk és receptek is. Ezentúl a felhasználók feljegyezhetik a saját túráikon talált fajokat a gyűjteménynaplójukba.</p>
+
+  <h2 class="tagok">A csoport tagjai</h2>
+  <p class="extra-hezag">Csapatunk a Boldog Kicsi Vendégmunkások, azaz a BKV. A fejlesztési feladatokat öttagú csapatunk látja el: Boda Noémi tervezi a felületeket, Gaál Botond a frontendet fejleszti, Tóth Sebestyén Bence a backendet valósítja meg, Jancsurák Napsugár kezeli az adatbázist, Biliczki Bence pedig a tesztelésért felel.</p>
+
+  <h2 class="fejlesztes">Fejlesztési terv</h2>
+  <p>A fejlesztési tervet három mérföldkőre bontottuk. Az első hónap célja a tervezési feladatok és az adatbázis-architektúra elkészítése, amelynek eredményeként elkészül a részletes rendszerterv és az adatbázis-séma. A második hónapban az alapfunkciók programozására és a felhasználói felület integrálására kerül sor, létrehozva egy működőképes béta verziót (MVP). A harmadik hónap a tesztelésé és a finomhangolásé, a hibák javításával előáll a végleges release.</p>
+
+  <h2 class="eszkozok">Használni tervezett nyelvek, környezetek és eszközök</h2>
+  <p class="extra-hezag">A fejlesztési folyamat a klasszikus vízesés modellt követi, világosan elkülönülő szakaszokra bontva a tervezést és a kivitelezést. A feladatok kiosztását és állapotát a Trello rendszerében menedzseljük. Fejlesztés előtt a UI/UX designokat Figmában, az ER-t pedig ERDPlusban tervezzük meg. A mobilalkalmazás fejlesztése Android Studio környezetben zajlik Java és Kotlin nyelven, míg a frontend felületek JavaScript technológiára épülnek. A backend Python nyelven Visual Studio/Pycharm környezetben történik, az adatok tárolását és kezelését pedig egy XAMPP-on futó MySQL adatbázisban végezzük. A gombák azonosításáért a GBIF API integrációja felel.</p>
+
+  <h2 class="produktumok">Leendő produktomok</h2>
+  <p>A dokumentációt négy ütemben készítjük el. A funkciók működését leíró követelményspecifikáció a 2. hét végére írjuk össze. A UI/UX design tervet az 5. hét végére készül el. Az API fejlesztői dokumentációt a 8. hét végére dolgozzuk ki. Végül a 11. hét végére a felhasználói kézikönyv is elkészül.</p>
+
+  <h2 class="teszteles">Tesztelési követelmények</h2>
+  <p>A megbízható működést különböző tesztek készítésével és végrehajtásával garantáljuk, ahol 80%-os kódlefedettség elérése az elvárás. Ennek eléréséhez automatizált unit teszteket alkalmazunk az egyes komponensek vizsgálatára. Emelett automatizált integrációs tesztekkel is vizsgáljuk az alrendszerek együttműködését.</p>
+
+  <h2 class="szallitas">Bemutatás és szállítás</h2>
+  <p>A 12. Héten a fejlesztés zárásaként kerül sor a projekt bemutatásra és szállítására. A prezentáció során mutatjuk be a teljesen működőképes mobilalkalmazást valós környezetben. Szemléltetjük a gombafelismerés folyamatát, a receptek közötti böngészést, valamint a személyes logbook használatát.</p>
+  <p class="extra-hezag">A szállítás digitálisan történik, GitHubon keresztül. Itt elérhetővé tesszük az alkalmazást, a forráskódokat és a dokumentációkat is.</p>
+
+  <h2 class="forrasok">Információforrások</h2>
+  <p>A projekt működésének hátterét két információforrás biztosítja. Az egyik a GBIF API dokumentáció, ami a növény- és gombarendszertani adatok, fajmeghatározó algoritmusok és a biológiai referencia-adatbázis integrálásának hivatalos technikai útmutatója. A másik pedig a Wikipédia API, ami a felismert gombafajokhoz tartozó leírások, jellegzetességek dinamikus lekérdezésére szolgáló adatforrás.</p>
+
+</body>
+</html>
