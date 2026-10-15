@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Vízió dokumentum</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        .under-development {
+            color: gray;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Vízió dokumentum</h1>
+
+    <!-- Verziótörténet táblázat -->
+    <table>
+        <thead>
+            <tr>
+                <th>Dátum</th>
+                <th>Verzió</th>
+                <th>Leírás</th>
+                <th>Szerző</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2026.10.07</td>
+                <td>1.0</td>
+                <td>Kezdeti verzió</td>
+                <td>Jancsurák Napsugár</td>
+            </tr>
+            <tr>
+                <td>2026.10.10.</td>
+                <td>1.1</td>
+                <td>Ötletek a pontokhoz</td>
+                <td>Tóth Sebestyén Bence</td>
+            </tr>
+            <tr>
+                <td>2026.10.11</td>
+                <td>1.2</td>
+                <td>Problémák megfogalmazása (3.1)</td>
+                <td>Boda Noémi</td>
+            </tr>
+            <tr>
+                <td>2026.10.12</td>
+                <td>1.3</td>
+                <td>A végtermék jellemzői, biztosított szolgáltatások (5.1, 5.2, 5.3)</td>
+                <td>Gaál Botond</td>
+            </tr>
+            <tr>
+                <td>2026.10.14</td>
+                <td>1.4</td>
+                <td>Kockázat lista, Dokumentációkkal kapcsolatos követelmények (8.1, 8.2, 8.3, 9)</td>
+                <td>Boda Noémi</td>
+            </tr>
+            <tr>
+                <td>2026.10.14</td>
+                <td>1.5</td>
+                <td>Feltételezések és függőségek (4.3)</td>
+                <td>Tóth Sebestyén Bence</td>
+            </tr>
+            <tr>
+                <td>2026.10.14</td>
+                <td>1.5</td>
+                <td>A végtermék áttekintése (4.1, 4.2, 4.4, 4.5)</td>
+                <td>Jancsurák Napsugár</td>
+            </tr>
+            <tr>
+                <td>2026.10.14</td>
+                <td>1.5</td>
+                <td>Az alkalmazás helye (2.1)</td>
+                <td>Gaál Botond</td>
+            </tr>
+            <tr>
+                <td>2026.10.14</td>
+                <td>1.6</td>
+                <td>Korlátozások, Minőségi elvárások (6, 7)</td>
+                <td>Jancsurák Napsugár</td>
+            </tr>
+            <tr>
+                <td>2026.10.14</td>
+                <td>1.7</td>
+                <td>Bevezetés (1)</td>
+                <td>Tóth Sebestyén Bence</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Tartalomjegyzék -->
+    <h2>Tartalomjegyzék</h2>
+    <ul>
+        <li><a href="#bevezetes">1. Bevezetés</a></li>
+        <li><a href="#alkalmazas-helye">2. Az alkalmazás helye</a>
+            <ul>
+                <li><a href="#uzleti-lehetosegek">2.1 Üzleti lehetőségek</a></li>
+                <li><a href="#problema-megfogalmazasa-2">2.2 A probléma megfogalmazása</a></li>
+                <li><a href="#elkeszult-termek-helye">2.3 Az elkészült termék helye</a></li>
+            </ul>
+        </li>
+        <li><a href="#erintettek-es-felhasznalok">3. Érintettek és felhasználók</a>
+            <ul>
+                <li><a href="#problema-megfogalmazasa-3">3.1 A probléma megfogalmazása</a></li>
+                <li><a href="#felhasznalok-osszefoglalasa">3.2 A felhasználók összefoglalása</a></li>
+                <li><a href="#felhasznaloi-kornyezet">3.3 Felhasználói környezet</a></li>
+                <li><a href="#illetekesek-adatai">3.4 Illetékesek adatai</a></li>
+                <li><a href="#felhasznalok-adatai">3.5 Felhasználók adatai</a></li>
+            </ul>
+        </li>
+        <li><a href="#vegtermek-attekintese">4. A végtermék áttekintése</a>
+            <ul>
+                <li><a href="#termek-kapcsolatai">4.1 A termék kapcsolatai</a></li>
+                <li><a href="#termek-hasznalatanak-elonyei">4.2 A termék használatának előnyei</a></li>
+                <li><a href="#feltetelezek-es-fuggosegek">4.3 Feltételezések és függőségek</a></li>
+                <li><a href="#koltsegbecsles">4.4 Költségbecslés</a></li>
+                <li><a href="#installacio">4.5 Installáció</a></li>
+            </ul>
+        </li>
+        <li><a href="#vegtermek-jellemzoi">5. A végtermék jellemzői, biztosított szolgáltatások</a>
+            <ul>
+                <li><a href="#fo-funkciok">5.1 Fő funkciók és szolgáltatások</a></li>
+                <li><a href="#szolgaltatasok-tablazata">5.2 Szolgáltatások összefoglaló táblázata</a></li>
+                <li><a href="#szolgaltatasok-elonyei">5.3 A szolgáltatások használatának főbb előnyei</a></li>
+            </ul>
+        </li>
+        <li><a href="#korlatozasok">6. Korlátozások</a></li>
+        <li><a href="#minosegi-elvarasok">7. Minőségi elvárások</a></li>
+        <li><a href="#dokumentaciok">8. Dokumentációkkal kapcsolatos követelmények</a>
+            <ul>
+                <li><a href="#dokumentaciok-tipusai">8.1 A dokumentációk típusai</a></li>
+                <li><a href="#dokumentaciok-formatuma">8.2 A dokumentációk formátuma és elérhetősége</a></li>
+                <li><a href="#nyelvezet-karbantartas">8.3 Nyelvezet és a dokumentációk karbantartása</a></li>
+            </ul>
+        </li>
+        <li><a href="#kockazat-lista">9. Kockázat lista</a></li>
+        <li><a href="#szotar">10. Szótár</a></li>
+    </ul>
+
+    <!-- 1. Bevezetés -->
+    <h1 id="bevezetes">1. Bevezetés</h1>
+    <p>A GombApp egy Androidra fejlesztett modern mobilalkalmazás, amely kifejezetten a hobbi gombászok, természetjárók és a gombászat iránt érdeklődők számára készül. A szoftver fő célja, hogy hidat építsen a hagyományos természetjárás és a modern digitális technológiák, különösen a mesterséges intelligencia alapú képfelismerés között.</p>
+    <p>A fejlesztés során kiemelt figyelmet kap a biztonságos gombászat támogatása és a tanulás: az alkalmazás segít a felhasználóknak a találati helyszínen gyors előzetes tájékozódást szerezni a gombafajokról, megismerni a morfológiai bélyegeket, valamint elkerülni a veszélyes, mérgező hasonmásokat. A GombApp amellett, hogy érdekesebbé és interaktívabbá teszi az erdei túrákat, még digitális gyűjteménynapló is. Természetvédelmi figyelmeztetések révén hozzájárul a tudatos és felelősségteljes gombászáshoz is, tehermentesítve a hivatásos gombaellenőri hálózatot.</p>
+
+    <!-- 2. Az alkalmazás helye -->
+    <h1 id="alkalmazas-helye">2. Az alkalmazás helye</h1>
+    <p>Ennek a fejezetnek a célja az alkalmazás által megoldandó probléma elhelyezése a környezetében.</p>
+
+    <h2 id="uzleti-lehetosegek">2.1 Üzleti lehetőségek</h2>
+    <p>A gombafelismerő alkalmazás fejlesztése közvetlenül reagál a digitális technológiák és az agrotechnológia iránti növekvő lakossági igényekre, hidat képezve a hagyományos természetjárás és a modern mesterséges intelligencia között. Az alkalmazás elsősorban a biztonságos gombászat elősegítését és az oktatást célozza meg, miközben fenntartható üzleti modellt teremt.</p>
+    <p>Piaci igények és célcsoportok:</p>
+    <p>- Hobbi gombászok és természetjárók: A hagyományos gombászkönyvek használata a terepen lassú és nehézkes. Az alkalmazás azonnali, látásalapú visszajelzést ad, csökkentve a tévedések kockázatát.</p>
+    <p>- Oktatás és ökoturizmus: Erdei iskolák, biológiaórák és nemzeti parkok számára interaktív, élményalapú oktatási eszközként szolgál a biodiverzitás megismeréséhez.</p>
+    <p>- Szakértői előszűrés: Bár a kereskedelmi forgalomba hozatalhoz hivatalos gombaellenőri szakvélemény szükséges, a rendszer hatékony előszűrőként támogatja a szakértők és a gyűjtők munkáját.</p>
+    <p>Üzleti és monetizációs modellek:</p>
+    <p>- Freemium modell: Az alapvető képalapú felismerés ingyenesen érhető el a felhasználók számára, míg az exkluzív funkciók előfizetéses alapon működnek.</p>
+    <p>- B2B partnerkapcsolatok: Együttműködési lehetőség biztosítókkal, valamint turisztikai szervezetekkel és nemzeti parkokkal integrált szolgáltatások nyújtására.</p>
+    <p>- Adatgyűjtés és kutatás: A felhasználók által gyűjtött anonim megfigyelési adatok értékesíthetők kutatóintézetek és erdőgazdaságok számára.</p>
+
+    <h2 id="problema-megfogalmazasa-2">2.2 A probléma megfogalmazása</h2>
+    <p class="under-development">Probléma definiálása, a résztvevők, akiket a probléma érint, a probléma hatásai és a sikeres megoldás legfontosabb hasznos hatásai.</p>
+
+    <h2 id="elkeszult-termek-helye">2.3 Az elkészült termék helye</h2>
+    <p class="under-development">Célközönség, alkalmazáskategória, alapvető haszon, alternatívák előnyei és hátrányai, valamint a termék megkülönböztető jegyei.</p>
+
+    <!-- 3. Érintettek és felhasználók -->
+    <h1 id="erintettek-es-felhasznalok">3. Érintettek és felhasználók</h1>
+
+    <h2 id="problema-megfogalmazasa-3">3.1 A probléma megfogalmazása</h2>
+    <p>A természetjárás és a hobbi gombászás egyre népszerűbb szabadidős tevékenység. Sokan szeretnek erdei séták során gombákat keresni, megismerni a különböző fajokat, vagy akár saját maguk gyűjteni a vacsorához. A gombák felismerése azonban nem mindig egyszerű, különösen azok számára, akik még csak most ismerkednek ezzel a hobbival.</p>
+    <p>Korábban a gombák azonosítása főként nyomtatott gombahatározók segítségével történt. Ezek a könyvek hasznos információkat tartalmaznak, de a terepen nem mindig könnyű használni őket. A bennük szereplő képek általában ideális állapotú gombákat mutatnak be, miközben a természetben a gombák megjelenése sokat változhat az időjárás, a koruk vagy a környezetük hatására.</p>
+    <p>A kezdő gombászok számára további nehézséget jelenthetnek a szakkifejezések és az egyes fajok közötti apró különbségek. Emiatt könnyen előfordulhat, hogy egy ehető gombát összetévesztenek egy mérgező hasonmásával.</p>
+    <p>A résztvevők, akiket a probléma és a megoldása érint: Kezdő és hobbi gombászok, természetjárók és családok, hivatásos gombaszakértők, egészségügyi intézmények és toxikológiai szakemberek.</p>
+    <p>Miben tud segíteni a GombApp? Azonnali segítség a helyszínen, könnyen érthető felismerés és tanulás, a gombaszakértők munkájának támogatása, kényelem és egyszerű használat, természetvédelem és tudatosabb gyűjtés.</p>
+
+    <h2 id="felhasznalok-osszefoglalasa">3.2 A felhasználók összefoglalása</h2>
+    <p class="under-development">Az érintettek és felhasználók elnevezése, leírása és szerepük a fejlesztésben.</p>
+
+    <h2 id="felhasznaloi-kornyezet">3.3 Felhasználói környezet</h2>
+    <p class="under-development">Platform, várható felhasználószám, használati időtartam, egyedi hardware eszközök és egyéb integrációk részletezése.</p>
+
+    <h2 id="illetekesek-adatai">3.4 Illetékesek adatai</h2>
+    <p class="under-development">A rendszer fejlesztését segítő illetékesek adatai, elérhetőségei és felelősségi körei.</p>
+
+    <h2 id="felhasznalok-adatai">3.5 Felhasználók adatai</h2>
+    <p class="under-development">A fejlesztést segítő felhasználók adatai és elérhetőségei.</p>
+
+    <!-- 4. A végtermék áttekintése -->
+    <h1 id="vegtermek-attekintese">4. A végtermék áttekintése</h1>
+
+    <h2 id="termek-kapcsolatai">4.1 A termék kapcsolatai</h2>
+    <p>A GombApp egy több rétegből álló, kliens-szerver architektúrára épülő mobil rendszer, amely önálló alkalmazásként valósul meg, de működéséhez szervesen integrálódik külső, nemzetközi természettudományi szolgáltatásokhoz és nyilvános adatbázisokhoz.</p>
+    <p>1. Android mobil kliens (Frontend és natív funkciók): Java and Kotlin nyelven, Android Studio környezetben. Biztosítja a kameravezérlést, GPS-koordináták lekérését és a felület megjelenítését.</p>
+    <p>2. Központi háttérrendszer (Backend API): Python nyelven fejlesztett szerveroldali alkalmazás az üzleti logika és külső adatforrások kezelésére.</p>
+    <p>3. Adatbázis réteg (DBMS): MySQL relációs adatbázis a felhasználói fiókok és a gyűjteménynapló tárolására.</p>
+    <p>4. Külső integrációs szolgáltatások: iNaturalist API, Wikipedia REST API v1, Android operációs rendszer szolgáltatásai.</p>
+
+    <h2 id="termek-hasznalatanak-elonyei">4.2 A termék használatának előnyei</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>A megrendelő haszna (előnyei)</th>
+                <th>Az ezt támogató rendszer jellemző(k)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gombamérgezések kockázatának és az egészségügyi ellátórendszer terhelésének csökkentése</td>
+                <td>1. Képalapú gombafelismerés<br>2. Veszélyes hasonmások kiemelése<br>3. Kötelező biztonsági figyelmeztetések</td>
+            </tr>
+            <tr>
+                <td>Hivatalos gombavizsgáló szakértők munkájának tehermentesítése</td>
+                <td>1. Helyszíni előzetes szűrés<br>2. Edukációs modul</td>
+            </tr>
+            <tr>
+                <td>Környezettudatosság és természetvédelem növelése</td>
+                <td>1. Védett fajok jelölése<br>2. Kíméletes gyűjtési útmutatók</td>
+            </tr>
+            <tr>
+                <td>Felhasználói aktivitás, közösségi kötődés és edukáció növelése</td>
+                <td>1. Digitális tudásbázis és receptek<br>2. Személyes gyűjteménynapló (Logbook)</td>
+            </tr>
+            <tr>
+                <td>Költséghatékony és skálázható üzemeltetés</td>
+                <td>1. Nyílt és ingyenes API-k használata<br>2. Korszerű, egyszerű terjesztés</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="feltetelezek-es-fuggosegek">4.3 Feltételezések és függőségek</h2>
+    <p>A GombApp fejlesztése és fenntartható működése szempontjából alapvető feltételezés, hogy a külső adatforrások és felhőalapú szolgáltatások hosszú távon is hozzáférhetők és megbízhatók maradnak. Az alkalmazás gombafelismerő funkciója elsősorban az iNaturalist által biztosított API-ra épül.</p>
+    <p>További feltételezés, hogy a célközönség az erdőben történő használat során rendelkezik mobilinternetes kapcsolattal. Ugyancsak feltételezzük, hogy a gépi látásra vonatkozó jogi szabályozás nem változik meg olyan mértékben, amely közvetlen jogi vagy anyagi felelősséget terhelne a szoftverfejlesztőkre.</p>
+
+    <h2 id="koltsegbecsles">4.4 Költségbecslés</h2>
+    <p>A GombApp költségvetése két fő részből tevődik össze: a fejlesztési fázis, valamint az üzembe állítási és üzemeltetési fázis.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Tétel</th>
+                <th>Típus</th>
+                <th>Költség</th>
+                <th>Megjegyzés</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Személyi jellegű fejlesztési költség</td>
+                <td>Fejlesztés</td>
+                <td>0 Ft</td>
+                <td>Hallgatói / belső projektmunka</td>
+            </tr>
+            <tr>
+                <td>Eszközök és fejlesztői szoftverek</td>
+                <td>Fejlesztés</td>
+                <td>0 Ft</td>
+                <td>Saját hardverek, nyílt forráskódú szoftverek</td>
+            </tr>
+            <tr>
+                <td>Google Play fejlesztői fiók</td>
+                <td>Fejlesztés</td>
+                <td>0 – 9 500 Ft</td>
+                <td>Csak hivatalos Play Store közzététel esetén szükséges.</td>
+            </tr>
+            <tr>
+                <td>Külső API-k (iNaturalist, Wikipedia)</td>
+                <td>Üzemeltetés</td>
+                <td>0 Ft</td>
+                <td>Ingyenes szolgáltatások.</td>
+            </tr>
+            <tr>
+                <td>Tárhely és szerverkapacitás</td>
+                <td>Üzemeltetés</td>
+                <td>0 – 30 000 Ft / év</td>
+                <td>Demó fázisban ingyenes (lokális hosztolás)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Összesen: 0 – 39 500 Ft (minimális/nulla költségvetésű projektmegvalósítás).</p>
+
+    <h2 id="installacio">4.5 Installáció</h2>
+    <p>I. Mobilalkalmazás beszerzése és telepítése: Az alkalmazás elsődlegesen a projekt hivatalos GitHub repozitóriumából tölthető le közvetlenül telepíthető Android csomagként (.apk formátumban).</p>
+    <p>Készülékkövetelmények: Android 8.0 vagy újabb verzió, működő hátlapi kamera, beépített GPS-vevő, aktív mobilinternet-kapcsolat.</p>
+    <p>II. Kiszolgáló oldali üzembe állítás: A Python backend és MySQL adatbázis forráskódja szintén a GitHub repozitóriumból érhető el.</p>
+
+    <!-- 5. A végtermék jellemzői, biztosított szolgáltatások -->
+    <h1 id="vegtermek-jellemzoi">5. A végtermék jellemzői, biztosított szolgáltatások</h1>
+
+    <h2 id="fo-funkciok">5.1 Fő funkciók és szolgáltatások</h2>
+    <p>1. Kép alapú gombafelismerés (Magas prioritás): Lehetővé teszi a felhasználók számára, hogy a mobiltelefonjuk kamerájával készített fénykép alapján tájékozódjanak a talált gombáról.</p>
+    <p>2. Gombahatározó lexikon és adatbázis (Magas prioritás): Digitális tudásbázis, amely a Magyarországon leggyakrabban előforduló ehető, nem ehető és mérgező gombafajokat mutatja be.</p>
+    <p>3. Edukációs és biztonsági modul (Közepes prioritás): A kezdő gombászok és túrázók tájékoztatását szolgáló modul tévhitek eloszlatására és kíméletes gyűjtésre.</p>
+    <p>4. Kedvencek és saját gyűjtemény (Alacsony prioritás): Gyakran keresett fajok elmentése és saját fotók rögzítése.</p>
+
+    <h2 id="szolgaltatasok-tablazata">5.2 Szolgáltatások összefoglaló táblázata</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Szolgáltatás / Funkció</th>
+                <th>Prioritás</th>
+                <th>Célcsoport</th>
+                <th>Elsődleges haszon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kamerás gombafelismerés</td>
+                <td>Magas (P1)</td>
+                <td>Kezdő gombászok, túrázók</td>
+                <td>Gyors előzetes tájékozódás a helyszínen</td>
+            </tr>
+            <tr>
+                <td>Gombahatározó lexikon</td>
+                <td>Magas (P1)</td>
+                <td>Minden felhasználó</td>
+                <td>Részletes morfológiai leírások és hasonmások</td>
+            </tr>
+            <tr>
+                <td>Edukációs és biztonsági modul</td>
+                <td>Közepes (P2)</td>
+                <td>Kezdő gombászok, családok</td>
+                <td>Téves azonosítások és mérgezések megelőzése</td>
+            </tr>
+            <tr>
+                <td>Kedvencek és gyűjtemény</td>
+                <td>Alacsony (P3)</td>
+                <td>Rendszeres túrázók</td>
+                <td>Saját megfigyelések rögzítése és tanulás</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="szolgaltatasok-elonyei">5.3 A szolgáltatások használatának főbb előnyei</h2>
+    <p>1. A biztonság növelése: Mérgezések kockázatának csökkentése.</p>
+    <p>2. Kényelmes használat: Okostelefonon elérhető információk nehéz könyvek helyett.</p>
+    <p>3. A szakértők támogatása: Kevesebb feleslegesen leszedett gomba kerül a vizsgálókra.</p>
+    <p>4. Természetvédelem: A védett fajok ismerete óvja az erdei élővilágot.</p>
+
+    <!-- 6. Korlátozások -->
+    <h1 id="korlatozasok">6. Korlátozások</h1>
+    <p>I. Jogi és szabályozási korlátozások: Felelősségkizárás a gombaazonosításban, természetvédelmi előírások védett fajokra, GDPR adatvédelmi megfelelőség.</p>
+    <p>II. Technológiai és platform korlátozások: Kizárólag Android 8.0+ platform, autófókuszos kamera és GPS követelmény, legfeljebb 100 MB helyi gyorsítótár méret.</p>
+    <p>III. Hálózati és külső szolgáltatási korlátok: Mobilinternet-függőség a képfelismeréshez, külső API-k lekérdezési korlátai (rate limit).</p>
+    <p>IV. Erőforrás és projektkorlátok: Nulla pénzügyi büdzsé, 12 hetes egyetemi fejlesztési időkeret.</p>
+
+    <!-- 7. Minőségi elvárások -->
+    <h1 id="minosegi-elvarasok">7. Minőségi elvárások</h1>
+    <p>I. Teljesítmény és válaszidők: 3–5 másodperces válaszidő a felismerésnél, 1 másodpercen belüli helyi felületi reakcióidő, automatikus képtömörítés, 150–200 MB alatti memóriahasználat.</p>
+    <p>II. Felismerési pontosság és megbízhatóság: Cél a 91%-os megbízhatóság elérése megfelelő fotók esetén, hálózati hibakezelés, legalább 80%-os tesztkód-lefedettség.</p>
+    <p>III. Felhasználóbarátság és használhatóság: Intuitív kezelőfelület (UI/UX), erős kontrasztarány a terepi olvashatóság érdekében.</p>
+
+    <!-- 8. Dokumentációkkal kapcsolatos követelmények -->
+    <h1 id="dokumentaciok">8. Dokumentációkkal kapcsolatos követelmények</h1>
+
+    <h2 id="dokumentaciok-tipusai">8.1 A dokumentációk típusai</h2>
+    <p>Felhasználói dokumentáció (bevezető és súgó), Fejlesztői dokumentáció, Üzemeltetői dokumentáció.</p>
+
+    <h2 id="dokumentaciok-formatuma">8.2 A dokumentációk formátuma és elérhetősége</h2>
+    <p>A felhasználók számára digitális formában az alkalmazáson belül és a weboldalon. A fejlesztők és üzemeltetők számára Markdown formátumban a repozitóriumban (GitHub/GitLab) vagy Notion/Confluence felületen.</p>
+
+    <h2 id="nyelvezet-karbantartas">8.3 Nyelvezet és a dokumentációk karbantartása</h2>
+    <p>A felhasználói dokumentáció magyar nyelvű és közérthető. A fejlesztői/üzemeltetői dokumentáció magyar vagy angol. Folyamatos frissítés és verziókövetés szükséges.</p>
+
+    <!-- 9. Kockázat lista -->
+    <h1 id="kockazat-lista">9. Kockázat lista</h1>
+    <p>1. A projekt túlnövekedése (Magas prioritás) - Kockázatcsökkentés: Csak az MVP funkciókra fókuszálunk az első verzióban.</p>
+    <p>2. Problémák a külső szolgáltatások összekapcsolásánál (Magas prioritás) - Kockázatcsökkentés: Saját teszt-adathalmaz létrehozása és különálló integrációs réteg kezelése.</p>
+    <p>3. A tesztelés nehézségei a gombák szezonális megjelenése miatt (Közepes prioritás) - Kockázatcsökkentés: Eltérő minőségű meglévő fotók és szimulált GPS-adatok használata.</p>
+    <p>4. Késések a felhasználói felület és a telefon funkcióinak összekapcsolásakor (Közepes prioritás) - Kockázatcsökkentés: Bevált keretrendszerek (Android CameraX) használata.</p>
+    <p>5. Lassulás és tárhelyproblémák az adatok mentésekor (Alacsony prioritás) - Kockázatcsökkentés: Tömörített tárolás és maximum 100 MB gyorsítótár-korlát.</p>
+
+    <!-- 10. Szótár -->
+    <h1 id="szotar">10. Szótár</h1>
+    <p>Gombászati és természettudományi fogalmak:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Kifejezés</th>
+                <th>Meghatározás</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gombavizsgáló szakértő</td>
+                <td>Hatósági bizonyítvánnyal rendelkező szakember, aki hivatalosan bevizsgálja a leszedett gombákat.</td>
+            </tr>
+            <tr>
+                <td>Hasonmás faj</td>
+                <td>Olyan gombafaj, amely külső megjelenésében megtévesztésig hasonlít egy másik fajra.</td>
+            </tr>
+            <tr>
+                <td>Morfológiai bélyegek</td>
+                <td>A gombatest külső alakbeli és szerkezeti sajátosságai (kalap, lemezek, tönk, gallér, bocskor).</td>
+            </tr>
+            <tr>
+                <td>Micélium</td>
+                <td>A gomba föld alatti, vékony fonalakból álló vegetatív része.</td>
+            </tr>
+            <tr>
+                <td>Termőtest</td>
+                <td>A gomba felszínen megjelenő, spóraképző része.</td>
+            </tr>
+            <tr>
+                <td>Védett gombafaj</td>
+                <td>Jogszabály által védettnek vagy fokozottan védettnek nyilvánított gombafaj.</td>
+            </tr>
+            <tr>
+                <td>Toxikológia</td>
+                <td>A gombamérgek emberi szervezetre gyakorolt hatásaival és kezelésével foglalkozó szakterület.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Informatikai és szoftverfejlesztési fogalmak:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Kifejezés</th>
+                <th>Meghatározás</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>API</td>
+                <td>Alkalmazásprogramozási felület; szoftverkomponensek közötti kommunikációra.</td>
+            </tr>
+            <tr>
+                <td>APK</td>
+                <td>Az Android operációs rendszer telepítőfájl-formátuma.</td>
+            </tr>
+            <tr>
+                <td>Backend</td>
+                <td>A rendszer kiszolgáló oldali része (Python alapon).</td>
+            </tr>
+            <tr>
+                <td>Frontend</td>
+                <td>A szoftver interaktív felhasználói felülete.</td>
+            </tr>
+            <tr>
+                <td>DBMS</td>
+                <td>Adatbázis-kezelő rendszer (MySQL).</td>
+            </tr>
+            <tr>
+                <td>iNaturalist</td>
+                <td>Nemzetközi biodiverzitási adatbázis és képalapú fajfelismerő API.</td>
+            </tr>
+            <tr>
+                <td>GDPR</td>
+                <td>Az Európai Unió általános adatvédelmi rendelete.</td>
+            </tr>
+            <tr>
+                <td>MVP</td>
+                <td>A termék legkisebb működőképes változata (Minimum Viable Product).</td>
+            </tr>
+            <tr>
+                <td>REST API</td>
+                <td>Webszolgáltatások építésére szolgáló architektúra HTTP/JSON alapon.</td>
+            </tr>
+            <tr>
+                <td>Vízesés modell</td>
+                <td>Lépcsőzetes szoftverfejlesztési megközelítés.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
