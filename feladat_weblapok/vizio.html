@@ -13,6 +13,27 @@
             color: gray;
             font-style: italic;
         }
+        li {
+            margin-bottom: 10px;
+        }
+        h1 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        h2, h3, h4 {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+            margin-left: 30px;
+        }
+        table {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -158,9 +179,9 @@
     <p>- Oktatás és ökoturizmus: Erdei iskolák, biológiaórák és nemzeti parkok számára interaktív, élményalapú oktatási eszközként szolgál a biodiverzitás megismeréséhez.</p>
     <p>- Szakértői előszűrés: Bár a kereskedelmi forgalomba hozatalhoz hivatalos gombaellenőri szakvélemény szükséges, a rendszer hatékony előszűrőként támogatja a szakértők és a gyűjtők munkáját.</p>
     <p>Üzleti és monetizációs modellek:</p>
-    <p>- Freemium modell: Az alapvető képalapú felismerés ingyenesen érhető el a felhasználók számára, míg az exkluzív funkciók előfizetéses alapon működnek.</p>
-    <p>- B2B partnerkapcsolatok: Együttműködési lehetőség biztosítókkal, valamint turisztikai szervezetekkel és nemzeti parkokkal integrált szolgáltatások nyújtására.</p>
-    <p>- Adatgyűjtés és kutatás: A felhasználók által gyűjtött anonim megfigyelési adatok értékesíthetők kutatóintézetek és erdőgazdaságok számára.</p>
+    <p>- Freemium modell: Az alapvető képalapú felismerés ingyenesen érhető el a felhasználók számára, míg az exkluzív funkciók (pl. offline adatbázis gyenge térerővel rendelkező erdőkben, részletes toxikológiai útmutató, szakértői konzultáció) előfizetéses alapon működnek.</p>
+    <p>- B2B partnerkapcsolatok: Együttműködési lehetőség biztosítókkal (baleset-megelőzési kampányok keretében), valamint turisztikai szervezetekkel és nemzeti parkokkal integrált szolgáltatások nyújtására.</p>
+    <p>- Adatgyűjtés és kutatás: A felhasználók által gyűjtött anonim, térbeli és időbeli megfigyelési adatok értékesíthetők kutatóintézetek és erdőgazdaságok számára a helyi ökoszisztémák és gombafajok elterjedésének elemzésére.</p>
 
     <h2 id="problema-megfogalmazasa-2">2.2 A probléma megfogalmazása</h2>
     <p class="under-development">Probléma definiálása, a résztvevők, akiket a probléma érint, a probléma hatásai és a sikeres megoldás legfontosabb hasznos hatásai.</p>
@@ -173,10 +194,32 @@
 
     <h2 id="problema-megfogalmazasa-3">3.1 A probléma megfogalmazása</h2>
     <p>A természetjárás és a hobbi gombászás egyre népszerűbb szabadidős tevékenység. Sokan szeretnek erdei séták során gombákat keresni, megismerni a különböző fajokat, vagy akár saját maguk gyűjteni a vacsorához. A gombák felismerése azonban nem mindig egyszerű, különösen azok számára, akik még csak most ismerkednek ezzel a hobbival.</p>
-    <p>Korábban a gombák azonosítása főként nyomtatott gombahatározók segítségével történt. Ezek a könyvek hasznos információkat tartalmaznak, de a terepen nem mindig könnyű használni őket. A bennük szereplő képek általában ideális állapotú gombákat mutatnak be, miközben a természetben a gombák megjelenése sokat változhat az időjárás, a koruk vagy a környezetük hatására.</p>
-    <p>A kezdő gombászok számára további nehézséget jelenthetnek a szakkifejezések és az egyes fajok közötti apró különbségek. Emiatt könnyen előfordulhat, hogy egy ehető gombát összetévesztenek egy mérgező hasonmásával.</p>
-    <p>A résztvevők, akiket a probléma és a megoldása érint: Kezdő és hobbi gombászok, természetjárók és családok, hivatásos gombaszakértők, egészségügyi intézmények és toxikológiai szakemberek.</p>
-    <p>Miben tud segíteni a GombApp? Azonnali segítség a helyszínen, könnyen érthető felismerés és tanulás, a gombaszakértők munkájának támogatása, kényelem és egyszerű használat, természetvédelem és tudatosabb gyűjtés.</p>
+    <p>Korábban a gombák azonosítása főként nyomtatott gombahatározók segítségével történt. Ezek a könyvek hasznos információkat tartalmaznak, de a terepen nem mindig könnyű használni őket. A bennük szereplő képek általában ideális állapotú gombákat mutatnak be, miközben a természetben a gombák megjelenése sokat változhat az időjárás, a koruk vagy a környezetük hatására. Egy eső áztatta vagy kiszáradt példány ezért egészen másképp nézhet ki, mint a könyvben látható kép.</p>
+    <p>A kezdő gombászok számára további nehézséget jelenthetnek a szakkifejezések és az egyes fajok közötti apró különbségek. Emiatt könnyen előfordulhat, hogy egy ehető gombát összetévesztenek egy mérgező hasonmásával. Bár a leszedett gombákat szakértővel is meg lehet vizsgáltatni, ez nem mindig kényelmes, és sokszor csak a gyűjtés után derül ki, hogy egy-egy példány veszélyes lehet. A mérgező gombák közé tartozó fajok, például a gyilkos galóca, különösen nagy odafigyelést igényelnek. Fontos azonban tudni, hogy a legtöbb mérgező gomba puszta megérintése nem okoz mérgezést; a valódi veszélyt elsősorban a téves azonosítás és a mérgező gomba elfogyasztása jelenti.</p>
+    <p>A bizonytalanság miatt sokan inkább minden gombát leszednek, hogy később megmutathassák azokat egy szakértőnek. Ez azonban felesleges munkát jelenthet, és a természetnek sem kedvez, különösen akkor, ha ritka vagy védett fajok is a kosárba kerülnek. Mindez rámutat arra, hogy szükség lenne egy könnyen használható megoldásra, amely már az erdőben segít a gombák felismerésében, és támogatja a biztonságosabb, tudatosabb gyűjtést.</p>
+    <h3>A résztvevők, akiket a probléma és a megoldása érint:</h3>
+    <ul>
+        <li><b>Kezdő és hobbi gombászok:</b> Azok, akik szívesen gyűjtenének gombát, de még nem rendelkeznek elegendő tapasztalattal ahhoz, hogy biztosan megkülönböztessék egymástól az egyes fajokat. Számukra különösen fontos a könnyen érthető, megbízható segítség.</li>
+        <li><b>Természetjárók és családok:</b> Azok, akik kirándulás közben szeretnék jobban megismerni az erdő élővilágát. Egy egyszerűen használható alkalmazás számukra is érdekesebbé és tanulságosabbá teheti a természetben töltött időt.</li>
+        <li><b>Hivatásos gombaszakértők:</b> Azok a szakemberek, akik a piacokon és a kijelölt vizsgálóhelyeken ellenőrzik a begyűjtött gombákat. Munkájukat megkönnyítheti, ha a gyűjtők már előzetesen tájékozódnak a talált fajokról, miközben a végső ellenőrzés továbbra is a szakértők feladata marad.</li>
+        <li><b>Egészségügyi intézmények és toxikológiai szakemberek:</b> Ők látják el azokat, akik mérgező gomba fogyasztása miatt kerülnek kórházba. A téves azonosításból eredő mérgezések megelőzése számukra is fontos, hiszen a súlyos esetek komoly egészségügyi kockázatot jelentenek.</li>
+    </ul>
+    <h3>Milyen hatással van a probléma az érintettekre?</h3>
+    <ul>
+        <li><b>A gombászokra és túrázókra:</b> A bizonytalanság miatt sokan félnek attól, hogy rosszul ismernek fel egy gombát. A nehezen értelmezhető leírások és a hasonló megjelenésű fajok miatt a gombászás könnyen stresszessé válhat, vagy egyeseket teljesen elriaszthat ettől a tevékenységtől.</li>
+        <li><b>A gombaszakértőkre:</b> A vizsgálóhelyeken sokféle gombával találkoznak, amelyek között gyakran akadnak olyan példányok is, amelyeket a gyűjtők bizonytalanságból szedtek le. Az ilyen esetek növelik a szakértők leterheltségét, és kevesebb idő maradhat az összetettebb vizsgálatokra.</li>
+        <li><b>Az egészségügyre:</b> A gombák téves felismerése súlyos, akár életveszélyes mérgezésekhez is vezethet. Ezek kezelése jelentős terhet ró az egészségügyi ellátásra, miközben sok eset megelőzhető lenne a megfelelő tájékoztatással és a biztonságos gyűjtési szokások kialakításával.</li>
+        <li><b>A természetre:</b> A tapasztalatlanság miatt sokan olyan gombákat is leszednek, amelyekre valójában nincs szükségük, vagy amelyeket később egyszerűen kidobnak. Ez a védett fajok esetében különösen problémás lehet, de más gombák felesleges gyűjtése is megzavarhatja az erdei élővilág természetes egyensúlyát.</li>
+    </ul>
+    <h3>Miben tud segíteni a GombApp?</h3>
+    <ul>
+      <li><b>Azonnali segítség a helyszínen:</b> A GombApp segítségével a felhasználók már az erdőben, a mobiltelefonjuk kamerájával készített kép alapján kaphatnak tájékoztatást a talált gombáról. Ez segíthet felismerni a lehetséges veszélyeket még azelőtt, hogy a gombát leszednék vagy a többi közé tennék. Az alkalmazás azonban nem garantálhatja a biztos fajazonosítást, ezért a gombák fogyasztásáról minden esetben szakértői vizsgálat alapján kell dönteni.</li>
+      <li><b>Könnyen érthető felismerés és tanulás:</b> Az alkalmazás nem csupán megmutatja, hogy egy gomba melyik fajhoz hasonlíthat, hanem arra is felhívja a figyelmet, hogy mely tulajdonságait érdemes megfigyelni. Például bemutathatja, milyen különbségek lehetnek egy ehető csiperke és egy mérgező, hasonló megjelenésű gomba között. Így a felhasználók idővel egyre többet tanulhatnak, és tudatosabban figyelhetik meg a természetet.</li>
+      <li><b>A gombaszakértők munkájának támogatása:</b> A GombApp segíthet abban, hogy a felhasználók már a gyűjtés előtt több információval rendelkezzenek a talált gombákról. Ennek köszönhetően csökkenhet a feleslegesen leszedett példányok száma, és a gyűjtők felkészültebben fordulhatnak szakértőhöz. Az alkalmazás ugyanakkor nem helyettesíti a hivatalos gombavizsgálatot, és nem nyilváníthat egy gombát fogyasztásra biztonságosnak pusztán egy fénykép alapján.</li>
+      <li><b>Kényelem és egyszerű használat:</b> A több száz oldalas gombahatározók helyett a legfontosabb információk közvetlenül a felhasználó telefonján érhetők el. Ez különösen hasznos lehet kirándulás közben, amikor gyorsan szeretnének utánanézni egy érdekes gombának anélkül, hogy könyveket kellene magukkal vinniük.</li>
+      <li><b>Természetvédelem és tudatosabb gyűjtés:</b> Ha a felhasználók már a helyszínen több információt kapnak a gombákról, kisebb eséllyel szednek le minden útjukba kerülő példányt. A védett fajokra való figyelemfelhívás és a gombák természetben betöltött szerepének bemutatása hozzájárulhat ahhoz, hogy a természetjárók jobban óvják az erdei élővilágot.</li>
+    </ul>
+    <p>Összességében a GombApp célja, hogy a gombászás biztonságosabb, egyszerűbb és élvezetesebb tevékenységgé váljon. Az alkalmazás a modern technológia segítségével támogatja a kezdőket, segíti a tanulást, és hozzájárulhat a természet tudatosabb megismeréséhez és megóvásához.</p>
 
     <h2 id="felhasznalok-osszefoglalasa">3.2 A felhasználók összefoglalása</h2>
     <p class="under-development">Az érintettek és felhasználók elnevezése, leírása és szerepük a fejlesztésben.</p>
@@ -195,15 +238,47 @@
 
     <h2 id="termek-kapcsolatai">4.1 A termék kapcsolatai</h2>
     <p>A GombApp egy több rétegből álló, kliens-szerver architektúrára épülő mobil rendszer, amely önálló alkalmazásként valósul meg, de működéséhez szervesen integrálódik külső, nemzetközi természettudományi szolgáltatásokhoz és nyilvános adatbázisokhoz.</p>
-    <p>1. Android mobil kliens (Frontend és natív funkciók): Java and Kotlin nyelven, Android Studio környezetben. Biztosítja a kameravezérlést, GPS-koordináták lekérését és a felület megjelenítését.</p>
-    <p>2. Központi háttérrendszer (Backend API): Python nyelven fejlesztett szerveroldali alkalmazás az üzleti logika és külső adatforrások kezelésére.</p>
-    <p>3. Adatbázis réteg (DBMS): MySQL relációs adatbázis a felhasználói fiókok és a gyűjteménynapló tárolására.</p>
-    <p>4. Külső integrációs szolgáltatások: iNaturalist API, Wikipedia REST API v1, Android operációs rendszer szolgáltatásai.</p>
+    <ol style="list-style: upper-roman;">
+      <li><b>Android mobil kliens (Frontend és natív funkciók)</b></li>
+        <ul>
+          <li><b>Felépítés:</b> A felhasználói felület és a mobil üzleti logika Java és Kotlin nyelven, valamint frontend technológiák segítségével valósul meg Android Studio környezetben.</li>
+          <li><b>Feladat:</b> Biztosítja a közvetlen kapcsolatot a felhasználóval: az eszköz beépített kamerájának vezérlését a fotók elkészítéséhez, a képek előkészítését, a GPS-koordináták lekérését a találati helyekhez, valamint a találatok, receptek és lexikonbejegyzések megjelenítését.</li>
+          <li><b>Kapcsolódás:</b> Szabványos REST API hívásokon (JSON formátumú adatcsere) keresztül kommunikál a központi backend szerverrel.</li>
+      </ul>
+      <li><b>Központi háttérrendszer (Backend API)</b></li>
+        <ul>
+          <li><b>Felépítés:</b> Python nyelven fejlesztett szerveroldali alkalmazás.</li>
+          <li><b>Feladat:</b> Kiszolgálja a mobil klienstől érkező kéréseket, kezeli az üzleti logikát, koordinálja a külső adatforrások elérését, valamint biztosítja a gyorsítótárazást a felesleges hálózati terhelés minimalizálása érdekében.</li>
+      </ul>
+      <li><b>Adatbázis réteg (DBMS)</b></li>
+        <ul>
+          <li><b>Felépítés:</b> MySQL relációs adatbázis.</li>
+          <li><b>Feladat:</b> Biztosítja az adatok perzisztens tárolását, beleértve a felhasználói fiókokat, a személyes gyűjteménynaplót (Logbook bejegyzések rögzített adatai és képhivatkozásai), a gombarecepteket, valamint a helyi referenciaadatokat.</li>
+      </ul>
+      <li><b>Külső integrációs szolgáltatások (External APIs)</b></li>
+        <ul>
+          <li><b>iNaturalist API:</b> A képalapú fajfelismerést támogató külső adatbázis és gépi tanulási szolgáltatás, amely a továbbított fényképek alapján valószínűségi találati listát nyújt a gombafajokról.</li>
+          <li><b>Wikipedia REST API v1:</b> A gombafajokhoz kapcsolódó részletes morfológiai leírásokat, természettudományi érdekességeket és kiegészítő ismereteket szolgáltató külső forrás.</li>
+          <li><b>Android operációs rendszer szolgáltatásai:</b> A mobil eszköz natív erőforrásaival (beépített kamera hardver, GPS-vevő és helyi háttértár) való közvetlen kommunikáció az Android rendszerhívásain keresztül.</li>
+      </ul>
+    </ol>
+    <h3>Kapcsolódási formák és adatfolyam:</h3>
+    <p>[ Android Mobil Kliens ] <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   │ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   │ HTTPS / REST (JSON)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ▼ <br>
+[ Python Backend Szerver ] ─── SQL ─── [ MySQL Adatbázis ] <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   │ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ├─── HTTPS / REST ───> [ iNaturalist Fajmeghatározó API ] <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   │ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   └─── HTTPS / REST ───> [ Wikipedia REST API v1 ] <br>
+    </p>
+    <p>A rendszer zárt, önálló működésre korlátozottan képes (például a már letöltött lexikonadatok és a helyi Logbook megtekintése esetén), az új azonosításokhoz és a részletes adatok dinamikus frissítéséhez folyamatos hálózati kapcsolatot tart fenn a felhőszolgáltatásokkal. </p>
 
     <h2 id="termek-hasznalatanak-elonyei">4.2 A termék használatának előnyei</h2>
     <table>
         <thead>
-            <tr>
+            <tr style="background-color: #9fc5e8;">
                 <th>A megrendelő haszna (előnyei)</th>
                 <th>Az ezt támogató rendszer jellemző(k)</th>
             </tr>
@@ -211,23 +286,46 @@
         <tbody>
             <tr>
                 <td>Gombamérgezések kockázatának és az egészségügyi ellátórendszer terhelésének csökkentése</td>
-                <td>1. Képalapú gombafelismerés<br>2. Veszélyes hasonmások kiemelése<br>3. Kötelező biztonsági figyelmeztetések</td>
+                <td>
+                  <ol>
+                    <li><b>Képalapú gombafelismerés:</b> a felhasználó a helyszínen, a kamera képéből gyors előzetes tájékoztatást kap a gombafajról</li>
+                    <li><b>Veszélyes hasonmások kiemelése:</b> az adatlapok vizuálisan és szövegesen is felhívják a figyelmet az összetéveszthető mérgező fajokra.</li>
+                    <li><b>Kötelező biztonsági figyelmeztetések:</b> minden találati képernyőn kötelező figyelmeztetés jelenik meg a szakértői bevizsgálás elengedhetetlenségéről.</li>
+                  </ol>
+                </td>
             </tr>
             <tr>
                 <td>Hivatalos gombavizsgáló szakértők munkájának tehermentesítése</td>
-                <td>1. Helyszíni előzetes szűrés<br>2. Edukációs modul</td>
+                <td>
+                  <ol>
+                    <li><b>Helyszíni előzetes szűrés:</b> a felhasználó nem szed le és visz be feleslegesen bizonytalan vagy értéktelen példányokat</li>
+                    <li><b>Edukációs modul:</b> a felhasználók megtanulják a helyes gombaszedési és tárolási technikákat, így jobb minőségű minták kerülnek vizsgálatra.</li>
+                  </ol>
+                </td>
             </tr>
             <tr>
                 <td>Környezettudatosság és természetvédelem növelése</td>
-                <td>1. Védett fajok jelölése<br>2. Kíméletes gyűjtési útmutatók</td>
+                <td><ol>
+                    <li><b>Védett fajok jelölése:</b> a lexikon és a felismerő azonnal felhívja a figyelmet a védett és ritka gombákra.</li>
+                    <li><b>Kíméletes gyűjtési útmutatók:</b> az edukációs modul bemutatja a micéliumot óvó szedési gyakorlatot.</li>
+                  </ol>
+                </td>
             </tr>
             <tr>
                 <td>Felhasználói aktivitás, közösségi kötődés és edukáció növelése</td>
-                <td>1. Digitális tudásbázis és receptek<br>2. Személyes gyűjteménynapló (Logbook)</td>
+                <td><ol>
+                    <li><b>Digitális tudásbázis és receptek:</b> a Wikipédia-integráció és a beépített receptkönyv növeli a gombák felhasználási élményét.</li>
+                    <li><b>Személyes gyűjteménynapló (Logbook):</b>  a felhasználók rögzíthetik korábbi találataikat koordinátákkal és fotókkal, ami rendszeres használatra és a természet járására ösztönöz</li>
+                  </ol>
+                </td>
             </tr>
             <tr>
                 <td>Költséghatékony és skálázható üzemeltetés</td>
-                <td>1. Nyílt és ingyenes API-k használata<br>2. Korszerű, egyszerű terjesztés</td>
+                <td><ol>
+                    <li><b>Nyílt és ingyenes API-k használata:</b> az iNaturalist és a Wikipedia REST API-k révén a háttérrendszer alacsony üzemeltetési költséggel tartható fenn.</li>
+                    <li><b>Korszerű, egyszerű terjesztés:</b> standard Android csomagként (APK / Google Play Store) egyszerűen, külön telepítő infrastruktúra nélkül terjeszthető.</li>
+                  </ol>
+                </td>
             </tr>
         </tbody>
     </table>
