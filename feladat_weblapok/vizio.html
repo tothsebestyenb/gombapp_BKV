@@ -36,11 +36,33 @@
       .under_dev {
         color: gray;
       }
-    </style>
-  </head>
-  <body>
 
-    
+      h4 { margin: 10px 40px; }
+      .table-scroll { overflow-x: auto; }
+      img { max-width: 100%; height: auto; }
+      figure { margin: 20px 40px; }
+      figcaption { margin-top: 10px; }
+      td p, th p, li p { margin: 0; }
+      main p, main li { overflow-wrap: anywhere; }
+      @media (max-width: 640px) { figure { margin: 16px; } }
+    </style>
+    <link rel="stylesheet" href="../navigation.css">
+</head>
+  <body>
+<nav class="site-nav" aria-label="Fő navigáció">
+  <div class="site-nav__inner">
+    <a class="site-nav__brand" href="../index.html">GombApp · BKV</a>
+    <div class="site-nav__links">
+      <a href="../index.html">Feladatok</a>
+      <a href="projektterv.html">Projektterv</a>
+      <a href="vizio.html" aria-current="page">Vízió</a>
+      <a href="szoftver-kovetelmeny.html">Követelményspecifikáció</a>
+      <a href="felhasznaloi-dokumentacio.html">Felhasználói dokumentáció</a>
+    </div>
+  </div>
+</nav>
+
+
 
 <p style="margin-bottom: 0cm;" align="center"><br>
 
@@ -113,19 +135,19 @@ tagok:</font></p>
     <tr valign="top">
 
 		<td width="118">
-			
+
       <p align="left" lang="hu-HU"><font size="3">Biliczki Bence</font></p>
 
 		</td>
 
 		<td width="75" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">EY25VM</font></p>
 
 		</td>
 
 		<td width="264" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">bence.biliczki@student.uni-miskolc.hu</font></p>
 
 		</td>
@@ -135,19 +157,19 @@ tagok:</font></p>
 	<tr valign="top">
 
 		<td width="118" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">Jancsurák Napsugár</font></p>
 
 		</td>
 
 		<td width="75" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">DBANML</font></p>
 
 		</td>
 
 		<td width="264" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">napsugar.jancsurak@student.uni-miskolc.hu</font></p>
 
 		</td>
@@ -157,19 +179,19 @@ tagok:</font></p>
 	<tr valign="top">
 
 		<td width="118" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">Boda Noémi</font></p>
 
 		</td>
 
 		<td width="75" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">HLNWIU</font></p>
 
 		</td>
 
 		<td width="264" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">noemi.boda@student.uni-miskolc.hu</font></p>
 
 		</td>
@@ -179,19 +201,19 @@ tagok:</font></p>
 	<tr valign="top" >
 
 		<td width="118" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">Gaál Botond</font></p>
 
 		</td>
 
 		<td width="75" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">COP0ZM</font></p>
 
 		</td>
 
 		<td width="264" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">botond.gaal@student.uni-miskolc.hu</font></p>
 
 		</td>
@@ -201,19 +223,19 @@ tagok:</font></p>
 	<tr valign="top" >
 
 		<td width="118" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">Tóth Sebestyén Bence</font></p>
 
 		</td>
 
 		<td width="75" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">EEBYCX</font></p>
 
 		</td>
 
 		<td width="264" >
-			
+
       <p align="left" lang="hu-HU"><font size="3">sebestyen.bence.toth@student.uni-miskolc.hu</font></p>
 
 		</td>
@@ -265,577 +287,821 @@ tagok:</font></p>
 
     <hr>
     <h2>Tartalomjegyzék</h2>
-    <ul>
-        <li><a href="#1">1. Bevezetés</a></li>
-        <li><a href="#2">2. Az alkalmazás helye</a>
-            <ul>
-                <li><a href="#2.1">2.1 Üzleti lehetőségek</a></li>
-                <li><a href="#2.2">2.2 A probléma megfogalmazása</a></li>
-                <li><a href="#2.3">2.3 Az elkészült termék helye</a></li>
-            </ul>
-        </li>
-        <li><a href="#3">3. Érintettek és felhasználók</a>
-            <ul>
-                <li><a href="#3.1">3.1 A probléma megfogalmazása</a></li>
-                <li><a href="#3.2">3.2 A felhasználók összefoglalása</a></li>
-                <li><a href="#3.3">3.3 Felhasználói környezet</a></li>
-            </ul>
-        </li>
-        <li><a href="#4">4. A végtermék áttekintése</a>
-            <ul>
-                <li><a href="#4.1">4.1 A termék kapcsolatai</a></li>
-                <li><a href="#4.2">4.2. A termék használatának előnyei</a></li>
-                <li><a href="#4.3">4.3. Feltételezések és függőségek</a></li>
-                <li><a href="#4.4">4.4. Költségbecslés</a></li>
-                <li><a href="#4.5">4.5. Installáció</a></li>
-            </ul>
-        </li>
-        <li><a href="#5">5. A végtermék jellemzői, biztosított szolgáltatások</a></li>
-        <li><a href="#6">6. Korlátozások</a></li>
-        <li><a href="#7">7. Minőségi elvárások</a></li>
-        <li><a href="#8">8. Dokumentációkkal kapcsolatos követelmények</a></li>
-        <li><a href="#9">9. Kockázat lista</a></li>
-        <li><a href="#10">10. Szótár</a></li>
-    </ul>
-
-    <h1 id="1">1. Bevezetés</h1>
-    <p>A GombApp egy Androidra fejlesztett modern mobilalkalmazás, amely kifejezetten a hobbi gombászok, természetjárók és a gombászat iránt érdeklődők számára készül. A szoftver fő célja, hogy hidat építsen a hagyományos természetjárás és a modern digitális technológiák, különösen a mesterséges intelligencia alapú képfelismerés között.</p>
-    <p>A fejlesztés során kiemelt figyelmet kap a biztonságos gombászat támogatása és a tanulás: az alkalmazás segít a felhasználóknak a találati helyszínen gyors előzetes tájékozódást szerezni a gombafajokról, megismerni a morfológiai bélyegeket, valamint elkerülni a veszélyes, mérgező hasonmásokat. A GombApp amellett, hogy érdekesebbé és interaktívabbá teszi az erdei túrákat, még digitális gyűjteménynapló is. Természetvédelmi figyelmeztetések révén hozzájárul a tudatos és felelősségteljes gombászáshoz is, tehermentesítve a hivatásos gombaellenőri hálózatot.</p>
-
-    <h1 id="2">2. Az alkalmazás helye</h1>
-
-    <h2 id="2.1">2.1 Üzleti lehetőségek</h2>
-    <p>A gombafelismerő alkalmazás fejlesztése közvetlenül reagál a digitális technológiák és az agrotechnológia iránti növekvő lakossági igényekre, hidat képezve a hagyományos természetjárás és a modern mesterséges intelligencia között. Az alkalmazás elsősorban a biztonságos gombászat elősegítését és az oktatást célozza meg, miközben fenntartható üzleti modellt teremt.</p>
-    <ul>
-        <li>Piaci igények és célcsoportok
-            <ul>
-                <li>Hobbi gombászok és természetjárók: A hagyományos gombászkönyvek használata a terepen lassú és nehézkes. Az alkalmazás azonnali, látásalapú visszajelzést ad, csökkentve a tévedések kockázatát.</li>
-                <li>Oktatás és ökoturizmus: Erdei iskolák, biológiaórák és nemzeti parkok számára interaktív, élményalapú oktatási eszközként szolgál a biodiverzitás megismeréséhez.</li>
-                <li>Szakértői előszűrés: Bár a kereskedelmi forgalomba hozatalhoz hivatalos gombaellenőri szakvélemény szükséges, a rendszer hatékony előszűrőként támogatja a szakértők és a gyűjtők munkáját.</li>
-            </ul>
-        </li>
-        <li>Üzleti és monetizációs modellek
-            <ul>
-                <li>Freemium modell: Az alapvető képalapú felismerés ingyenesen érhető el a felhasználók számára, míg az exkluzív funkciók (pl. offline adatbázis gyenge térerővel rendelkező erdőkben, részletes toxikológiai útmutató, szakértői konzultáció) előfizetéses alapon működnek.</li>
-                <li>B2B partnerkapcsolatok: Együttműködési lehetőség biztosítókkal (baleset-megelőzési kampányok keretében), valamint turisztikai szervezetekkel és nemzeti parkokkal integrált szolgáltatások nyújtására.</li>
-                <li>Adatgyűjtés és kutatás: A felhasználók által gyűjtött anonim, térbeli és időbeli megfigyelési adatok értékesíthetők kutatóintézetek és erdőgazdaságok számára a helyi ökoszisztémák és gombafajok elterjedésének elemzésére.</li>
-            </ul>
-        </li>
-    </ul>
-
-    <h2 id="2.3">2.3 Az elkészült termék helye</h2>
-    <p>Androidon használható, képalapú gombahatározó és ismeretterjesztő mobilalkalmazás, amely a terepi tájékozódást digitális lexikonnal és személyes gyűjteménynaplóval kapcsolja össze.</p>
-      <ul>
-        <li>Célközönség és felhasználás</li>
-        <ul>
-          <li>A GombApp elsősorban hobbi gombászoknak és természetjáróknak készül, akik kirándulás közben szeretnék megismerni a talált gombákat. Ismeretterjesztő tartalma családok, erdei iskolák és természetismereti foglalkozások számára is hasznos lehet.</li>
-        </ul>
-        <li>A termék haszna és megkülönböztető jellemzői</li>
-        <ul>
-          <li>Alapvető haszon: A felhasználó a telefonjával készített fénykép alapján előzetes fajazonosítási javaslatokat kap, majd megtekintheti a gombák jellemzőit és veszélyes hasonmásait. A saját találatok rögzítése segíti a tanulást és a korábbi túrák felidézését.</li>
-          <li>A GombApp megkülönböztető jellemzői: A tervezett rendszer egy magyar nyelvű, egyszerűen kezelhető felületen egyesíti a képalapú keresést, a hazai gombafajokat bemutató lexikont, a veszélyes hasonmások kiemelését, a kapcsolódó recepteket és a saját gyűjteménynaplót. A találatok tájékoztató jellegét és a szakértői ellenőrzés szükségességét egyértelműen jelzi.</li>
-        </ul>
-        <li>Alternatív megoldások</li>
-        <ul>
-          <li>Hagyományos alternatívák: A nyomtatott gombahatározók internet nélkül is használhatók, de külön könyvet kell magunkkal vinni, és a megfelelő fajleírás megkeresése időigényes lehet. A személyes szakértői vizsgálat a begyűjtött gombák ellenőrzését szolgálja; ezt az alkalmazás nem helyettesíti.</li>
-          <li>Digitális alternatívák: Weboldalak, online közösségek és más fajfelismerő alkalmazások is segíthetik a tájékozódást. Több külön felület használatakor azonban a fajleírások, a fényképek és a személyes feljegyzések összegyűjtése a felhasználóra hárulhat.</li>
-        </ul>
-      </ul>
-    <h1 id="3">3. Érintettek és felhasználók</h1>
-
-    <h2 id="3.1">3.1 A probléma megfogalmazása</h2>
-
-    <p>A természetjárás és a hobbi gombászás egyre népszerűbb szabadidős tevékenység. Sokan szeretnek erdei séták során gombákat keresni, megismerni a különböző fajokat, vagy akár saját maguk gyűjteni a vacsorához. A gombák felismerése azonban nem mindig egyszerű, különösen azok számára, akik még csak most ismerkednek ezzel a hobbival.</p>
-    
-    <p>Korábban a gombák azonosítása főként nyomtatott gombahatározók segítségével történt. Ezek a könyvek hasznos információkat tartalmaznak, de a terepen nem mindig könnyű használni őket. A bennük szereplő képek általában ideális állapotú gombákat mutatnak be, miközben a természetben a gombák megjelenése sokat változhat az időjárás, a koruk vagy a környezetük hatására. Egy eső áztatta vagy kiszáradt példány ezért egészen másképp nézhet ki, mint a könyvben látható kép.</p>
-    
-    <p>A kezdő gombászok számára további nehézséget jelenthetnek a szakkifejezések és az egyes fajok közötti apró különbségek. Emiatt könnyen előfordulhat, hogy egy ehető gombát összetévesztenek egy mérgező hasonmásával. Bár a leszedett gombákat szakértővel is meg lehet vizsgáltatni, ez nem mindig kényelmes, és sokszor csak a gyűjtés után derül ki, hogy egy-egy példány veszélyes lehet. A mérgező gombák közé tartozó fajok, például a gyilkos galóca, különösen nagy odafigyelést igényelnek. Fontos azonban tudni, hogy a legtöbb mérgező gomba puszta megérintése nem okoz mérgezést; a valódi veszélyt elsősorban a téves azonosítás és a mérgező gomba elfogyasztása jelenti.</p>
-    
-    <p>A bizonytalanság miatt sokan inkább minden gombát leszednek, hogy később megmutathassák azokat egy szakértőnek. Ez azonban felesleges munkát jelenthet, és a természetnek sem kedvez, különösen akkor, ha ritka vagy védett fajok is a kosárba kerülnek. Mindez rámutat arra, hogy szükség lenne egy könnyen használható megoldásra, amely már az erdőben segít a gombák felismerésében, és támogatja a biztonságosabb, tudatosabb gyűjtést.</p>
-
-    <h3>A résztvevők, akiket a probléma és a megoldása érint</h3>
-    <ul>
-        <li>Kezdő és hobbi gombászok: Azok, akik szívesen gyűjtenének gombát, de még nem rendelkeznek elegendő tapasztalattal ahhoz, hogy biztosan megkülönböztessék egymástól az egyes fajokat. Számukra különösen fontos a könnyen érthető, megbízható segítség.</li>
-        <li>Természetjárók és családok: Azok, akik kirándulás közben szeretnék jobban megismerni az erdő élővilágát. Egy egyszerűen használható alkalmazás számukra is érdekesebbé és tanulságosabbá teheti a természetben töltött időt.</li>
-        <li>Hivatásos gombaszakértők: Azok a szakemberek, akik a piacokon és a kijelölt vizsgálóhelyeken ellenőrzik a begyűjtött gombákat. Munkájukat megkönnyítheti, ha a gyűjtők már előzetesen tájékozódnak a talált fajokról, miközben a végső ellenőrzés továbbra is a szakértők feladata marad.</li>
-        <li>Egészségügyi intézmények és toxikológiai szakemberek: Ők látják el azokat, akik mérgező gomba fogyasztása miatt kerülnek kórházba. A téves azonosításból eredő mérgezések megelőzése számukra is fontos, hiszen a súlyos esetek komoly egészségügyi kockázatot jelentenek.</li>
-    </ul>
-
-    <h3>Milyen hatással van a probléma az érintettekre?</h3>
-    <ul>
-        <li>A gombászokra és túrázókra: A bizonytalanság miatt sokan félnek attól, hogy rosszul ismernek fel egy gombát. A nehezen értelmezhető leírások és a hasonló megjelenésű fajok miatt a gombászás könnyen stresszessé válhat, vagy egyeseket teljesen elriaszthat ettől a tevékenységtől.</li>
-        <li>A gombaszakértőkre: A vizsgálóhelyeken sokféle gombával találkoznak, amelyek között gyakran akadnak olyan példányok is, amelyeket a gyűjtők bizonytalanságból szedtek le. Az ilyen esetek növelik a szakértők leterheltségét, és kevesebb idő maradhat az összetettebb vizsgálatokra.</li>
-        <li>Az egészségügyre: A gombák téves felismerése súlyos, akár életveszélyes mérgezésekhez is vezethet. Ezek kezelése jelentős terhet ró az egészségügyi ellátásra, miközben sok eset megelőzhető lenne a megfelelő tájékoztatással és a biztonságos gyűjtési szokások kialakításával.</li>
-        <li>A természetre: A tapasztalatlanság miatt sokan olyan gombákat is leszednek, amelyekre valójában nincs szükségük, vagy amelyeket később egyszerűen kidobnak. Ez a védett fajok esetében különösen problémás lehet, de más gombák felesleges gyűjtése is megzavarhatja az erdei élővilág természetes egyensúlyát.</li>
-    </ul>
-
-    <h3>Miben tud segíteni a GombApp?</h3>
-    <ul>
-        <li>Azonnali segítség a helyszínen: A GombApp segítségével a felhasználók már az erdőben, a mobiltelefonjuk kamerájával készített kép alapján kaphatnak tájékoztatást a talált gombáról. Ez segíthet felismerni a lehetséges veszélyeket még azelőtt, hogy a gombát leszednék vagy a többi közé tennék. Az alkalmazás azonban nem garantálhatja a biztos fajazonosítást, ezért a gombák fogyasztásáról minden esetben szakértői vizsgálat alapján kell dönteni.</li>
-        <li>Könnyen érthető felismerés és tanulás: Az alkalmazás nem csupán megmutatja, hogy egy gomba melyik fajhoz hasonlíthat, hanem arra is felhívja a figyelmet, hogy mely tulajdonságait érdemes megfigyelni. Például bemutathatja, milyen különbségek lehetnek egy ehető csiperke és egy mérgező, hasonló megjelenésű gomba között. Így a felhasználók idővel egyre többet tanulhatnak, és tudatosabban figyelhetik meg a természetet.</li>
-        <li>A gombaszakértők munkájának támogatása: A GombApp segíthet abban, hogy a felhasználók már a gyűjtés előtt több információval rendelkezzenek a talált gombákról. Ennek köszönhetően csökkenhet a feleslegesen leszedett példányok száma, és a gyűjtők felkészültebben fordulhatnak szakértőhöz. Az alkalmazás ugyanakkor nem helyettesíti a hivatalos gombavizsgálatot, és nem nyilváníthat egy gombát fogyasztásra biztonságosnak pusztán egy fénykép alapján.</li>
-        <li>Kényelem és egyszerű használat: A több száz oldalas gombahatározókhelyett a legfontosabb információk közvetlenül a felhasználó telefonján érhetők el. Ez különösen hasznos lehet kirándulás közben, amikor gyorsan szeretnének utánanézni egy érdekes gombának anélkül, hogy könyveket kellene magukkal vinniük.</li>
-        <li>Természetvédelem és tudatosabb gyűjtés: Ha a felhasználók már a helyszínen több információt kapnak a gombákról, kisebb eséllyel szednek le minden útjukba kerülő példányt. A védett fajokra való figyelemfelhívás és a gombák természetben betöltött szerepének bemutása hozzájárulhat ahhoz, hogy a természetjárók jobban óvják az erdei élővilágot.</li>
-    </ul>
-    <p>Összességében a GombApp célja, hogy a gombászás biztonságosabb, egyszerűbb és élvezetesebb tevékenységgé váljon. Az alkalmazás a modern technológia segítségével támogatja a kezdőket, segíti a tanulást, és hozzájárulhat a természet tudatosabb megismeréséhez és megóvásához.</p>
-
-    <table border="1" style="border-collapse: collapse;">
-  <thead>
-    <tr>
-      <th>Elnevezés</th>
-      <th>Leírás</th>
-      <th>Szerep</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Hobbi gombászok és természetjárók képviselői</td>
-      <td>A terepi tájékozódás és a megfigyelések rögzítésének leendő felhasználóit képviselik.</td>
-      <td>Igényeket fogalmaznak meg, véleményezik a felületterveket és a használati folyamatokat.</td>
-    </tr>
-    <tr>
-      <td>Családok és oktatási felhasználók képviselői</td>
-      <td>A közös természetjárás és az ismeretterjesztő használat szempontjait képviselik.</td>
-      <td>Visszajelzést adnak a magyarázatok érthetőségéről és az oktatási tartalmakról.</td>
-    </tr>
-    <tr>
-      <td>Gombaszakértő</td>
-      <td>A fajleírások és a biztonsági tájékoztatás szakmai véleményezésébe bevonandó szakember.</td>
-      <td>Ellenőrzi a szakmai tartalmakat, a veszélyes hasonmások bemutatását és a figyelmeztetések megfogalmazását.</td>
-    </tr>
-    <tr>
-      <td>Fejlesztőcsapat</td>
-      <td>A GombApp specifikációját és rendszerterveit készítő ötfős csapat.</td>
-      <td>Összegyűjti a követelményeket, megtervezi a felületet és a rendszer működését, ellenőrzi a dokumentumok összhangját.</td>
-    </tr>
-    <tr>
-      <td>Tartalomfelelős</td>
-      <td>A lexikon, a receptek és az ismeretterjesztő anyagok gondozására tervezett szerepkör.</td>
-      <td>Összegyűjti és rendszerezi a tartalmakat, egyezteti szakmai ellenőrzésüket, és gondoskodik a frissítésükről.</td>
-    </tr>
-    <tr>
-      <td>Üzemeltető</td>
-      <td>A későbbi háttérrendszer és adatbázis működtetéséért felelős szerepkör.</td>
-      <td>Meghatározza az üzemeltetési igényeket, később felügyeli a szolgáltatásokat, a mentéseket és a frissítéseket.</td>
-    </tr>
-  </tbody>
-  </table>
-    <h2 id="3.2">3.2 A felhasználók összefoglalása</h2>
-    <table border="1" style="border-collapse: collapse;">
-  <thead>
-    <tr>
-      <th>Elnevezés</th>
-      <th>Leírás</th>
-      <th>Illetékes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Kezdő és alkalmi gombász</td>
-      <td>Előzetes fajazonosítási javaslatokat és közérthető útmutatást keres; kiemelten fontos számára a veszélyes hasonmások bemutatása.</td>
-      <td>Hobbi gombászok képviselője – kijelölendő.</td>
-    </tr>
-    <tr>
-      <td>Rendszeres hobbi gombász és természetjáró</td>
-      <td>Fajleírásokat böngész, saját fotókat és megjegyzéseket ment, illetve visszakeresi korábbi megfigyeléseit.</td>
-      <td>Rendszeres természetjárók képviselője – kijelölendő.</td>
-    </tr>
-    <tr>
-      <td>Családi kirándulás résztvevője</td>
-      <td>Közös természetjárás során szeretne gombafajokat és érdekességeket megismerni; egyszerű, szemléletes felületet igényel.</td>
-      <td>Családok képviselője – kijelölendő.</td>
-    </tr>
-    <tr>
-      <td>Oktatási célú felhasználó</td>
-      <td>Pedagógus vagy tanuló, aki természetismereti foglalkozáson a lexikont és az ismeretterjesztő tartalmakat használja.</td>
-      <td>Pedagógus vagy erdei iskolai képviselő – kijelölendő.</td>
-    </tr>
-  </tbody>
-  </table>
-
-
-    <h1 id="4">4. A végtermék áttekintése</h1>
-
-    <h2 id="4.1">4.1 A termék kapcsolatai</h2>
-    <p>A GombApp egy több rétegből álló, kliens-szerver architektúrára épülő mobil rendszer, amely önálló alkalmazásként valósul meg, de működéséhez szervesen integrálódik külső, nemzetközi természettudományi szolgáltatásokhoz és nyilvános adatbázisokhoz.</p>
-    <h3>I. Android mobil kliens (Frontend és natív funkciók)</h3>
-    <ul>
-        <li>Felépítés: A felhasználói felület és a mobil üzleti logika Java és Kotlin nyelven, valamint frontend technológiák segítségével valósul meg Android Studio környezetben.</li>
-        <li>Feladat: Biztosítja a közvetlen kapcsolatot a felhasználóval: az eszköz beépített kamerájának vezérlését a fotók elkészítéséhez, a képek előkészítését, a GPS-koordináták lekérését a találati helyekhez, valamint a találatok, receptek és lexikonbejegyzések megjelenítését.</li>
-        <li>Kapcsolódás: Szabványos REST API hívásokon (JSON formátumú adatcsere) keresztül kommunikál a központi backend szerverrel.</li>
-    </ul>
-    <h3>II. Központi háttérrendszer (Backend API)</h3>
-    <ul>
-        <li>Felépítés: Python nyelven fejlesztett szerveroldali alkalmazás.</li>
-        <li>Feladat: Kiszolgálja a mobil klienstől érkező kéréseket, kezeli az üzleti logikát, koordinálja a külső adatforrások elérését, valamint biztosítja a gyorsítótárazást a felesleges hálózati terhelés minimalizálása érdekében.</li>
-    </ul>
-    <h3>III. Adatbázis réteg (DBMS)</h3>
-    <ul>
-        <li>Felépítés: MySQL relációs adatbázis.</li>
-        <li>Feladat: Biztosítja az adatok perzisztens tárolását, beleértve a felhasználói fiókokat, a személyes gyűjteménynaplót (Logbook bejegyzések rögzített adatai és képhivatkozásai), a gombarecepteket, valamint a helyi referenciaadatokat.</li>
-    </ul>
-    <h3>IV. Külső integrációs szolgáltatások (External APIs)</h3>
-    <ul>
-        <li>iNaturalist API: A képalapú fajfelismerést támogató külső adatbázis és gépi tanulási szolgáltatás, amely a továbbított fényképek alapján valószínűségi találati listát nyújt a gombafajokról.</li>
-        <li>Wikipedia REST API v1: A gombafajokhoz kapcsolódó részletes morfológiai leírásokat, természettudományi érdekességeket és kiegészítő ismereteket szolgáltató külső forrás.</li>
-        <li>Android operációs rendszer szolgáltatásai: A mobil eszköz natív erőforrásaival (beépített kamera hardver, GPS-vevő és helyi háttértár) való közvetlen kommunikáció az Android rendszerhívásain keresztül.</li>
-    </ul>
-    <h3>Kapcsolódási formák és adatfolyam</h3>
-    <p style="margin-left: 60px;">
-    [ Android Mobil Kliens ] <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ HTTPS / REST (JSON)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ <br>
-    [ Python Backend Szerver ] ─── SQL ─── [ MySQL Adatbázis ]<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─── HTTPS / REST ───> [ iNaturalist Fajmeghatározó API ] <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── HTTPS / REST ───> [ Wikipedia REST API v1 ] <br>
-    </p>
-    <p>A rendszer zárt, önálló működésre korlátozottan képes (például a már letöltött lexikonadatok és a helyi Logbook megtekintése esetén), az új azonosításokhoz és a részletes adatok dinamikus frissítéséhez folyamatos hálózati kapcsolatot tart fenn a felhőszolgáltatásokkal.</p>
-
-    <h2 id="4.2">4.2. A termék használatának előnyei</h2>
-    <p>Ebben a részben összefoglaljuk, hogy a megrendelő milyen közvetlen és közvetett előnyökhöz jut az alkalmazás használata és elterjedése révén, valamint mely rendszerfunkciók támogatják ezek megvalósulását:</p>
-    <table border="1" cellpadding="4" cellspacing="3" width="90%">
-        <thead style="background-color: #c9daf8;">
-            <tr>
-                <th>A megrendelő haszna (előnyei)</th>
-                <th>Az ezt támogató rendszer jellemző(k)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Gombamérgezések kockázatának és az egészségügyi ellátórendszer terhelésének csökkentése</td>
-                <td>1. Képalapú gombafelismerés: a felhasználó a helyszínen, a kamera képéből gyors előzetes tájékoztatást kap a gombafajról<br>
-                    2. Veszélyes hasonmások kiemelése: az adatlapok vizuálisan és szövegesen is felhívják a figyelmet az összetéveszthető mérgező fajokra.<br>
-                    3. Kötelező biztonsági figyelmeztetések: minden találati képernyőn kötelező figyelmeztetés jelenik meg a szakértői bevizsgálás elengedhetetlenségéről.
-                </td>
-            </tr>
-            <tr>
-                <td>Hivatalos gombavizsgáló szakértők munkájának tehermentesítése</td>
-                <td>1. Helyszíni előzetes szűrés: a felhasználó nem szed le és visz be feleslegesen bizonytalan vagy értéktelen példányokat<br>
-                    2. Edukációs modul: a felhasználók megtanulják a helyes gombaszedési és tárolási technikákat, így jobb minőségű minták kerülnek vizsgálatra.
-                </td>
-            </tr>
-            <tr>
-                <td>Környezettudatosság és természetvédelem növelése</td>
-                <td>1. Védett fajok jelölése: a lexikon és a felismerő azonnal felhívja a figyelmet a védett és ritka gombákra.<br>
-                    2. Kíméletes gyűjtési útmutatók: az edukációs modul bemutatja a micéliumot óvó szedési gyakorlatot.
-                </td>
-            </tr>
-            <tr>
-                <td>Felhasználói aktivitás, közösségi kötődés és edukáció növelése</td>
-                <td>1. Digitális tudásbázis és receptek: a Wikipédia-integráció és a beépített receptkönyv növeli a gombák felhasználási élményét.<br>
-                    2. Személyes gyűjteménynapló (Logbook): a felhasználók rögzíthetik korábbi találataikat koordinátákkal és fotókkal, ami rendszeres használatra és a természet járására ösztönöz
-                </td>
-            </tr>
-            <tr>
-                <td>Költséghatékony és skálázható üzemeltetés</td>
-                <td>1. Nyílt és ingyenes API-k használata: az iNaturalist és a Wikipedia REST API-k révén a háttérrendszer alacsony üzemeltetési költséggel tartható fenn.<br>
-                    2. Korszerű, egyszerű terjesztés: standard Android csomagként (APK/ Google Play Store) egyszerűen, külön telepítő infrastruktúra nélkül terjeszthető.
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2 id="4.3">4.3. Feltételezések és függőségek</h2>
-    
-    <p>A GombApp fejlesztése és fenntartható működése szempontjából alapvető feltételezés, hogy a külső adatforrások és felhőalapú szolgáltatások hosszú távon is hozzáférhetők és megbízhatók maradnak. Az alkalmazás gombafelismerő funkciója elsősorban a Global Biodiversity Information Facility (iNatural API) által biztosított ingyenes növény- és gombafelismerő API-ra épül. Feltételezzük, hogy az API szolgáltatásminősége, válaszideje és felismerési pontossága nem csökken lényegesen, valamint a lekérdezések számára és a feltöltött fotók méretére vonatkozó korlátozások nem gátolják a normál használatot. Emellett a gombafajok részletes leírásainak és tudományos hátterének megjelenítéséhez a Wikipedia REST API v1 szolgáltatást használjuk, amely feltételezésünk szerint továbbra is ingyenesen és sávszélesség-korlátozások nélkül kiszolgálja az alkalmazásból érkező kéréseket.</p>
-    <p>További feltételezés, hogy a célközönség az erdőben történő használat során rendelkezik mobilinternetes kapcsolattal. Mivel a képfelismerési folyamat és a részletes adatlapok lekérése a háttérben futó felhőszolgáltatásokon keresztül történik, a rendszer jelenlegi architektúrája nem követeli meg a teljes értékű offline működést. Ugyancsak feltételezzük, hogy a gépi látásra és a mesterséges intelligencia alapú fajazonosításra vonatkozó jogi szabályozás nem változik meg olyan mértékben, amely közvetlen jogi vagy anyagi felelősséget terhelne a szoftverfejlesztőkre a téves azonosításokból eredő esetleges gombamérgezések miatt.</p>
-    <p>A szoftveres architektúrán túl a rendszer működése számos hardveres és környezeti tényezőtől is függ. Feltételezzük, hogy a célközönség által használt Android-eszközök támogatják a modern Android CameraX API-t, így biztosítva a kamera egységes kezelését, az automatikus élességállítást és a megfelelő képminőséget a különböző gyártók készülékein. A helymeghatározási funkciók szempontjából feltételezzük, hogy a mobilkészülékek GPS-vevői sűrű lombozatú erdőkben is elfogadható pontosságú koordinátákat biztosítanak a találati helyek rögzítéséhez.</p>
-    <p>A felhasználói adatok kezelése során feltételezzük, hogy a helyileg vagy felhőben tárolott fényképek, helyadatok és személyes megjegyzések megfelelnek az Európai Unió általános adatvédelmi rendeletének (GDPR). Feltételezzük továbbá, hogy a fejlesztéshez felhasznált nyílt forráskódú könyvtárak és fejlesztői környezetek (SDK-k) hosszú távon stabilak, naprakészek és biztonságosak maradnak. Végül feltételezzük a felhasználók részéről a felelősségteljes magatartást és a megfelelő digitális tudatosságot: az alkalmazás által nyújtott edukációs tartalom feltételezi, hogy a gombászok figyelembe veszik a biztonsági figyelmeztetéseket, és a gombák fogyasztásáról minden esetben hivatalos gombavizsgáló szakértő bevonásával döntenek.</p>
-    <p>Amennyiben a feltételezett körülmények megváltoznak, a fejlesztőcsapatnak fel készülnie a megfelelő alternatív megoldások és kockázatkezelési lépések életbe léptetésére:</p>
-    <ul>
-        <li>Külső API váltási stratégiák: Ha a iNatural API elérhetetlenné válik, megszűnik az ingyenessége vagy szigorú kéréskorlátokat vezet be, a rendszer architektúrája lehetővé teszi a váltást más, kereskedelmi vagy nyílt forráskódú növény- és gombafelismerő szolgáltatásokra (például a Kindwise Mushroom.id API-ra). Amennyiben a Wikipedia REST API használata korlátozás alá esik, az adatok tárolása áttérhet egy saját szerveren hosztolt adatbázisra vagy a leggyakoribb hazai gombafajok leírásainak tömörített, helyi tárolására a mobil eszközön.</li>
-        <li>Offline működési igények: Ha a felhasználói visszajelzések vagy az erdei hálózati lefedettség hiánya miatt elvárássá válik az offline használat, a fejlesztés második fázisában bevezetésre kerülhet egy könnyített, eszközön futó (on-device) gépi tanulási modell, amely térerő nélkül is képes a leggyakoribb gombafajok alapvető azonosítására.</li>
-        <li>Hardveres egyenlőtlenségek megoldása: Az eltérő kamerarendszerekből adódó fókuszálási és képminőségi hibák megelőzésére az Android CameraX könyvtárát alkalmazzuk, kiegészítve automatikus képminőség-ellenőrzéssel (pl. homályos vagy túl sötét képek kiszűrése a beküldés előtt), valamint manuális fókusz- és vakuvezérlési lehetőséggel.</li>
-        <li>GPS-pontatlanság kezelése: Gyenge GPS-jel esetén az alkalmazás becsült pontossági kört jelenít meg a térképen, figyelmezteti a felhasználót, és lehetővé teszi a gomba feltalálási helyének kézi korrekcióját vagy felülbírálatát.</li>
-        <li>Adatvédelem és GDPR-megfelelés biztosítása: Minimális adatgyűjtést alkalmazunk: a fotók EXIF helyadatait csak hozzájárulással dolgozzuk fel, és biztosítjuk a helyi adatok törlésének lehetőségét.</li>
-        <li>Külső könyvtárak stabilitása: A függőségek rögzítésével (dependency locking), rendszeres frissítésekkel és absztrakciós rétegekkel előzzük meg a működési zavarokat.</li>
-        <li>Felhasználói edukáció, felelősségvállalás és jogi nyilatkozatok: A téves azonosításból eredő kockázatok csökkentésére az alkalmazás indításakor és minden találati képernyőn kötelezően megjelenő, jól látható biztonsági figyelmeztetést helyezünk el. Emellett beépített edukációs modullal hívjuk fel a figyelmet a gombaszakértői vizsgálat elengedhetetlen szerepére.</li>
-        <li>Jogi szabályozás és felelősségbiztosítás: Új felelősségi törvények hatálybalépése esetén az alkalmazásban szigorúbb, kötelezően elfogadandó jogi nyilatkozatokat kell elhelyezni, valamint a felületen még hangsúlyosabban ki kell emelni, hogy a határozás kizárólag tájékoztató jellegű, és nem helyettesíti a hivatalos gombavizsgáló szakértőt.</li>
-    </ul>
-
-    <h2 id="4.4">4.4. Költségbecslés</h2>
-    <p>A GombApp költségvetése két fő részből tevődik össze: a fejlesztési fázis (egyszeri munkaórák és infrastrukturális kiadások), valamint az üzembe állítási és üzemeltetési fázis (éves/havi fenntartási költségek). A projekt egyetemi környezetben, belső fejlesztésként valósul meg az öttagú fejlesztőcsapatunk részvételével, így a fejlesztési munka közvetlen bérköltséggel nem jár. A fejlesztés és az üzembe állítás költségeit ennek megfelelően a tényleges pénzügyi kiadásokra (hardver, szoftverlicencek, tárhely és terjesztés) fókuszálva becsüljük meg.</p>
-    <p>I. Fejlesztési fázis költségei (Egyszeri költségek)</p>
-    <ul>
-        <li>Munkaerő-költség: 0 Ft - A fejlesztési feladatokat a csapat tagjai saját projektmunka keretében, belső ráfordításként végzik.</li>
-        <li>Eszköz- és infrastruktúraköltség: 0 Ft - A fejlesztés és a tesztelés a csapattagok saját eszközein (személyi számítógépek, tesztelésre használt Android okostelefonok) történik.</li>
-        <li>Fejlesztői környezetek és szoftverek: 0 Ft - Kizárólag nyílt forráskódú és ingyenes eszközöket használunk (Android Studio, PyCharm Community / VS Code, XAMPP, MySQL, Figma, Miro, Trello ingyenes változatai).</li>
-        <li>Alkalmazás-áruházi publikáció (Google Play Developer fiók): ~9 500 Ft (egyszeri 25 USD) - abban az esetben szükséges, ha az alkalmazást hivatalosan közzétesszük a Google Play Áruházban. (Közvetlen .apk terjesztés és belső demonstráció esetén ez a költség is 0 Ft).</li>
-    </ul>
-    <p>II. Üzembe állítás és üzemeltetés költségei (Éves szinten)</p>
-    <ul>
-        <li>iNatural API: 0 Ft - Kutatási és biodiverzitási célú, nyilvánosan és ingyenesen elérhető szolgáltatás.</li>
-        <li>Wikipedia REST API v1: 0 Ft - Korlátozások nélkül, ingyenesen igénybe vehető tudásbázis.</li>
-        <li>Backend és Adatbázis szerver:
-            <ul>
-                <li>Teszt / Demó fázis: 0 Ft (helyi gépen XAMPP környezetben és lokális backenddel futtatva).</li>
-                <li>Éles online publikáció esetén: kb. 2 000  4000 Ft/hó (~24 000-48 000 Ft/év) egy belépő szintű virtuális felhőszerverért (VPS).</li>
-            </ul>
-        </li>
-    </ul>
-    <p>Összesített költségterv:</p>
-    <table border="1" cellpadding="4" cellspacing="3" width="90%">
-        <thead style="background-color: #c9daf8;">
-            <tr>
-                <th>Tétel</th>
-                <th>Típus</th>
-                <th>Költség</th>
-                <th>Megjegyzés</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Személyi jellegű</td><td>Fejlesztés</td><td>0 Ft</td><td>Hallgatói / belső fejlesztési költség projektmunka</td></tr>
-            <tr><td>Eszközök és fejlesztői szoftverek</td><td>Fejlesztés</td><td>0 Ft</td><td>Saját hardverek, nyílt forráskódú szoftverek</td></tr>
-            <tr><td>Google Play fejlesztői fiók</td><td>Fejlesztés</td><td>0-9 500 Ft</td><td>Csak hivatalos Play Store közzététel esetén szükséges.</td></tr>
-            <tr><td>Külső API-k (iNatural, Wikipedia)</td><td>Üzemeltetés</td><td>0 Ft</td><td>Ingyenes szolgáltatások.</td></tr>
-            <tr><td>Tárhely és szerverkapacitás</td><td>Üzemeltetés</td><td>0-30 000 Ft/év</td><td>Demó fázisban ingyenes (lokális hosztolás)</td></tr>
-        </tbody>
-    </table>
-    <p>Összesen: 0-39 500 Ft<br>
-    Minimális/nulla költségvetésű projektmegvalósítás.</p>
-
-    <h2 id="4.5">4.5. Installáció</h2>
-    <p>A GombApp rendszer úgy került megtervezésre, hogy a végfelhasználói telepítés és az üzembe helyezés a lehető legegyszerűbb, automatizált folyamat legyen. Ennek köszönhetően a rendszer használatba vétele semmilyen speciális informatikai előképzettséget, külön telepítővarázslót vagy a személyzet előzetes technikai betanítását nem igényli.</p>
-    <h3>I. Mobilalkalmazás beszerzése és telepítése</h3>
-    <ul>
-        <li>Terjesztési csatorna: Az alkalmazás elsődlegesen a projekt hivatalos GitHub repozitóriumából tölthető le közvetlenül telepíthető Android csomagként (.apk formátumban). (A Google Play Áruházban történő megjelenés a projekt későbbi, opcionális terjesztési fázisát képezi.)</li>
-        <li>Telepítési folyamat:
-            <ul>
-                <li>A felhasználó vagy tesztelő letölti a legfrissebb apk fájlt a GitHubról közvetlenül az Android készülékre.</li>
-                <li>A letöltött fájl megnyitásával az Android beépített csomagtelepítője elindítja a folyamatot.</li>
-                <li>Amennyiben a készülék kéri, a felhasználónak engedélyeznie kell az ismeretlen/külső forrásból származó alkalmazások telepítését az adott böngésző vagy fájlkezelő számára.</li>
-            </ul>
-        </li>
-        <li>Készülékkövetelmények:
-            <ul>
-                <li>Android operációs rendszer (ajánlott: Android 8.0 vagy újabb verzió).</li>
-                <li>Működő hátlapi kamera a gombák helyszíní fotózásához.</li>
-                <li>Beépített GPS-vevő engedélyezett helymeghatározási jogosultsággal a találatok koordinátáinak rögzítéséhez.</li>
-                <li>Aktív mobilinternet-kapcsolat a képfelismerő és a Wikipédia API eléréséhez.</li>
-            </ul>
-        </li>
-    </ul>
-    <p>Adatcsomag: A működéshez szükséges összes alapvető felületi elem, ikon és keretrendszeri adat magában a letöltött .apk csomagban helyet kap, így az első indításkor nincs szükség további nagy méretű adatfájlok utólagos letöltésére.</p>
-    <h3>II. Kiszolgáló oldali üzembe állítás</h3>
-    <ul>
-        <li>Kiszolgáló telepítése: A Python nyelven futó backend és a MySQL adatbázis forráskódja, valamint az adatbázis-séma szintén a GitHub repozitóriumból érhető el. Demó és fejlesztői fázisban a kiszolgáló lokálisan, standard XAMPP és Python futtatókörnyezetben indítható el minimális konfigurációval.</li>
-        <li>Üzemeltetői feladatok: A rendszer felépítése nem igényel külön technikai személyzetet; az indítási és konfigurációs lépéseket a fejlesztői és üzemeltetői leírás (README és kapcsolódó dokumentumok) részletezi.</li>
-    </ul>
-
-    <h1 id="5">5. A végtermék jellemzői, biztosított szolgáltatások min 2 o.</h1>
-    <p>Ez a fejezet a GombApp mobilalkalmazás legfontosabb, felhasználók szemszögéből meghatározott szolgáltatásait és funkcióit foglalja össze prioritási sorrendben. Az alkalmazás célja, hogy a modern mesterséges intelligencián alapuló képfelismerést, a digitális lexikont és a biztonsági modulokat ötvözve segítse a túrázókat a gombák biztonságos és tudatos gyűjtésében. A részletezett funkciók - a kamerás azonosítástól a saját gyűjteményekig - növelik a túrázók biztonságát, miközben tehermentesítik a gombaszakértőket.</p>
-
-    <h2 id="5.1">5.1. Fő funkciók és szolgáltatások</h2>
-    <ol>
-        <li><h3 style="margin-left: 10px;">Kép alapú gombafelismerés (Magas prioritás)</h3>
-            <ul>
-                <li>A szolgáltatás leírása: Az alkalmazás központi funkciója, amely lehetővé teszi a felhasználók számára, hogy a mobiltelefonjuk kamerájával a helyszínen készített fénykép alapján tájékozódjanak a talált gombáról.</li>
-                <li>Működése: A rendszer a beérkező fotót a háttérben elérhető növény- és gombafelismerő API (például a iNatural vagy a Kindwise Mushroom.id) segítségével elemzi. Az elemzést követően listát ad a legvalószínűbb találatokról a hozzájuk tartozó valószínűségi értékekkel együtt.</li>
-                <li>Kiemelt biztonsági elvárás: A felismerés eredménye felett minden esetben egyértelmű figyelmeztetés jelenik meg, amely rögzíti, hogy a képalapú azonosítás csak tájékoztató jellegű, és nem helyettesíti a hivatalos gombavizsgáló szakértő ellenőrzését.</li>
-            </ul>
-        </li>
-        <li><h3 style="margin-left: 10px;">Gombahatározó lexikon és adatbázis (Magas prioritás)</h3>
-            <ul>
-                <li>A szolgáltatás leírása: A nyomtatott gombakönyveket felváltó, digitális tudásbázis, amely a Magyarországon leggyakrabban előforduló ehető, nem ehető és mérgező gombafajokat mutatja be.</li>
-                <li>Adatlapok tartalma: A gombák magyar és latin neve, ehetőségi besorolása, morfológiai bélyegei (kalap, tönk, lemezek), termőideje és élőhelye.</li>
-                <li>Hasonmások kiemelése: Különös figyelmet fordít a könnyen összetéveszthető fajokra, bemutatva az ehető gombák és mérgező hasonmásaik közötti apró megkülönböztető jegyeket (például a mezei csiperke és a gyilkos galóca esetében). A részletes leírások kiegészítéséhez az alkalmazás a Wikipedia REST API-t használja.</li>
-            </ul>
-        </li>
-        <li><h3 style="margin-left: 10px;">Edukációs és biztonsági modul (Közepes prioritás)</h3>
-            <ul>
-                <li>A szolgáltatás leírása: A kezdő gombászok és túrázók tájékoztatását szolgáló modul, amely segít eloszlatni a gombákkal kapcsolatos leggyakoribb tévhiteket (például a megérintés kockázataival vagy a rágott gombákkal kapcsolatban).</li>
-                <li>Tudatos gyűjtés támogatása: Útmutatást ad a gombák kíméletes leszedéséhez, felhívja a figyelmet a védett fajok óvására, valamint tájékoztatást nyújt a legközelebbi lakossági gombavizsgáló helyekről.</li>
-            </ul>
-        </li>
-        <li><h3 style="margin-left: 10px;">Kedvencek és saját gyűjtemény (Alacsony prioritás)</h3>
-            <ul>
-                <li>A szolgáltatás leírása: Lehetővé teszi a felhasználók számára a gyakran keresett fajok elmentését a gyorsabb elérés érdekében, valamint saját fotók és megjegyzések hozzáadását a megtalált példányokhoz.</li>
-            </ul>
-        </li>
-    </ol>
-
-    <h2 id="5.2">5.2. Szolgáltatások összefoglaló táblázata</h2>
-    <table border="1" cellpadding="4" cellspacing="3" width="90%">
-        <thead style="background-color: #c9daf8;">
-            <tr>
-                <th>Szolgáltatás / Funkció</th>
-                <th>Prioritás</th>
-                <th>Célcsoport</th>
-                <th>Elsődleges haszon</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Kamerás gombafelismerés</td><td>Magas (P1)</td><td>Kezdő gombászok, túrázók</td><td>Gyors előzetes tájékozódás a helyszínen</td></tr>
-            <tr><td>Gombahatározó lexikon</td><td>Magas (P1)</td><td>Minden felhasználó</td><td>Részletes morfológiai leírások és hasonmások</td></tr>
-            <tr><td>Edukációs és biztonsági modul</td><td>Közepes (P2)</td><td>Kezdő gombászok, családok</td><td>Téves azonosítások és mérgezések megelőzése</td></tr>
-            <tr><td>Kedvencek és gyűjtemény</td><td>Alacsony (P3)</td><td>Rendszeres túrázók</td><td>Saját megfigyelések rögzítése és tanulás</td></tr>
-        </tbody>
-    </table>
-
-    <h2 id="5.3">5.3. A szolgáltatások használatának főbb előnyei</h2>
-    <ol>
-        <li>A biztonság növelése: A helyszínen elérhető információk és a veszélyes hasonmások kiemelése csökkentik a téves felismerésből eredő gombamérgezések kockázatát.</li>
-        <li>Kényelmes használat: A nehéz gombahatározó könyvek cipelése helyett a legfontosabb adatok közvetlenül a felhasználók okostelefonján érhetők el.</li>
-        <li>A szakértők támogatása: A felkészültebb gyűjtők kevesebb feleslegesen leszedett gombát viszenek be a vizsgálókra, így csökken a gombaszakértők leterheltsége.</li>
-        <li>Természetvédelem: A védett fajok ismerete és a tudatosabb gyűjtési szokások hozzájárulnak az erdei élővilág megóvásához.</li>
-    </ol>
-
-    <h1 id="6">6. Korlátozások</h1>
-    <p>Ebben a fejezetben azokat a technikai, hardveres, környezeti, jogi és gazdálkodási korlátokat rögzítjük, amelyek keretek közé szorítják a GombApp fejlesztését, valamint meghatározzák annak mindennapi működését és használatát.</p>
-    <h3>I. Jogi és szabályozási korlátozások</h3>
-    <ul>
-        <li>Felelősségkizárás a gombaazonosításban: A hatályos jogszabályok és a lakossági gombavizsgálat rendjéről szóló előírások értelmében az alkalmazás által nyújtott képalapú fajmeghatározás kizárólag tájékoztató jellegű lehet. A szoftver egyetlen gombát sem nyilváníthat hivatalosan emberi fogyasztásra alkalmasnak. A rendszer minden azonosítási felületen kötelezően megjeleníti a jogi felelősségkizárást és a gombaszakértői vizsgálat szükségességét.</li>
-        <li>Természetvédelmi előírások (Védett gombafajok): A védett és fokozottan védett növény- és állatfajokról, valamint a védett gombákról szóló jogszabályoknak megfelelően az alkalmazás köteles egyértelműen jelölni a védett fajokat, felhívva a felhasználók figyelmét arra, hogy azok gyűjtése, elpusztítása vagy termőhelyük károsítása törvénybe ütközik.</li>
-        <li>Adatvédelem (GDPR): A felhasználók által mentett helyadatok (GPS-koordináták) és személyes fotók kezelése során teljes mértékben meg kell felelni az Európai Unió általános adatvédelmi rendeletének (GDPR). A képek EXIF helyadatai kizárólag a felhasználó kifejezett hozzájárulásával tárolhatók a lokális adatbázisban, és biztosítani kell az adatok törlésének lehetőségét.</li>
-    </ul>
-    <h3 id="6.2">II. Technológiai és platform korlátozások</h3>
-    <ul>
-        <li>Mobil operációs rendszer: Az alkalmazás kizárólag Android operációs rendszerre készül, így iOS vagy egyéb mobil platformokon nem futtatható. A megcélzott minimális verzió az Android 8.0 (API Level 26), amely biztosítja a megfelelő piaci lefedettséget, miközben támogatja a modern kamerakezelést és hálózati funkciókat.</li>
-        <li>Hardveres követelmények: A rendszer megfelelő működéséhez a célkészüléknek rendelkeznie kell működőképes, autófókusszal ellátott hátlapi kamerával (a gombák makró/közeli fotózásához), valamint integrált GPS-vevővel a találati koordináták rögzítéséhez.</li>
-        <li>Tárhely- és memóriakorlát: Mivel az alkalmazás régebbi vagy belépő kategóriás okostelefonokon is futhat, a helyi gyorsítótár (cache) és a mentett képek mérete szigorúan korlátozott (legfeljebb 100 MB), megelőzve az eszköz tárhelyének túlzott igénybevételét és az alkalmazás lassulását.</li>
-    </ul>
-    <h3>III. Hálózati és külső szolgáltatási korlátok</h3>
-    <ul>
-        <li>Mobilinternet függőség: A gépi tanuláson alapuló képfelismerés (iNatural API) és a részletes leírások lekérése (Wikipedia REST API) felhőalapú szolgáltatásokon keresztül zajlik, így a fajazonosítás elvégzéséhez elengedhetetlen az aktív internetkapcsolat.</li>
-        <li>Külső API korlátozások és kvóták: A iNatural és a Wikipédia nyilvános, ingyenesen elérhető szolgáltatásaiként rate-limit (lekérdezésszám-korlát) alá eshetnek. A backendnek úgy kell felépülnie, hogy kezelni tudja az esetleges időszakos hálózati kieséseket és a várakozási időket.</li>
-    </ul>
-    <h3>IV. Erőforrás és projektkorlátok</h3>
-    <ul>
-        <li>Költségvetési korlát: A projekt nulla pénzügyi büdzsével, kizárólag ingyenes, nyílt forráskódú és közösségi technológiákra épül.</li>
-        <li>Idő- és határidőkeret: A fejlesztést egy 12 hetes egyetemi ciklusban, vízesés modellben kell megvalósítani az ötfős hallgatói csapatnak, a 12. heti végső határidőre és bemutatóra szállítva a működő rendszert.</li>
-    </ul>
-
-    <h1 id="7">7. Minőségi elvárások</h1>
-    <p>A minőségi elvárások (nem-funkcionális követelmények) határozzák meg, hogy a GombApp milyen működési tulajdonságok, teljesítményszintek és minőségi paraméterek mellett kell, hogy ellássa a feladatait.</p>
-    <h3>I.Teljesítmény és válaszidők</h3>
-    <ul>
-        <li>Képalapú felismerés válaszideje: Normál térerő és hálózati kapcsolat mellett a kép rögzítését és elküldésétől a iNaturalAPI által adott találati lista megjelenítéséig eltelt idő nem haladhatja meg a 3-5 másodpercet</li>
-        <li>Helyi felületi reakcióidő: Az alkalmazás képernyői közötti navigáció, menüváltás és a helyileg tárolt adatok (például a Logbook vagy a receptek listája) betöltése 1 másodpercen belül meg kell, hogy történjen.</li>
-        <li>Képoptimalizálás: A beküldött fotók automatikus tömörítésen és átméretezésen esnek át a feltöltés előtt, így a hálózati adatforgalom minimális marad, csökkentve a felhőbe küldött adatmennyiséget és a lekérdezési időt.</li>
-        <li>Alkalmazás mérete és memóriaigénye: A telepített alkalmazás mérete optimalizált, memóriahasználata pedig futás közben folyamatosan 150-200 MB alatt marad, biztosítva az akadozásmentes működést átlagos hardverű telefonokon is.</li>
-    </ul>
-    <h3>II.Felismerési pontosság és megbízhatóság</h3>
-    <ul>
-        <li>Felismerési pontosság: A iNatural növény- és gombarendszertani adatbázisára és algoritmusára támaszkodva a rendszer célja, hogy megfelelő minőségű fotók esetén elérje a 91%-os megbízhatóságot az elsődleges találatok pontosságában.</li>
-        <li>Hibakezelés és hálózati stabilitás: Internetkapcsolat megszakadása vagy gyenge térerő esetén az alkalmazás nem omolhat össze, hanem egyértelmű hibaüzenettel tájékoztatja a felhasználót, és felajánlja a fotó helyi mentését a későbbi azonosításhoz.</li>
-        <li>Kódminőség és tesztlefedettség: A megbízható működés garantálása érdekében a backend modulokra és az integrációs rétegre vonatkozóan a minimális elvárás a legalább 80%-os tesztkód-lefedettség (unit és integrációs tesztekkel alátámasztva).</li>
-    </ul>
-    <h3>III. Felhasználóbarátság és használhatóság</h3>
-    <ul>
-        <li>Intuitív kezelőfelület (UI/UX): A felület letisztult, egyértelmű ikonokkal és magyar nyelvű feliratokkal rendelkezik, hogy digitális tapasztalattal kevésbé rendelkező kezdő gombászok vagy idősebb túrázók is betanítás nélkül használni tudják.</li>
-        <li>Terepi olvashatóság: A dizájn kialakításánál fontos szempont az erős kontrasztarány, hogy a képernyő tartalma közvetlen napfényben, erdei környezetben is jól olvasható maradjon.</li>
-    </ul>
-    <h3>IV.Biztonság és adatvédelem</h3>
-    <ul>
-        <li>Adatbiztonság: A mobil kliens és a Python backend, valamint a backend és a külső API-k közötti kommunikáció titkosított HTTPS protokollon keresztül zajlik.</li>
-        <li>Jogi és életvédelmi biztonság: A téves fajazonosításból fakadó mérgezések elkerülése érdekében az alkalmazás szigorú biztonsági irányelveket követ: a veszélyes hasonmások kiemelése és a kötelező jogi felelősségkizáró nyilatkozat minden egyes találati lapon hangsúlyosan, félreérthetetlenül jelenik meg.</li>
-    </ul>
-
-    <h1 id="8">8. Dokumentációkkal kapcsolatos követelmények</h1>
-
-    <p>A GombApp fejlesztése során többféle dokumentációra lesz szükség, hiszen a felhasználóknak, a fejlesztőknek és az alkalmazás üzemeltetőinek más-más információkra van szükségük. Fontos, hogy mindenki könnyen megtalálja a számára szükséges leírásokat, és azok érthetőek, naprakészek legyenek.</p>
-
-    <h2 id="8.1">8.1. A dokumentációk típusai</h2>
-    <ul>
-        <li>Felhasználói dokumentáció (bevezető és súgó): Mivel a GombApp elsősorban kezdő és hobbi gombászoknak készül, fontos, hogy már az első használat során könnyen megérthető legyen a működése. Ehhez egy rövid, alkalmazáson belüli útmutató nyújt segítséget, amely lépésről lépésre bemutatja a legfontosabb funkciókat. Külön figyelmet kap a gombák helyes lefotózása, amelyhez képes útmutató is készül. Emellett egy gyakori kérdéseket összegyűjtő súgó is elérhető lesz, ahol a felhasználók gyorsan választ találhatnak a felmerülő problémákra.</li>
-        <li>Fejlesztői dokumentáció: Ez a dokumentáció a program működését és felépítését mutatja be a fejlesztők számára. Tartalmazza az alkalmazás felépítését, az adatbázis működését, valamint a külső adatforrásokkal, például a iNatural-val és a Wikipédiával való kapcsolat leírását. A forráskódot is megfelelő megjegyzésekkel látjuk el, hogy más fejlesztők számára is könnyen követhető és később is egyszerűen módosítható legyen.</li>
-        <li>Üzemeltetői dokumentáció: Ez a leírás az alkalmazás működtetéséhez szükséges tudnivalókat tartalmazza. Bemutatja többek között a háttérrendszer kezelését, a külső szolgáltatások kapcsolatainak ellenőrzését, az új verziók telepítését és az adatok biztonsági mentését. Célja, hogy az alkalmazás későbbi üzemeltetése és karbantartása is gördülékenyen történjen.</li>
-    </ul>
-
-    <h2 id="8.2">8.2. A dokumentációk formátuma és elérhetősége</h2>
-    <ul>
-        <li>A felhasználók számára: A dokumentáció kizárólag digitális formában lesz elérhető. A legfontosabb útmutatók közvetlenül az alkalmazásba épülnek be, így a felhasználóknak nem kell külön dokumentumokat keresniük. Emellett a GombApp weboldalán is elérhetők lesznek a szükséges információk, például a használati útmutatók és a gyakori kérdések.</li>
-        <li>A fejlesztők és az üzemeltetők számára: A technikai dokumentációkat online, közösen használható felületen, például Notionben vagy Confluence-ben tároljuk. A fontosabb leírások a projekt forráskódja mellett is elérhetők lesznek Markdown-formátumú fájlokként, például a GitHubon vagy a GitLabon. Így a csapattagok könnyen hozzáférhetnek az információkhoz, és szükség esetén egyszerűen frissíthetik azokat. Nyomtatott dokumentáció készítésére nem lesz szükség.</li>
-    </ul>
-
-    <h2 id="8.3">8.3. Nyelvezet és a dokumentációk karbantartása</h2>
-    <ul>
-        <li>Nyelvezet: A felhasználóknak szánt alkalmazás és a hozzá tartozó súgó magyar nyelvű, egyszerűen érthető megfogalmazást használ. Kerüljük a bonyolult informatikai kifejezéseket és a nehezen értelmezhető gombászati szakkifejezéseket, hogy a kezdők is könnyen eligazodjanak. A fejlesztői és üzemeltetői dokumentáció magyarul vagy angolul is készülhet, a csapat igényei szerint.</li>
-        <li>Karbantartás és verziókövetés: Fontos, hogy a dokumentáció mindig megfeleljen az alkalmazás aktuális állapotának. Ha új funkciók jelennek meg, vagy jelentősebb változtatások történnek, a kapcsolódó leírásokat is frissíteni kell. Az új verziók megjelenésekor a felhasználók egy rövid összefoglalót is kapnak a változásokról, például egy „Mi az újdonság? című részben. Ez segít abban, hogy könnyen megismerjék az új funkciókat, és mindig naprakész információk alapján használhassák a GombAppot.</li>
-    </ul>
-
-    <h1 id="9">9. Kockázat lista</h1>
-    <ol>
-        <li><h3 style="margin-left: 10px;">A projekt túlnövekedése (Magas prioritás)</h3>
-            <ul>
-                <li>Leírás: A fejlesztés során könnyen felmerülhetnek új ötletek, például közösségi funkciók, offline térképek vagy egy olyan felület, ahol a gombászok megoszthatják egymással a tapasztalataikat. Ezek önmagukban hasznos fejlesztések lehetnek, de ha folyamatosan új funkciókkal bővül a projekt, az könnyen elhúzhatja a fejlesztést. Így fennáll a veszélye annak, hogy az alkalmazás alapvető funkciói sem készülnek el időben.</li>
-                <li>Kockázatcsökkentés: Már a fejlesztés elején meg kell határozni, hogy mi kerüljön bele az alkalmazás első verziójába. Kezdetben csak a legfontosabb funkciókra koncentrálunk: a kamera használatára, a gombák képfelismerésére és az eredmények megjelenítésére. A további ötleteket egy későbbi fejlesztési listára gyűjtjük össze, és csak akkor foglalkozunk velük, ha az alapvető funkciók már megfelelően működnek.</li>
-            </ul>
-        </li>
-        <li><h3 style="margin-left: 10px;">Problémák a külső szolgáltatások összekapcsolásánál (Magas prioritás)</h3>
-            <ul>
-                <li>Leírás: A GombApp működéséhez szükség lehet külső adatforrásokra, például a iNatural-ra vagy a Wikipédiára, amelyekből a gombafajokról szerezhetünk információkat. Előfordulhat azonban, hogy ezek a szolgáltatások nem úgy működnek, ahogyan azt a fejlesztés során várjuk, megváltozik az adatok formátuma, vagy túl sok lekérdezés miatt ideiglenesen korlátozzák a hozzáférést. Ezek a problémák megnehezíthetik a fejlesztést, és késleltethetik az alkalmazás elkészültét.</li>
-                <li>Kockázatcsökkentés: A fejlesztés elején létrehozunk egy saját, tesztelésre alkalmas adathalmazt, amellyel a funkciók akkor is kipróbálhatók, ha a külső szolgáltatások éppen nem érhetők el. A külső adatforrások összekapcsolását külön kezeljük a program többi részétől, így ha valamelyik szolgáltatással probléma adódik, könnyebb lesz javítani vagy másikra cserélni. A valódi szolgáltatásokat csak a szükséges tesztek során használjuk, így a túl sok lekérdezésből adódó problémák is elkerülhetők.</li>
-            </ul>
-        </li>
-        <li><h3 style="margin-left: 10px;">A tesztelés nehézségei a gombák szezonális megjelenése miatt (Közepes prioritás)</h3>
-            <ul>
-                <li>Leírás: A GombAppot a természetben is ki kell próbálni, hiszen fontos, hogy a kamera különböző fényviszonyok mellett is használható legyen, és az alkalmazás a valós körülmények között is megfelelően működjön. Ez azonban nehézséget jelenthet, ha a fejlesztés olyan időszakra esik, amikor kevés gomba található az erdőben. Ilyenkor a terepi tesztelés korlátozottabb, és nehezebb ellenőrizni, hogyan teljesít az alkalmazás a gyakorlatban.</li>
-                <li>Kockázatcsökkentés: A fejlesztés során különböző minőségű gombafotókat használunk a teszteléshez, például homályos, rossz fényviszonyok között készült vagy esőben lefotózott képeket. Így az alkalmazás akkor is kipróbálható, amikor éppen nincs lehetőség erdei tesztelésre. A helymeghatározás működését szimulált GPS-adatokkal ellenőrizzük, a valódi környezetben történő tesztelést pedig a megfelelő időszakra tervezzük.</li>
-            </ul>
-        </li>
-        <li><h3 style="margin-left: 10px;">Késések a felhasználói felület és a telefon funkcióinak összekapcsolásakor (Közepes prioritás)</h3>
-            <ul>
-                <li>Leírás: Az alkalmazásnak megfelelően kell együttműködnie a telefon kamerájával és helymeghatározó rendszerével. Ez nem minden készüléken működik feltétlenül ugyanúgy, hiszen az egyes gyártók, például a Samsung vagy a Xiaomi telefonjai között is lehetnek különbségek. Emiatt előfordulhat, hogy bizonyos készülékeken hibák jelentkeznek, vagy a kamera és a GPS megfelelő működésének kialakítása több időt vesz igénybe a tervezettnél.</li>
-                <li>Kockázatcsökkentés: A fejlesztés során már bevált megoldásokat és könyvtárakat használunk, például az Android CameraX rendszerét, ahelyett, hogy minden funkciót teljesen saját magunk fejlesztenénk le. Emellett a projekt ütemtervében külön időtartalékot hagyunk a különböző telefonokon történő tesztelésre és az esetleges hibák javítására. Így kisebb az esélye annak, hogy egy váratlan technikai probléma jelentősen késleltesse a projektet.</li>
-            </ul>
-        </li>
-        <li><h3 style="margin-left: 10px;">Lassulás és tárhelyproblémák az adatok mentésekor (Alacsony prioritás)</h3>
-            <ul>
-                <li>Leírás: Ha az alkalmazásban lehetőség lesz korábban felismert gombák, képek vagy találatok mentésére, idővel jelentős mennyiségű adat gyűlhet össze a telefonon. Ez növelheti az alkalmazás tárhelyigényét, és nagyobb adatmennyiség esetén akár a működését is lelassíthatja. A probléma főként akkor jelentkezhet, ha a felhasználók hosszabb időn keresztül használják az alkalmazást, és sok képet mentenek el.</li>
-                <li>Kockázatcsökkentés: A képeket úgy tároljuk, hogy azok a lehető legkevesebb helyet foglalják el, miközben a felismeréshez szükséges részletek megmaradnak. Emellett korlátozzuk az alkalmazás által használt gyorsítótár méretét, például legfeljebb 100 MB-ra, és gondoskodunk arról, hogy a régebbi, már nem szükséges ideiglenes adatok automatikusan törlődjenek. Ezzel csökkenthető a tárhely túlzott használata, és hosszabb távon is biztosítható az alkalmazás megfelelő működése.</li>
-            </ul>
-        </li>
-    </ol>
-
-    <h1 id="10">10. Szótár</h1>
-    <p>Ez a fejezet adja meg az alapját annak a fogalomtárnak, amely egységesíti a dokumentációban és a fejlesztés során használt kifejezéseket. A könnyebb áttekinthetőség érdekében a fogalmakat két külön kategóriába rendeztük: gombászati és természettudományi, valamint informatikai és szoftverfejlesztési kifejezésekre.</p>
-
-    <h3>Gombászati és természettudományi fogalmak</h3>
-    <table border="1" cellpadding="4" cellspacing="3" width="90%">
-        <thead>
-            <tr>
-                <th>Kifejezés</th>
-                <th>Meghatározás</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Gombavizsgáló szakértő</td><td>Hatósági bizonyítvánnyal rendelkező szakember, aki a lakosság vagy a piacok számára hivatalosan bevizsgálja a leszedett gombákat, és hitelesen megállapítja azok fogyaszthatóságát.</td></tr>
-            <tr><td>Hasonmás faj</td><td>Olyan gombafaj, amely külső megjelenésében, méretében vagy színében megtévesztésig hasonlít egy másik fajra. Kiemelt veszélyt jelent, ha egy ehető fajnak mérgező hasonmása létezik (például mezei csiperke és a halálosan mérgező gyilkos galóca).</td></tr>
-            <tr><td>Morfológiai bélyegek</td><td>A gombatest külső alakbeli és szerkezeti sajátosságai, amelyek alapján az azonosítás történik (kalap formája, színe, felülete; lemezek/csövek illeszkedése; tönk alakja, gallér és bocskor megléte vagy hiánya)</td></tr>
-            <tr><td>Micélium (Gombafonal-hálózat)</td><td>A gomba föld alatti, vékony fonalakból álló vegetatív része. A helyes gombagyűjtési technika célja a micélium épségének megóvása a jövőbeli termőtest-képződés érdekében.</td></tr>
-            <tr><td>Termőtest</td><td>A gomba felszínen megjelenő, spóraképző része, amelyet a köznyelvben gombaként ismerünk és gyűjtünk.</td></tr>
-            <tr><td>Védett gombafaj</td><td>Jogszabály által védettnek vagy fokozottan védettnek nyilvánított gombafaj, amelynek gyűjtése, károsítása vagy elpusztítása törvényileg tilos, és természetvédelmi bírságot von maga után.</td></tr>
-            <tr><td>Toxikológia (Gombatoxikológia)</td><td>A gombamérgek emberi szervezetre gyakorolt hatásaival, a mérgezések tüneteivel és orvosi kezelésével foglalkozó szakterület.</td></tr>
-        </tbody>
-    </table>
-
-    <h3>Informatikai és szoftverfejlesztési fogalmak</h3>
-    <table border="1" cellpadding="4" cellspacing="3" width="90%">
-        <thead>
-            <tr>
-                <th>Kifejezés</th>
-                <th>Meghatározás</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Kódlefedettség (Code Coverage)</td><td>Szoftvertesztelési mutatószám, amely megadja, hogy az automatizált tesztek a forráskód hány százalékát ellenőrzik futás közben.</td></tr>
-            <tr><td>API (Application Programming Interface)</td><td>Alkalmazásprogramozási felület; olyan előre meghatározott szabályrendszer és interfész, amely lehetővé teszi két különböző szoftverkomponens közötti automatikus kommunikációt és adatcserét.</td></tr>
-            <tr><td>APK (Android Package Kit)</td><td>Az Android operációs rendszer telepítőfájl-formátuma, amely tartalmazza az alkalmazás futtatásához szükséges lefordított kódot és erőforrásokat.</td></tr>
-            <tr><td>Backend</td><td>A rendszer kiszolgáló oldali része (Python alapon), amely a háttérben futva felelős az üzleti logikáért, az adatbázis-kezelésért és a külső lekérdezések koordinálásáért.</td></tr>
-            <tr><td>Frontend</td><td>A szoftver közvetlenül látható és interaktív felhasználói felülete, amellyel a mobiltelefon tulajdonosa kapcsolatba lép.</td></tr>
-            <tr><td>DBMS (Database Management System)</td><td>Adatbázis-kezelő rendszer; olyan szoftverréteg (a projektben a MySQL), amely strukturáltan tárolja, lekérdezi és karbantartja a felhasználói és rendszeradatokat.</td></tr>
-            <tr><td>iNaturalist</td><td>Nemzetközi, nyílt hozzáférésű biodiverzitási adatbázis és infrastruktúra; a projekt ennek képalapú fajfelismerő API-ját használja a gombák beazonosítására.</td></tr>
-            <tr><td>GDPR (General Data Protection Regulation)</td><td>Az Európai Unió általános adatvédelmi rendelete, amely kötelező előírásokat tartalmaz a személyes adatok (pl. GPS-koordináták, fényképek) biztonságos és átlátható kezelésére.</td></tr>
-            <tr><td>Képfelismerő / Gépi látás modell</td><td>Olyan mesterséges intelligencia alapú algoritmus, amely a kép vizuális sajátosságait (mintázatok, formák, színek) elemezve valószínűségi találatokat ad a fotón látható alanyra.</td></tr>
-            <tr><td>MVP (Minimum Viable Product)</td><td>A termék legkisebb működőképes változata, amely a leglényegesebb alapfunkciókat biztosítja a teszteléshez és az alapkoncepció igazolásához.</td></tr>
-            <tr><td>REST API (Representational State Transfer)</td><td>Webszolgáltatások építésére szolgáló architektúra, amely szabványos HTTP-kéréseken (GET, POST) keresztül, leggyakrabban JSON formátumban cserél adatot a kliens és a szerver között.</td></tr>
-            <tr><td>Vízesés modell </td><td>Klasszikus, lépcsőzetes szoftverfejlesztési megközelítés, amelyben az egyes szakaszok (tervezés, fejlesztés, tesztelés, átadás) szigorú sorrendben követik egymást.</td></tr>
-        </tbody>
-    </table>
-
-  </body>
+<nav aria-label="Tartalomjegyzék"><ul>
+<li><a href="#1">1. Bevezetés</a><ul>
+<li><a href="#1.1">1.1 A termék célja és célközönsége</a></li>
+<li><a href="#1.2">1.2 Biztonság és ismeretterjesztés</a></li></ul>
+</li>
+<li><a href="#2">2. Az alkalmazás helye</a><ul>
+<li><a href="#2.1">2.1 Üzleti lehetőségek</a><ul>
+<li><a href="#2.1.1">2.1.1 Piaci igények és célcsoportok</a></li>
+<li><a href="#2.1.2">2.1.2 Hozzáférési és biztonsági alapelvek</a></li></ul>
+</li>
+<li><a href="#2.2">2.2 A probléma megfogalmazása</a><ul>
+<li><a href="#2.2.1">2.2.1 A probléma lényege</a></li>
+<li><a href="#2.2.2">2.2.2 A problémában érintett személyek és szervezetek</a></li>
+<li><a href="#2.2.3">2.2.3 A probléma hatása az érintettekre</a></li>
+<li><a href="#2.2.4">2.2.4 A sikeres megoldás legfontosabb várható hasznos hatásai</a></li></ul>
+</li>
+<li><a href="#2.3">2.3 Az elkészült termék helye</a><ul>
+<li><a href="#2.3.1">2.3.1 Célközönség és felhasználás</a></li>
+<li><a href="#2.3.2">2.3.2 A termék haszna és megkülönböztető jellemzői</a></li>
+<li><a href="#2.3.3">2.3.3 Alternatív megoldások</a></li></ul>
+</li></ul>
+</li>
+<li><a href="#3">3. Érintettek és felhasználók</a><ul>
+<li><a href="#3.1">3.1 Az érintettek összefoglalása</a></li>
+<li><a href="#3.2">3.2 A felhasználók összefoglalása</a></li>
+<li><a href="#3.3">3.3 Felhasználói környezet</a><ul>
+<li><a href="#3.3.1">3.3.1 Platform és várható változások</a></li>
+<li><a href="#3.3.2">3.3.2 Egyidejű felhasználók és méretezés</a></li>
+<li><a href="#3.3.3">3.3.3 A felhasználószám várható alakulása</a></li>
+<li><a href="#3.3.4">3.3.4 A használat időtartama</a></li>
+<li><a href="#3.3.5">3.3.5 Különleges használati feltételek</a></li>
+<li><a href="#3.3.6">3.3.6 Külső szolgáltatások és integrációk</a></li></ul>
+</li></ul>
+</li>
+<li><a href="#4">4. A végtermék áttekintése</a><ul>
+<li><a href="#4.1">4.1 A termék kapcsolatai</a></li>
+<li><a href="#4.2">4.2 A termék használatának előnyei</a></li>
+<li><a href="#4.3">4.3 Feltételezések és függőségek</a><ul>
+<li><a href="#4.3.1">4.3.1 A fejlesztés alapfeltevései</a></li>
+<li><a href="#4.3.2">4.3.2 Külső adatforrások és szolgáltatások</a></li>
+<li><a href="#4.3.3">4.3.3 Hálózati és jogi feltételek</a></li>
+<li><a href="#4.3.4">4.3.4 Hardveres és környezeti feltételek</a></li>
+<li><a href="#4.3.5">4.3.5 Adatvédelem és fejlesztési függőségek</a></li>
+<li><a href="#4.3.6">4.3.6 Alternatívák és kockázatkezelés</a></li></ul>
+</li>
+<li><a href="#4.4">4.4 Költségbecslés</a><ul>
+<li><a href="#4.4.1">4.4.1 Fejlesztési fázis költségei (Egyszeri költségek)</a></li>
+<li><a href="#4.4.2">4.4.2 Üzembe állítás és üzemeltetés költségei (Éves szinten)</a></li></ul>
+</li>
+<li><a href="#4.5">4.5 Installáció</a><ul>
+<li><a href="#4.5.1">4.5.1 Mobilalkalmazás beszerzése és telepítése</a></li>
+<li><a href="#4.5.2">4.5.2 Kiszolgáló oldali üzembe állítás</a></li></ul>
+</li></ul>
+</li>
+<li><a href="#5">5. A végtermék jellemzői, biztosított szolgáltatások</a><ul>
+<li><a href="#5.1">5.1 Fő funkciók és szolgáltatások</a><ul>
+<li><a href="#5.1.1">5.1.1 Kép alapú gombafelismerés (Magas prioritás)</a></li>
+<li><a href="#5.1.2">5.1.2 Gombahatározó lexikon és adatbázis (Magas prioritás)</a></li>
+<li><a href="#5.1.3">5.1.3 Edukációs és biztonsági modul (Közepes prioritás)</a></li>
+<li><a href="#5.1.4">5.1.4 Kedvencek és saját gyűjtemény (Alacsony prioritás)</a></li></ul>
+</li>
+<li><a href="#5.2">5.2 Szolgáltatások összefoglaló táblázata</a></li>
+<li><a href="#5.3">5.3 A szolgáltatások használatának főbb előnyei</a></li></ul>
+</li>
+<li><a href="#6">6. Korlátozások</a><ul>
+<li><a href="#6.1">6.1 Jogi és szabályozási korlátozások</a><ul>
+<li><a href="#6.1.1">6.1.1 Felelősségkizárás a gombaazonosításban</a></li>
+<li><a href="#6.1.2">6.1.2 Természetvédelmi előírások (Védett gombafajok)</a></li>
+<li><a href="#6.1.3">6.1.3 Adatvédelem (GDPR)</a></li></ul>
+</li>
+<li><a href="#6.2">6.2 Technológiai és platform korlátozások</a><ul>
+<li><a href="#6.2.1">6.2.1 Mobil operációs rendszer</a></li>
+<li><a href="#6.2.2">6.2.2 Hardveres követelmények</a></li>
+<li><a href="#6.2.3">6.2.3 Tárhely- és memóriakorlát</a></li></ul>
+</li>
+<li><a href="#6.3">6.3 Hálózati és külső szolgáltatási korlátok</a><ul>
+<li><a href="#6.3.1">6.3.1 Mobilinternet függőség</a></li>
+<li><a href="#6.3.2">6.3.2 Külső API korlátozások és kvóták</a></li></ul>
+</li>
+<li><a href="#6.4">6.4 Erőforrás és projektkorlátok</a><ul>
+<li><a href="#6.4.1">6.4.1 Költségvetési korlát</a></li>
+<li><a href="#6.4.2">6.4.2 Idő- és határidőkeret</a></li></ul>
+</li></ul>
+</li>
+<li><a href="#7">7. Minőségi elvárások</a><ul>
+<li><a href="#7.1">7.1 Teljesítmény és válaszidők</a><ul>
+<li><a href="#7.1.1">7.1.1 Képalapú felismerés válaszideje</a></li>
+<li><a href="#7.1.2">7.1.2 Helyi felületi reakcióidő</a></li>
+<li><a href="#7.1.3">7.1.3 Képoptimalizálás</a></li>
+<li><a href="#7.1.4">7.1.4 Alkalmazás mérete és memóriaigénye</a></li></ul>
+</li>
+<li><a href="#7.2">7.2 Felismerési pontosság és megbízhatóság</a><ul>
+<li><a href="#7.2.1">7.2.1 Felismerési pontosság</a></li>
+<li><a href="#7.2.2">7.2.2 Hibakezelés és hálózati stabilitás</a></li>
+<li><a href="#7.2.3">7.2.3 Kódminőség és tesztlefedettség</a></li></ul>
+</li>
+<li><a href="#7.3">7.3 Felhasználóbarátság és használhatóság</a><ul>
+<li><a href="#7.3.1">7.3.1 Intuitív kezelőfelület (UI/UX)</a></li>
+<li><a href="#7.3.2">7.3.2 Terepi olvashatóság</a></li></ul>
+</li>
+<li><a href="#7.4">7.4 Biztonság és adatvédelem</a><ul>
+<li><a href="#7.4.1">7.4.1 Adatbiztonság</a></li>
+<li><a href="#7.4.2">7.4.2 Jogi és életvédelmi biztonság</a></li></ul>
+</li></ul>
+</li>
+<li><a href="#8">8. Dokumentációkkal kapcsolatos követelmények</a><ul>
+<li><a href="#8.1">8.1 A dokumentációk típusai</a><ul>
+<li><a href="#8.1.1">8.1.1 Felhasználói dokumentáció (bevezető és súgó)</a></li>
+<li><a href="#8.1.2">8.1.2 Fejlesztői dokumentáció</a></li>
+<li><a href="#8.1.3">8.1.3 Üzemeltetői dokumentáció</a></li></ul>
+</li>
+<li><a href="#8.2">8.2 A dokumentációk formátuma és elérhetősége</a><ul>
+<li><a href="#8.2.1">8.2.1 A felhasználók számára</a></li>
+<li><a href="#8.2.2">8.2.2 A fejlesztők és az üzemeltetők számára</a></li></ul>
+</li>
+<li><a href="#8.3">8.3 Nyelvezet és a dokumentációk karbantartása</a><ul>
+<li><a href="#8.3.1">8.3.1 Nyelvezet</a></li>
+<li><a href="#8.3.2">8.3.2 Karbantartás és verziókövetés</a></li></ul>
+</li></ul>
+</li>
+<li><a href="#9">9. Kockázat lista</a><ul>
+<li><a href="#9.1">9.1 A projekt túlnövekedése (Magas prioritás)</a><ul>
+<li><a href="#9.1.1">9.1.1 A kockázat leírása</a></li>
+<li><a href="#9.1.2">9.1.2 Kockázatcsökkentési intézkedések</a></li></ul>
+</li>
+<li><a href="#9.2">9.2 Problémák a külső szolgáltatások összekapcsolásánál (Magas prioritás)</a><ul>
+<li><a href="#9.2.1">9.2.1 A kockázat leírása</a></li>
+<li><a href="#9.2.2">9.2.2 Kockázatcsökkentési intézkedések</a></li></ul>
+</li>
+<li><a href="#9.3">9.3 A tesztelés nehézségei a gombák szezonális megjelenése miatt (Közepes prioritás)</a><ul>
+<li><a href="#9.3.1">9.3.1 A kockázat leírása</a></li>
+<li><a href="#9.3.2">9.3.2 Kockázatcsökkentési intézkedések</a></li>
+<li><a href="#9.4.1">9.4.1 A kockázat leírása</a></li>
+<li><a href="#9.4.2">9.4.2 Kockázatcsökkentési intézkedések</a></li></ul>
+</li>
+<li><a href="#9.5">9.5 Lassulás és tárhelyproblémák az adatok mentésekor (Alacsony prioritás)</a><ul>
+<li><a href="#9.5.1">9.5.1 A kockázat leírása</a></li>
+<li><a href="#9.5.2">9.5.2 Kockázatcsökkentési intézkedések</a></li></ul>
+</li></ul>
+</li>
+<li><a href="#10">10. Szótár</a><ul>
+<li><a href="#10.1">10.1 Gombászati és természettudományi fogalmak</a></li>
+<li><a href="#10.2">10.2 Informatikai és szoftverfejlesztési fogalmak</a></li></ul></li></ul></nav>
+<main id="document-content">
+<span id="h.yowpkw4sjxs8"></span><h1 id="1"><strong>1. Bevezetés</strong></h1>
+<span id="h.a2pauiov61gv"></span><h2 id="1.1"><strong>1.1 A termék célja és célközönsége</strong></h2>
+<p>A GombApp egy Androidra fejlesztett modern mobilalkalmazás, amely kifejezetten a hobbi gombászok, természetjárók és a gombászat iránt érdeklődők számára készül. A szoftver fő célja, hogy hidat építsen a hagyományos természetjárás és a modern digitális technológiák, különösen a mesterséges intelligencia alapú képfelismerés között. </p>
+<span id="h.rsztcqmwls1e"></span><h2 id="1.2"><strong>1.2 Biztonság és ismeretterjesztés</strong></h2>
+<p>A fejlesztés során kiemelt figyelmet kap a biztonságos gombászat támogatása és a tanulás: az alkalmazás segít a felhasználóknak a találati helyszínen gyors előzetes tájékozódást szerezni a gombafajokról, megismerni a morfológiai bélyegeket, valamint elkerülni a veszélyes, mérgező hasonmásokat.</p>
+<p>A GombApp amellett, hogy érdekesebbé és interaktívabbá teszi az erdei túrákat, még digitális gyűjteménynapló is. Természetvédelmi figyelmeztetésekkel hozzájárul a tudatos és felelősségteljes gombászáshoz is.<em></em></p>
+<span id="h.65d1fxm9h5xh"></span><h1 id="2"><strong>2. Az alkalmazás helye</strong></h1>
+<p>Ennek a fejezetnek a célja az alkalmazás által megoldandó probléma elhelyezése a környezetében. </p>
+<span id="h.rtu0cyrw08b6"></span><h2 id="2.1"><strong>2.1 Üzleti lehetőségek</strong></h2>
+<p>A gombafelismerő alkalmazás fejlesztése közvetlenül reagál a digitális technológiák és az agrotechnológia iránti növekvő lakossági igényekre, hidat képezve a hagyományos természetjárás és a modern mesterséges intelligencia között. Az alkalmazás elsősorban a biztonságos gombászat elősegítését és az oktatást célozza meg, miközben hosszú távon fenntartható digitális megoldást kínál.</p>
+<span id="h.wwu8qvvfanqm"></span><h3 id="2.1.1"><strong>2.1.1 Piaci igények és célcsoportok</strong></h3>
+<ul><li>
+Hobbi gombászok és természetjárók: A hagyományos gombászkönyvek használata a terepen lassú és nehézkes. Az alkalmazás azonnali, látásalapú visszajelzést ad, csökkentve a tévedések kockázatát.
+</li><li>
+Oktatás és ökoturizmus: Erdei iskolák, biológiaórák és nemzeti parkok számára interaktív, élményalapú oktatási eszközként szolgál a biodiverzitás megismeréséhez.
+</li><li>
+Szakértői előszűrés: Bár a kereskedelmi forgalomba hozatalhoz hivatalos gombaellenőri szakvélemény szükséges, a rendszer hatékony előszűrőként támogatja a szakértők és a gyűjtők munkáját.
+</li></ul>
+<span id="h.583k7k7r6li"></span><h3 id="2.1.2"><strong>2.1.2 Hozzáférési és biztonsági alapelvek</strong><strong></strong></h3>
+<ul><li>
+Tervezett funkciók: A GombApp alapfunkciói közé tartozik a képalapú gombafelismerés, a gombalexikon, a kapcsolódó ismertetők és a személyes gyűjteménynapló. Az offline adatbázis csak lehetséges későbbi bővítés, nem kötelező funkció. A veszélyjelzések és a szakértői ellenőrzésre figyelmeztető tájékoztatás minden felhasználó számára elérhető.
+</li><li>
+B2B partnerkapcsolatok: Együttműködési lehetőség biztosítókkal (baleset-megelőzési kampányok keretében), valamint turisztikai szervezetekkel és nemzeti parkokkal integrált szolgáltatások nyújtására.
+</li><li>
+Adatgyűjtés és kutatás: A felhasználók által gyűjtött anonim, térbeli és időbeli megfigyelési adatok értékesíthetők kutatóintézetek és erdőgazdaságok számára a helyi ökoszisztémák és gombafajok elterjedésének elemzésére.
+</li></ul>
+<span id="h.3f3jfhghp6nx"></span><h2 id="2.2"><strong>2.2 A probléma megfogalmazása</strong></h2>
+<span id="h.yszb99xehy7p"></span><h3 id="2.2.1"><strong>2.2.1 A probléma lényege</strong></h3>
+<ul><li>
+A GombAPP által kezelni kívánt probléma a gombafajok terepi felismerésének nehézsége, az információk helyszíni hozzáférhetősége és a téves azonosításból fakadó kockázat. A megoldásnak a leendő felhasználók szempontjából egyszerűbb tájékozódást kell nyújtania, de nem helyettesítheti a gombaszakellenőr által végzett fogyasztás előtti vizsgálatot.
+</li><li>
+A természetjárás és a hobbi gombászás egyre népszerűbb szabadidős tevékenység. Sokan szeretnek erdei séták során gombákat keresni, megismerni a különböző fajokat, vagy akár saját maguk gyűjteni a vacsorához. A gombák felismerése azonban nem mindig egyszerű, különösen azok számára, akik még csak most ismerkednek ezzel a hobbival.
+</li><li>
+Korábban a gombák azonosítása főként nyomtatott gombahatározók segítségével történt. Ezek a könyvek hasznos információkat tartalmaznak, de a terepen nem mindig könnyű használni őket. A bennük szereplő képek általában ideális állapotú gombákat mutatnak be, miközben a természetben a gombák megjelenése sokat változhat az időjárás, a koruk vagy a környezetük hatására. Egy eső áztatta vagy kiszáradt példány ezért egészen másképp nézhet ki, mint a könyvben látható kép.
+</li><li>
+A kezdő gombászok számára további nehézséget jelenthetnek a szakkifejezések és az egyes fajok közötti apró különbségek. Emiatt könnyen előfordulhat, hogy egy ehető gombát összetévesztenek egy mérgező hasonmásával. Bár a leszedett gombákat szakértővel is meg lehet vizsgáltatni, ez nem mindig kényelmes, és sokszor csak a gyűjtés után derül ki, hogy egy-egy példány veszélyes lehet. A mérgező gombák közé tartozó fajok, például a gyilkos galóca, különösen nagy odafigyelést igényelnek. Fontos azonban tudni, hogy a legtöbb mérgező gomba puszta megérintése nem okoz mérgezést; a valódi veszélyt elsősorban a téves azonosítás és a mérgező gomba elfogyasztása jelenti.
+</li><li>
+A bizonytalanság miatt sokan inkább minden gombát leszednek, hogy később megmutathassák azokat egy szakértőnek. Ez azonban felesleges munkát jelenthet, és a természetnek sem kedvez, különösen akkor, ha ritka vagy védett fajok is a kosárba kerülnek. Mindez rámutat arra, hogy szükség lenne egy könnyen használható megoldásra, amely már az erdőben segít a gombák felismerésében, és támogatja a biztonságosabb, tudatosabb gyűjtést.
+</li></ul>
+<span id="h.wpygqxcmzi5z"></span><h3 id="2.2.2"><strong>2.2.2 A problémában érintett személyek és szervezetek</strong></h3>
+<ul><li>
+A probléma közvetlenül a gombát gyűjtő vagy megfigyelő embereket érinti; következményei a szakemberek, az egészségügy és a természeti környezet szempontjából is fontosak. A következő felsorolás az érintett csoportokat azonosítja, míg a 3.1. fejezet külön táblázatban rögzíti a projektbeli szerepüket.
+</li><li>
+Kezdő és hobbi gombászok: Azok, akik szívesen gyűjtenének gombát, de még nem rendelkeznek elegendő tapasztalattal ahhoz, hogy biztosan megkülönböztessék egymástól az egyes fajokat. Számukra különösen fontos a könnyen érthető, megbízható segítség.
+</li><li>
+Természetjárók és családok: Azok, akik kirándulás közben szeretnék jobban megismerni az erdő élővilágát. Egy egyszerűen használható alkalmazás számukra is érdekesebbé és tanulságosabbá teheti a természetben töltött időt.
+</li><li>
+Hivatásos gombaszakértők: Azok a szakemberek, akik a piacokon és a kijelölt vizsgálóhelyeken ellenőrzik a begyűjtött gombákat. Munkájukat megkönnyítheti, ha a gyűjtők már előzetesen tájékozódnak a talált fajokról, miközben a végső ellenőrzés továbbra is a szakértők feladata marad.
+</li><li>
+Egészségügyi intézmények és toxikológiai szakemberek: Ők látják el azokat, akik mérgező gomba fogyasztása miatt kerülnek kórházba. A téves azonosításból eredő mérgezések megelőzése számukra is fontos, hiszen a súlyos esetek komoly egészségügyi kockázatot jelentenek.
+</li></ul>
+<span id="h.omocs4hrhwzw"></span><h3 id="2.2.3"><strong>2.2.3 A probléma hatása az érintettekre</strong></h3>
+<ul><li>
+A gombászokra és túrázókra: A bizonytalanság miatt sokan félnek attól, hogy rosszul ismernek fel egy gombát. A nehezen értelmezhető leírások és a hasonló megjelenésű fajok miatt a gombászás könnyen stresszessé válhat, vagy egyeseket teljesen elriaszthat ettől a tevékenységtől.
+</li><li>
+A gombaszakértőkre: A vizsgálóhelyeken sokféle gombával találkoznak, amelyek között gyakran akadnak olyan példányok is, amelyeket a gyűjtők bizonytalanságból szedtek le. Az ilyen esetek növelik a szakértők leterheltségét, és kevesebb idő maradhat az összetettebb vizsgálatokra.
+</li><li>
+Az egészségügyre: A gombák téves felismerése súlyos, akár életveszélyes mérgezésekhez is vezethet. Ezek kezelése jelentős terhet ró az egészségügyi ellátásra, miközben sok eset megelőzhető lenne a megfelelő tájékoztatással és a biztonságos gyűjtési szokások kialakításával.
+</li><li>
+A természetre: A tapasztalatlanság miatt sokan olyan gombákat is leszednek, amelyekre valójában nincs szükségük, vagy amelyeket később egyszerűen kidobnak. Ez a védett fajok esetében különösen problémás lehet, de más gombák felesleges gyűjtése is megzavarhatja az erdei élővilág természetes egyensúlyát.
+</li></ul>
+<span id="h.mzce2lt0yzig"></span><h3 id="2.2.4"><strong>2.2.4 A sikeres megoldás legfontosabb várható hasznos hatásai</strong></h3>
+<ul><li>
+Azonnali segítség a helyszínen: A GombApp segítségével a felhasználók már az erdőben, a mobiltelefonjuk kamerájával készített kép alapján kaphatnak tájékoztatást a talált gombáról. Ez segíthet felismerni a lehetséges veszélyeket még azelőtt, hogy a gombát leszednék vagy a többi közé tennék. Az alkalmazás azonban nem garantálhatja a biztos fajazonosítást, ezért a gombák fogyasztásáról minden esetben szakértői vizsgálat alapján kell dönteni.
+</li><li>
+Könnyen érthető felismerés és tanulás: Az alkalmazás nem csupán megmutatja, hogy egy gomba melyik fajhoz hasonlíthat, hanem arra is felhívja a figyelmet, hogy mely tulajdonságait érdemes megfigyelni. Például bemutathatja, milyen különbségek lehetnek egy ehető csiperke és egy mérgező, hasonló megjelenésű gomba között. Így a felhasználók idővel egyre többet tanulhatnak, és tudatosabban figyelhetik meg a természetet.
+</li><li>
+A gombaszakértők munkájának támogatása: A GombApp segíthet abban, hogy a felhasználók már a gyűjtés előtt több információval rendelkezzenek a talált gombákról. Ennek köszönhetően csökkenhet a feleslegesen leszedett példányok száma, és a gyűjtők felkészültebben fordulhatnak szakértőhöz. Az alkalmazás ugyanakkor nem helyettesíti a hivatalos gombavizsgálatot, és nem nyilváníthat egy gombát fogyasztásra biztonságosnak pusztán egy fénykép alapján.
+</li><li>
+Kényelem és egyszerű használat: A több száz oldalas gombahatározók helyett a legfontosabb információk közvetlenül a felhasználó telefonján érhetők el. Ez különösen hasznos lehet kirándulás közben, amikor gyorsan szeretnének utánanézni egy érdekes gombának anélkül, hogy könyveket kellene magukkal vinniük.
+</li><li>
+Természetvédelem és tudatosabb gyűjtés: Ha a felhasználók már a helyszínen több információt kapnak a gombákról, kisebb eséllyel szednek le minden útjukba kerülő példányt. A védett fajokra való figyelemfelhívás és a gombák természetben betöltött szerepének bemutatása hozzájárulhat ahhoz, hogy a természetjárók jobban óvják az erdei élővilágot.
+</li><li>
+Összességében a GombApp célja, hogy a gombászás biztonságosabb, egyszerűbb és élvezetesebb tevékenységgé váljon. Az alkalmazás a modern technológia segítségével támogatja a kezdőket, segíti a tanulást, és hozzájárulhat a természet tudatosabb megismeréséhez és megóvásához.
+</li><li>
+A várható előnyök csak akkor érvényesülhetnek felelősen, ha az alkalmazás következetesen megkülönbözteti az előzetes képfelismerési javaslatot a szakértő által ellenőrzött fajazonosítástól. A projekt célja a tájékozódás támogatása, nem pedig az emberi szakvélemény kiváltása.
+</li></ul>
+<span id="h.gems2gx0ml8h"></span><h2 id="2.3"><strong>2.3 Az elkészült termék helye</strong> </h2>
+<p>Androidon használható, képalapú gombahatározó és ismeretterjesztő mobilalkalmazás, amely a terepi tájékozódást digitális lexikonnal és személyes gyűjteménynaplóval kapcsolja össze.</p>
+<span id="h.ageqa9xctnl7"></span><h3 id="2.3.1"><strong>2.3.1 Célközönség és felhasználás</strong></h3>
+<ul><li>
+A GombApp elsősorban hobbi gombászoknak és természetjáróknak készül, akik kirándulás közben szeretnék megismerni a talált gombákat. Ismeretterjesztő tartalma családok, erdei iskolák és természetismereti foglalkozások számára is hasznos lehet.
+</li></ul>
+<span id="h.5wskmnpc2pxq"></span><h3 id="2.3.2"><strong>2.3.2 A termék haszna és megkülönböztető jellemzői</strong></h3>
+<ul><li>
+Alapvető haszon: A felhasználó a telefonjával készített fénykép alapján előzetes fajazonosítási javaslatokat kap, majd megtekintheti a gombák jellemzőit és veszélyes hasonmásait. A saját találatok rögzítése segíti a tanulást és a korábbi túrák felidézését.
+</li><li>
+A GombApp megkülönböztető jellemzői: A tervezett rendszer egy magyar nyelvű, egyszerűen kezelhető felületen egyesíti a képalapú keresést, a hazai gombafajokat bemutató lexikont, a veszélyes hasonmások kiemelésétés a saját gyűjteménynaplót. A találatok tájékoztató jellegét és a szakértői ellenőrzés szükségességét egyértelműen jelzi.
+</li></ul>
+<span id="h.n9nn21wry68f"></span><h3 id="2.3.3"><strong>2.3.3 Alternatív megoldások</strong></h3>
+<ul><li>
+Hagyományos alternatívák: A nyomtatott gombahatározók internet nélkül is használhatók, de külön könyvet kell magunkkal vinni, és a megfelelő fajleírás megkeresése időigényes lehet. A személyes szakértői vizsgálat a begyűjtött gombák ellenőrzését szolgálja; ezt az alkalmazás nem helyettesíti.
+</li><li>
+Digitális alternatívák: Weboldalak, online közösségek és más fajfelismerő alkalmazások is segíthetik a tájékozódást. Több külön felület használatakor azonban a fajleírások, a fényképek és a személyes feljegyzések összegyűjtése a felhasználóra hárulhat.
+</li></ul>
+<span id="h.dj599fn09rj7"></span><h1 id="3"><strong>3. Érintettek és felhasználók</strong></h1>
+<p>Ebben a fejezetben azoknak a személyeknek és szervezeteknek a szerepét tekintjük át, akik a GombAPP megtervezésében, véleményezésében, szakmai ellenőrzésében vagy későbbi használatában érintettek. A cél annak ellenőrzése, hogy minden lényeges igényforrást azonosítottunk-e.</p>
+<p>Az érintettek nem feltétlenül használják majd az alkalmazást; a tényleges felhasználói csoportokat a 3.2. alfejezet külön tárgyalja. A további részek a használati környezetet, valamint a kijelölt és kijelölendő képviselők adatait ismertetik.</p>
+<span id="h.d0bpt9jymo48"></span><h2 id="3.1"><strong>3.1 Az érintettek összefoglalása</strong></h2>
+<p>Ez a fejezet a GombAPP kialakításában és működtetésében érdekelt csoportokat, az alkalmazáshoz fűződő kapcsolatukat és a fejlesztésben betöltött szerepüket foglalja össze. Az érintettek nem feltétlenül azonosak a későbbi végfelhasználókkal: egy részük követelményeket fogalmaz meg, szakmai visszajelzést ad, tartalmat gondoz vagy az üzemeltetés feltételeit határozza meg.</p>
+<p>Az egészségügyi és természetvédelmi szervezetek a probléma szempontjából közvetetten érintettek, de számukra jelenleg nincs külön fejlesztési feladat kijelölve.</p>
+<div class="table-scroll"><table border="1" cellpadding="4" cellspacing="3" width="90%"><tbody>
+<tr>
+<th scope="col"><p><strong>Elnevezés</strong></p></th>
+<th scope="col"><p><strong>Leírás</strong></p></th>
+<th scope="col"><p><strong>Szerep</strong></p></th>
+</tr>
+<tr>
+<td><p>Hobbi gombászok és természetjárók képviselői</p></td>
+<td><p>A terepi tájékozódás és a megfigyelések rögzítésének leendő felhasználóit képviselik.</p></td>
+<td><p>Igényeket fogalmaznak meg, véleményezik a felületterveket és a használati folyamatokat.</p></td>
+</tr>
+<tr>
+<td><p>Családok és oktatási felhasználók képviselői</p></td>
+<td><p>A közös természetjárás és az ismeretterjesztő használat szempontjait képviselik.</p></td>
+<td><p>Visszajelzést adnak a magyarázatok érthetőségéről és az oktatási tartalmakról.</p></td>
+</tr>
+<tr>
+<td><p>Gombaszakértő</p></td>
+<td><p>A fajleírások és a biztonsági tájékoztatás szakmai véleményezésébe bevonandó szakember.</p></td>
+<td><p>Ellenőrzi a szakmai tartalmakat, a veszélyes hasonmások bemutatását és a figyelmeztetések megfogalmazását.</p></td>
+</tr>
+<tr>
+<td><p>Fejlesztőcsapat</p></td>
+<td><p>A GombApp specifikációját és rendszerterveit készítő ötfős csapat.</p></td>
+<td><p>Összegyűjti a követelményeket, megtervezi a felületet és a rendszer működését, ellenőrzi a dokumentumok összhangját.</p></td>
+</tr>
+<tr>
+<td><p>Tartalomfelelős</p></td>
+<td><p>A lexikon és az ismeretterjesztő anyagok gondozására tervezett szerepkör.</p></td>
+<td><p>Összegyűjti és rendszerezi a tartalmakat, egyezteti szakmai ellenőrzésüket, és gondoskodik a frissítésükről.</p></td>
+</tr>
+<tr>
+<td><p>Üzemeltető</p></td>
+<td><p>A későbbi backend és adatbázis működtetéséért felelős szerepkör.</p></td>
+<td><p>Meghatározza az üzemeltetési igényeket, később felügyeli a szolgáltatásokat, a mentéseket és a frissítéseket.</p></td>
+</tr>
+</tbody></table></div>
+<span id="h.vt9ivqy1apvk"></span><h2 id="3.2"><strong>3.2 A felhasználók összefoglalása</strong></h2>
+<p>A GombApp felhasználói elsősorban a gombák iránt érdeklődő természetjárók. Az egyes csoportok eltérő tapasztalattal és célokkal használják az alkalmazást, ezért a felületnek a gyors tájékozódást és az ismeretek elmélyítését egyaránt támogatnia kell.</p>
+<div class="table-scroll"><table border="1" cellpadding="4" cellspacing="3" width="90%"><tbody>
+<tr>
+<th scope="col"><p><strong>Elnevezés</strong></p></th>
+<th scope="col"><p><strong>Leírás</strong></p></th>
+<th scope="col"><p><strong>Illetékes</strong></p></th>
+</tr>
+<tr>
+<td><p>Kezdő és alkalmi gombász</p></td>
+<td><p>Előzetes fajazonosítási javaslatokat és közérthető útmutatást keres; kiemelten fontos számára a veszélyes hasonmások bemutatása.</p></td>
+<td><p>Hobbi gombászok képviselője – kijelölendő.</p></td>
+</tr>
+<tr>
+<td><p>Rendszeres hobbi gombász és természetjáró</p></td>
+<td><p>Fajleírásokat böngész, saját fotókat és megjegyzéseket ment, illetve visszakeresi korábbi megfigyeléseit.</p></td>
+<td><p>Rendszeres természetjárók képviselője – kijelölendő.</p></td>
+</tr>
+<tr>
+<td><p>Családi kirándulás résztvevője</p></td>
+<td><p>Közös természetjárás során szeretne gombafajokat és érdekességeket megismerni; egyszerű, szemléletes felületet igényel.</p></td>
+<td><p>Családok képviselője – kijelölendő.</p></td>
+</tr>
+<tr>
+<td><p>Oktatási célú felhasználó</p></td>
+<td><p>Pedagógus vagy tanuló, aki természetismereti foglalkozáson a lexikont és az ismeretterjesztő tartalmakat használja.</p></td>
+<td><p>Pedagógus vagy erdei iskolai képviselő – kijelölendő.</p></td>
+</tr>
+</tbody></table></div>
+<span id="h.5dhx6p75dryg"></span><h2 id="3.3"><strong>3.3 Felhasználói környezet</strong></h2>
+<span id="h.f9itqx9qa0j2"></span><h3 id="3.3.1"><strong>3.3.1 Platform és várható változások</strong></h3>
+<p>A GombAPP elsődleges felülete Android operációs rendszeren futó mobilalkalmazás; a megcélzott minimális verzió Android 8.0 . A felhasználói oldalon jelenleg nincs tervben iOS- vagy asztali kliens.</p>
+<p>A rendszerhez külön, böngészőből használható webes adminisztrációs felület tartozik . A mobilkliens mögött Python alapú backend és MySQL-adatbázis működik. Az Android-verziók és készüléktípusok eltéréseit figyelembe kell venni; más platformra bővítés későbbi döntés kérdése.</p>
+<span id="h.9a3y4ngrtd7p"></span><h3 id="3.3.2"><strong>3.3.2 Egyidejű felhasználók és méretezés</strong></h3>
+<p>Fejlesztési célnak a csúcsidőben egyidejű aktív felhasználók számát 1000-re tűztük ki, és 20.000 - 50.000 tárolt felhasználói profillal számolunk. </p>
+<p>Az átlagos egyidejű felhasználószámra jelenleg nincs igazolt mérés vagy külön számszerű előrejelzés. A csúcsérték és az adatbázis-kapacitás tervezési cél, nem mért terhelés; a kiszolgálási képességet későbbi terheléses teszteknek kell igazolniuk.</p>
+<span id="h.7tiq1jpxki0l"></span><h3 id="3.3.3"><strong>3.3.3 A felhasználószám várható alakulása</strong></h3>
+<p>A tervezés fokozatos felhasználószám-növekedéssel és szezonális ingadozással számol. Gombaszezonban, különösen az őszi időszakban, a képfelismerési és lexikonlekérdezési igény megemelkedhet . A tényleges növekedési ütem, a napi aktív felhasználók száma és a szezonális csúcs nagysága jelenleg nem ismert; ezekre piaci vagy használati mérés még nem áll rendelkezésre.</p>
+<span id="h.vv5y40nsyotm"></span><h3 id="3.3.4"><strong>3.3.4 A használat időtartama</strong></h3>
+<p>A rendszer várhatóan rövid, alkalmi terepi műveletekre (fénykép készítése, előzetes fajfelismerés, fajadatlap megnyitása), illetve hosszabb, otthoni vagy oktatási célú böngészésre (lexikon és Logbook áttekintése) szolgál.</p>
+<p>Egy munkamenet időtartama felhasználói csoportonként és műveletenként eltérhet. Mivel a használati időt még nem mértük, konkrét átlagot vagy időintervallumot nem állítunk; ezt használhatósági teszteken kell meghatározni.</p>
+<span id="h.3004mlikwzg4"></span><h3 id="3.3.5"><strong>3.3.5 Különleges használati feltételek</strong></h3>
+<p>Az alkalmazást gyakran erdőben, változó fényviszonyok között, gyenge mobilhálózat mellett használhatják. A külső szolgáltatásra épülő új képfelismeréshez internetkapcsolat szükséges; teljes offline működés nem kötelező, a későbbi helyi fényképmentés opcionális bővítés.</p>
+<p>A fotók készítéséhez használható kamera és megfelelő jogosultság kell; annak hiányában a megfigyelés helyadat nélkül is tárolható. A készülékek kamera-, képernyő-, akkumulátor- és tárhelykapacitása, valamint a hálózati kiesések külön tesztelési szempontot jelentenek. A külső képfeldolgozás kizárólag a felhasználó jóváhagyásával indítható.</p>
+<span id="h.mi9sqflvvxem"></span><h3 id="3.3.6"><strong>3.3.6 Külső szolgáltatások és integrációk</strong></h3>
+<p>A tervezett mobilkliens a Python backenddel kommunikál, amely MySQL-adatbázist és külső fajfelismerő szolgáltatást ér el. Az iNaturalist képalapú felismerési lehetőségeinek és feltételeinek ellenőrzése még nyitott feladat; a fajadatokhoz Wikipédia-alapú vagy más megfelelően licencelt adatforrás kapcsolódhat.</p>
+<span id="h.4n3z0wey5fca"></span><h1 id="4"><strong>4. A végtermék áttekintése</strong></h1>
+<span id="h.5ew5eb9yfc1l"></span><h2 id="4.1"><strong>4.1 A termék kapcsolatai</strong></h2>
+<p>A GombApp egy több rétegből álló, kliens-szerver architektúrára épülő mobil rendszer, amely önálló alkalmazásként valósul meg, de működéséhez szervesen integrálódik külső, nemzetközi természettudományi szolgáltatásokhoz és nyilvános adatbázisokhoz.</p>
+<ol><li>
+Android mobil kliens (Frontend és natív funkciók)
+</li></ol>
+<ul><li>
+Felépítés: A felhasználói felület és a mobil üzleti logika Java és Kotlin nyelven, valamint frontend technológiák segítségével valósul meg Android Studio környezetben.
+</li><li>
+Feladat: Biztosítja a közvetlen kapcsolatot a felhasználóval: az eszköz beépített kamerájának vezérlését a fotók elkészítéséhez, a képek előkészítését, valamint a találatok és lexikonbejegyzések megjelenítését.
+</li><li>
+Kapcsolódás: Szabványos REST API hívásokon (JSON formátumú adatcsere) keresztül kommunikál a központi backend szerverrel.
+</li></ul>
+<ol><li>
+Központi háttérrendszer (Backend API)
+</li></ol>
+<ul><li>
+Felépítés: Python nyelven fejlesztett szerveroldali alkalmazás.
+</li><li>
+Feladat: Kiszolgálja a mobil klienstől érkező kéréseket, kezeli az üzleti logikát, koordinálja a külső adatforrások elérését, valamint biztosítja a gyorsítótárazást a felesleges hálózati terhelés minimalizálása érdekében.
+</li></ul>
+<ol><li>
+Adatbázis réteg (DBMS)
+</li></ol>
+<ul><li>
+Felépítés: MySQL relációs adatbázis.
+</li><li>
+Feladat: Biztosítja az adatok perzisztens tárolását, beleértve a felhasználói fiókokat, a személyes gyűjteménynaplót (Logbook bejegyzések rögzített adatai).
+</li></ul>
+<ol><li>
+Külső integrációs szolgáltatások (External APIs)
+</li></ol>
+<ul><li>
+iNaturalist API: A képalapú fajfelismerést támogató külső adatbázis és gépi tanulási szolgáltatás, amely a továbbított fényképek alapján valószínűségi találati listát nyújt a gombafajokról.
+</li><li>
+Wikipedia REST API v1: A gombafajokhoz kapcsolódó részletes morfológiai leírásokat, természettudományi érdekességeket és kiegészítő ismereteket szolgáltató külső forrás.
+</li><li>
+Android operációs rendszer szolgáltatásai: A mobil eszköz natív erőforrásaival (beépített kamera hardver) való közvetlen kommunikáció az Android rendszerhívásain keresztül.
+</li></ul>
+<p>Kapcsolódási formák és adatfolyam:</p>
+<p>[ Android Mobil Kliens ] </p>
+<p>       │ </p>
+<p>       │ HTTPS / REST (JSON)</p>
+<p>       ▼</p>
+<p>[ Python Backend Szerver ] ─── SQL ─── [ MySQL Adatbázis ]</p>
+<p>       │</p>
+<p>       ├─── HTTPS / REST ───&gt; [ iNaturalist Fajmeghatározó API ]</p>
+<p>       │</p>
+<p>       └─── HTTPS / REST ───&gt; [ Wikipedia REST API v1 ]</p>
+<p>A GombApp tervezett alapműködése online szolgáltatásokra épül. A már letöltött lexikonadatok, a helyi napló vagy a fotók későbbi feldolgozásra történő offline mentése opcionális bővítési lehetőség, nem kötelező követelmény. Az új online fajfelismeréshez és a külső fajadatok frissítéséhez hálózati kapcsolat szükséges.</p>
+<span id="h.ky5yne951lab"></span><h2 id="4.2"><strong>4.2 A termék használatának előnyei</strong></h2>
+<p>Ebben a részben összefoglaljuk, hogy a megrendelő milyen közvetlen és közvetett előnyökhöz jut az alkalmazás használata és elterjedése révén, valamint mely rendszerfunkciók támogatják ezek megvalósulását: </p>
+<div class="table-scroll"><table border="1" cellpadding="4" cellspacing="3" width="90%"><tbody>
+<tr>
+<th scope="col"><p><strong>A megrendelő haszna (előnyei) </strong></p></th>
+<th scope="col"><p><strong>Az ezt támogató rendszer jellemző(k) </strong></p></th>
+</tr>
+<tr>
+<td><p>Gombamérgezések kockázatának és az egészségügyi ellátórendszer terhelésének csökkentése </p></td>
+<td><p>1. Képalapú gombafelismerés: a felhasználó a helyszínen, a kamera képéből gyors előzetes tájékoztatást kap a gombafajról</p>
+<p>2. Veszélyes hasonmások kiemelése: az adatlapok vizuálisan és szövegesen is felhívják a figyelmet az összetéveszthető mérgező fajokra.</p>
+<p>3. Kötelező biztonsági figyelmeztetések: minden találati képernyőn kötelező figyelmeztetés jelenik meg a szakértői bevizsgálás elengedhetetlenségéről. </p></td>
+</tr>
+<tr>
+<td><p>Hivatalos gombavizsgáló szakértők munkájának tehermentesítése </p></td>
+<td><p>1. Helyszíni előzetes szűrés: a felhasználó nem szed le és visz be feleslegesen bizonytalan vagy értéktelen példányokat</p>
+<p>2. Edukációs modul: a felhasználók megtanulják a helyes gombaszedési és tárolási technikákat, így jobb minőségű minták kerülnek vizsgálatra. </p></td>
+</tr>
+<tr>
+<td><p>Környezettudatosság és természetvédelem növelése </p></td>
+<td><p>1. Védett fajok jelölése: a lexikon és a felismerő azonnal felhívja a figyelmet a védett és ritka gombákra.</p>
+<p>2. Kíméletes gyűjtési útmutatók: az edukációs modul bemutatja a micéliumot óvó szedési gyakorlatot.</p></td>
+</tr>
+<tr>
+<td><p>Felhasználói aktivitás, közösségi kötődés és edukáció növelése </p></td>
+<td><p>1. Digitális tudásbázis:A Wikipédia-integráció növeli a gomba-alkalmazás felhasználói élményét. </p>
+<p>2. Személyes gyűjteménynapló (Logbook): a felhasználók rögzíthetik korábbi találataikat koordinátákkal és fotókkal, ami rendszeres használatra és a természet járására ösztönöz</p></td>
+</tr>
+<tr>
+<td><p>Költséghatékony és skálázható üzemeltetés </p></td>
+<td><p>1. Nyílt és ingyenes API-k használata: az iNaturalist és a Wikipedia REST API-k révén a backend alacsony üzemeltetési költséggel tartható fenn.</p>
+<p>2. Korszerű, egyszerű terjesztés: standard Android csomagként (APK / Google Play Store) egyszerűen, külön telepítő infrastruktúra nélkül terjeszthető.</p></td>
+</tr>
+</tbody></table></div>
+<span id="h.2dkngh6zikjt"></span><h2 id="4.3"><strong>4.3 Feltételezések és függőségek</strong></h2>
+<span id="h.3aivdsomap6i"></span><h3 id="4.3.1"><strong>4.3.1 A fejlesztés alapfeltevései</strong><em></em></h3>
+<ul><li>
+A tervezett külső fajfelismerő szolgáltatás elérhetőségét, lekérdezési korlátait, árazását és tényleges képfelismerési interfészét az integráció előtt ellenőrizni kell. A GombApp teljes körű offline működése, az internet nélküli fajfelismerés és az offline képmentés nem kötelező az alapváltozatban; ezek későbbi bővítésként valósíthatók meg.
+</li><li>
+A Wikipedia REST API v1 nem helyez további korlátozásokat a lekérdezésre, és továbbra is ingyenes marad.
+</li><li>
+Nem készül gépi látás felelősség vállalására vonatkozó törvény hatályba.
+</li></ul>
+<ul><li>
+Az iNaturalist helyett szükség esetén más képfelismerő szolgáltatás (például Kindwise Mushroom.id) választható, ha annak interfésze és feltételei megfelelőek. Az offline képtárolás és az internet nélkül futó automatikus fajfelismerés külön képesség: egyik sem kötelező, az utóbbi önálló technológiai döntést és külön fejlesztést igényel.
+</li><li>
+Wikipedia API helyett a gombafajok eszközön való tömörített eltárolása, vagy saját szerveren hosztolása.
+</li></ul>
+<span id="h.rcbf9y3jagvq"></span><h3 id="4.3.2"><strong>4.3.2 Külső adatforrások és szolgáltatások</strong></h3>
+<p>A GombApp fejlesztése és fenntartható működése szempontjából alapvető feltételezés, hogy a külső adatforrások és felhőalapú szolgáltatások hosszú távon is hozzáférhetők és megbízhatók maradnak. Az alkalmazás gombafelismerő funkciója elsősorban az iNaturalist<em> </em>API által biztosított ingyenes növény- és gombafelismerő API-ra épül.</p>
+<p>Feltételezzük, hogy az API szolgáltatásminősége, válaszideje és felismerési pontossága nem csökken lényegesen, valamint a lekérdezések számára és a feltöltött fotók méretére vonatkozó korlátozások nem gátolják a normál használatot.</p>
+<p>Emellett a gombafajok részletes leírásainak és tudományos hátterének megjelenítéséhez a Wikipedia REST API v1 szolgáltatást használjuk, amely feltételezésünk szerint továbbra is ingyenesen és sávszélesség-korlátozások nélkül kiszolgálja az alkalmazásból érkező kéréseket.</p>
+<span id="h.q14mx02lc8ex"></span><h3 id="4.3.3"><strong>4.3.3 Hálózati és jogi feltételek</strong></h3>
+<p>További feltételezés, hogy a célközönség az erdőben történő használat során rendelkezik mobilinternetes kapcsolattal. Mivel a képfelismerési folyamat és a részletes adatlapok lekérése a háttérben futó felhőszolgáltatásokon keresztül történik, a rendszer jelenlegi architektúrája nem követeli meg a teljes értékű offline működést.</p>
+<p>Ugyancsak feltételezzük, hogy a gépi látásra és a mesterséges intelligencia alapú fajazonosításra vonatkozó jogi szabályozás nem változik meg olyan mértékben, amely közvetlen jogi vagy anyagi felelősséget terhelne a szoftverfejlesztőkre a téves azonosításokból eredő esetleges gombamérgezések miatt.</p>
+<span id="h.abojiktkcxh"></span><h3 id="4.3.4"><strong>4.3.4 Hardveres és környezeti feltételek</strong></h3>
+<p>A szoftveres architektúrán túl a rendszer működése számos hardveres és környezeti tényezőtől is függ. Feltételezzük, hogy a célközönség által használt Android-eszközök támogatják a modern Android CameraX API-t, így biztosítva a kamera egységes kezelését, az automatikus élességállítást és a megfelelő képminőséget a különböző gyártók készülékein.</p>
+<span id="h.b4jjg0qkio7v"></span><h3 id="4.3.5"><strong>4.3.5 Adatvédelem és fejlesztési függőségek</strong></h3>
+<p>A felhasználói adatok kezelése során feltételezzük, hogy a helyileg vagy felhőben tárolott fényképek, helyadatok és személyes megjegyzések megfelelnek az Európai Unió általános adatvédelmi rendeletének (GDPR).</p>
+<p>Feltételezzük továbbá, hogy a fejlesztéshez felhasznált nyílt forráskódú könyvtárak és fejlesztői környezetek (SDK-k) hosszú távon stabilak, naprakészek és biztonságosak maradnak.</p>
+<p>Végül feltételezzük a felhasználók részéről a felelősségteljes magatartást és a megfelelő digitális tudatosságot: az alkalmazás által nyújtott edukációs tartalom feltételezi, hogy a gombászok figyelembe veszik a biztonsági figyelmeztetéseket, és a gombák fogyasztásáról minden esetben hivatalos gombavizsgáló szakértő bevonásával döntenek.</p>
+<span id="h.ph44ba81zana"></span><h3 id="4.3.6"><strong>4.3.6 Alternatívák és kockázatkezelés</strong></h3>
+<p>Amennyiben a feltételezett körülmények megváltoznak, a fejlesztőcsapatnak fel készülnie a megfelelő alternatív megoldások és kockázatkezelési lépések életbe léptetésére:</p>
+<ul><li>
+Külső API-k elérése és váltási stratégiák: Ha a iNaturalist API elérhetetlenné válik, megszűnik az ingyenessége vagy szigorú kéréskorlátokat vezet be, a rendszer architektúrája lehetővé teszi a váltást más, kereskedelmi vagy nyílt forráskódú növény- és gombafelismerő szolgáltatásokra (például a Kindwise Mushroom.id API-ra). Amennyiben a Wikipedia REST API használata korlátozás alá esik, az adatok tárolása áttérhet egy saját szerveren hosztolt adatbázisra vagy a leggyakoribb hazai gombafajok leírásainak tömörített, helyi tárolására a mobil eszközön.
+</li><li>
+Offline működési igények kezelése: Az internet nélküli működés jelenleg nem kötelező követelmény. Felhasználói igény vagy üzleti döntés esetén későbbi fejlesztési fázisban megvalósítható egyszerű helyi képtárolás, külön döntés alapján esetleg offline lexikon vagy eszközön futó képfelismerés.Hardveres és kamerakezelési egyenetlenségek feloldása: Az eltérő kamerarendszerekből adódó fókuszálási és képminőségi hibák megelőzésére az Android CameraX könyvtárát alkalmazzuk, kiegészítve automatikus képminőség-ellenőrzéssel (pl. homályos vagy túl sötét képek kiszűrése a beküldés előtt), valamint manuális fókusz- és vakuvezérlési lehetőséggel.
+</li><li>
+lehetővé teszi a gomba feltalálási helyének kézi korrekcióját vagy felülbírálatát.
+</li><li>
+Adatvédelem és GDPR-megfelelés biztosítása: Minimális adatgyűjtést alkalmazunk: a fotók EXIF helyadatait csak hozzájárulással dolgozzuk fel, és biztosítjuk a helyi adatok törlésének lehetőségét.
+</li><li>
+Külső könyvtárak és SDK-k stabilitása: A függőségek rögzítésével (dependency locking), rendszeres frissítésekkel és absztrakciós rétegekkel előzzük meg a működési zavarokat.
+</li><li>
+Felhasználói edukáció, felelősségvállalás és jogi nyilatkozatok: A téves azonosításból eredő kockázatok csökkentésére az alkalmazás indításakor és minden találati képernyőn kötelezően megjelenő, jól látható biztonsági figyelmeztetést helyezünk el. Emellett beépített edukációs modullal hívjuk fel a figyelmet a gombaszakértői vizsgálat elengedhetetlen szerepére.
+</li><li>
+Jogi szabályozás és felelősségbiztosítás: Új felelősségi törvények hatálybalépése esetén az alkalmazásban szigorúbb, kötelezően elfogadandó jogi nyilatkozatokat kell elhelyezni, valamint a felületen még hangsúlyosabban ki kell emelni, hogy a határozás kizárólag tájékoztató jellegű, és nem helyettesíti a hivatalos gombavizsgáló szakértőt.<em></em>
+</li></ul>
+<span id="h.4d6u1wqbl819"></span><h2 id="4.4"><strong>4.4 Költségbecslé</strong>s</h2>
+<p>A költségbecslés az kezdeti projekt közvetlen többletkiadásait választja külön az alkalmazás későbbi, opcionális publikálási és üzemeltetési költségeitől. Az egyszeri és az éves tételeket külön összegezzük.</p>
+<p>A féléves specifikáció és rendszerterv elkészítése saját eszközökkel, az alkalmazott szolgáltatások ingyenes csomagjainak keretein belül 0 Ft tervezett közvetlen többletkiadással végezhető. A becslés nem tartalmaz munkabért, saját eszközök amortizációját, meglévő internet-előfizetést és energiafelhasználást.</p>
+<span id="h.3e16wtgqw1rg"></span><h3 id="4.4.1"><strong>4.4.1 Fejlesztési fázis költségei (Egyszeri költségek</strong>)</h3>
+<ul><li>
+Eszköz- és infrastruktúraköltség: 0 Ft – A fejlesztés és a tesztelés a csapattagok saját eszközein (személyi számítógépek, tesztelésre használt Android okostelefonok) történik.
+</li><li>
+Fejlesztői környezetek és szoftverek: 0 Ft tervezett többletkiadás – Saját eszközöket, ingyenes fejlesztőeszközöket és a tervezési, illetve együttműködési szolgáltatások ingyenes csomagjait használjuk, azok licenc- és használati feltételeinek betartásával.
+</li><li>
+Alkalmazás-áruházi publikáció: opcionálisan egyszeri 25 USD Google Play-regisztrációs díj. A költségtervben ez 9 500 Ft, kizárólag 380 Ft/USD tervezési árfolyammal számolva; a tényleges forintösszeg a fizetéskori átváltástól és banki díjaktól függ. A féléves dokumentációhoz és a helyi demóhoz nem szükséges. Forrás: https://support.google.com/googleplay/android-developer/answer/6112435
+</li></ul>
+<span id="h.pi4uij4pbw8u"></span><h3 id="4.4.2"><strong>4.4.2 Üzembe állítás és üzemeltetés költségei (Éves szinten</strong>)</h3>
+<ul><li>
+Képfelismerő API: a költségterv 0 Ft közvetlen szolgáltatási díjjal számol, feltéve, hogy a kiválasztott szolgáltatás hozzáférési feltételei és ingyenes kvótái elegendők. A konkrét API hozzáférését és díjazását integráció előtt ellenőrizni kell; fizetős szolgáltatás választása külön költségtervet igényel.
+</li><li>
+Wikipédia API: a költségterv 0 Ft közvetlen szolgáltatási díjjal számol, a szolgáltatás használati feltételeinek és lekérdezési korlátainak betartásával.
+</li></ul>
+<p>Backend és Adatbázis szerver:</p>
+<ul><li>
+Teszt / Demó fázis: 0 Ft (helyi gépen XAMPP környezetben és lokális backenddel futtatva).
+</li><li>
+Opcionális éles üzemeltetés: a meglévő tervezési becslés alapján 2 000–4 000 Ft/hó, azaz 24 000–48 000 Ft/év a backend és az adatbázis közös VPS-ének költségkerete. Ez nem szolgáltatói árajánlat; megrendelés előtt ellenőrizni kell a bruttó végösszeget és a szükséges kapacitást. Külön domain, fizetős mentés vagy API díja nincs a keretben.
+</li></ul>
+<p>Összesített költségterv:</p>
+<div class="table-scroll"><table border="1" cellpadding="4" cellspacing="3" width="90%"><tbody>
+<tr>
+<th scope="col"><p><strong>Tétel</strong></p></th>
+<th scope="col"><p><strong>Típus</strong></p></th>
+<th scope="col"><p><strong>Költség</strong></p></th>
+<th scope="col"><p><strong>Megjegyzés</strong></p></th>
+</tr>
+<tr>
+<td><p>Eszközök és fejlesztői szoftverek </p></td>
+<td><p>Fejlesztés </p></td>
+<td><p>0 Ft </p></td>
+<td><p>Saját eszközök és ingyenes szoftverek/csomagok.</p></td>
+</tr>
+<tr>
+<td><p>Google Play fejlesztői fiók </p></td>
+<td><p>Egyszeri, opcionális</p></td>
+<td><p>0 Ft vagy kb. 9 500 Ft</p></td>
+<td><p>25 USD; 380 Ft/USD tervezési árfolyam. Csak Play-publikáláskor.</p></td>
+</tr>
+<tr>
+<td><p>Külső API-k</p></td>
+<td><p>Üzemeltetés </p></td>
+<td><p>0 Ft tervezett díj</p></td>
+<td><p>Hozzáférés és kvóta ellenőrizendő; fizetős API külön tétel.</p></td>
+</tr>
+<tr>
+<td><p>Tárhely és szerverkapacitás </p></td>
+<td><p>Üzemeltetés </p></td>
+<td><p>0 Ft helyben; 24 000–48 000 Ft/év VPS-en</p></td>
+<td><p>VPS: 2 000–4 000 Ft/hó tervezési keret.</p></td>
+</tr>
+</tbody></table></div>
+<p>Összesítés: féléves dokumentáció és helyi demó: 0 Ft tervezett közvetlen többletkiadás. Opcionális éles üzemeltetés saját APK-terjesztéssel: 24 000–48 000 Ft az első évben. Google Play-publikálással: kb. 33 500–57 500 Ft az első évben (12 havi VPS + egyszeri, tervezett 9 500 Ft regisztráció).</p>
+<p>A következő évek tervezett VPS-költsége 24 000–48 000 Ft/év; a Play-regisztráció nem ismétlődik évente. Az összegek a fenti feltételezésekre érvényesek; további fizetős szolgáltatás vagy eltérő díjazás esetén a költségtervet frissíteni kell.</p>
+<span id="h.y721d91gdfb9"></span><h2 id="4.5"><strong>4.5 Installáció</strong></h2>
+<p>A GombApp rendszer úgy került megtervezésre, hogy a végfelhasználói telepítés és az üzembe helyezés a lehető legegyszerűbb, automatizált folyamat legyen. Ennek köszönhetően a rendszer használatba vétele semmilyen speciális informatikai előképzettséget, külön telepítővarázslót vagy a személyzet előzetes technikai betanítását nem igényli. </p>
+<span id="h.lll9r3vj3qb"></span><h3 id="4.5.1"><strong>4.5.1 Mobilalkalmazás beszerzése és telepítése</strong></h3>
+<ul><li>
+Terjesztési csatorna: Az alkalmazás elsődlegesen a projekt hivatalos GitHub repozitóriumából tölthető le közvetlenül telepíthető Android csomagként (.apk formátumban). (A Google Play Áruházban történő megjelenés a projekt későbbi, opcionális terjesztési fázisát képezi.)
+</li><li>
+Telepítési folyamat:
+<ul><li>
+A felhasználó vagy tesztelő letölti a legfrissebb .apk fájlt a GitHubról közvetlenül az Android készülékre.
+</li><li>
+A letöltött fájl megnyitásával az Android beépített csomagtelepítője elindítja a folyamatot.
+</li><li>
+Amennyiben a készülék kéri, a felhasználónak engedélyeznie kell az ismeretlen/külső forrásból származó alkalmazások telepítését az adott böngésző vagy fájlkezelő számára.
+</li></ul>
+</li><li>
+Készülékkövetelmények:
+<ul><li>
+Android operációs rendszer (ajánlott: Android 8.0 vagy újabb verzió).
+</li><li>
+Működő hátlapi kamera a gombák helyszíni fotózásához.
+</li><li>
+Aktív mobilinternet-kapcsolat a képfelismerő és a Wikipédia API eléréséhez.
+</li></ul>
+</li><li>
+Adatcsomag: A működéshez szükséges összes alapvető felületi elem, ikon és keretrendszeri adat magában a letöltött .apk csomagban helyet kap, így az első indításkor nincs szükség további nagy méretű adatfájlok utólagos letöltésére.
+</li></ul>
+<span id="h.dwgwulbfge2y"></span><h3 id="4.5.2"><strong>4.5.2 Kiszolgáló oldali üzembe állítás</strong></h3>
+<ul><li>
+Kiszolgáló telepítése: A Python nyelven futó backend és a MySQL adatbázis forráskódja, valamint az adatbázis-séma szintén a GitHub repozitóriumból érhető el. Demó és fejlesztői fázisban a kiszolgáló lokálisan, standard XAMPP és Python futtatókörnyezetben indítható el minimális konfigurációval.
+</li><li>
+Üzemeltetői feladatok: A rendszer felépítése nem igényel külön technikai személyzetet; az indítási és konfigurációs lépéseket a fejlesztői és üzemeltetői leírás (README és kapcsolódó dokumentumok) részletezi.
+</li></ul>
+<span id="h.kyu68hv3vnq1"></span><h1 id="5"><strong>5. A végtermék jellemzői, biztosított szolgáltatások</strong></h1>
+<p>Ez a fejezet a GombApp mobilalkalmazás legfontosabb, felhasználók szemszögéből meghatározott szolgáltatásait és funkcióit foglalja össze prioritási sorrendben.</p>
+<p>Az alkalmazás célja, hogy a modern mesterséges intelligencián alapuló képfelismerést, a digitális lexikont és a biztonsági modulokat ötvözve segítse a túrázókat a gombák biztonságos és tudatos gyűjtésében. A részletezett funkciók – a kamerás azonosítástól a saját gyűjteményekig – növelik a túrázók biztonságát, miközben tehermentesítik a gombaszakértőket. </p>
+<span id="h.itzxf7x2992s"></span><h2 id="5.1"><strong>5.1 Fő funkciók és szolgáltatások</strong></h2>
+<span id="h.umnnpx7dz53"></span><h3 id="5.1.1"><strong>5.1.1 Kép alapú gombafelismerés (Magas prioritás)</strong></h3>
+<ul><li>
+A szolgáltatás leírása: Az alkalmazás központi funkciója, amely lehetővé teszi a felhasználók számára, hogy a mobiltelefonjuk kamerájával a helyszínen készített fénykép alapján tájékozódjanak a talált gombáról.
+</li><li>
+Működése: A rendszer a beérkező fotót a háttérben elérhető növény- és gombafelismerő API (például a iNaturalist vagy a Kindwise Mushroom.id) segítségével elemzi. Az elemzést követően listát ad a legvalószínűbb találatokról a hozzájuk tartozó valószínűségi értékekkel együtt.
+</li><li>
+Kiemelt biztonsági elvárás: A felismerés eredménye felett minden esetben egyértelmű figyelmeztetés jelenik meg, amely rögzíti, hogy a képalapú azonosítás csak tájékoztató jellegű, és nem helyettesíti a hivatalos gombavizsgáló szakértő ellenőrzését.
+</li></ul>
+<span id="h.q1zr035pptn"></span><h3 id="5.1.2"><strong>5.1.2 Gombahatározó lexikon és adatbázis (Magas prioritás)</strong></h3>
+<ul><li>
+A szolgáltatás leírása: A nyomtatott gombakönyveket felváltó, digitális tudásbázis, amely a Magyarországon leggyakrabban előforduló ehető, nem ehető és mérgező gombafajokat mutatja be.
+</li><li>
+Adatlapok tartalma: A gombák magyar és latin neve, ehetőségi besorolása, morfológiai bélyegei (kalap, tönk, lemezek), termőideje és élőhelye.
+</li><li>
+Hasonmások kiemelése: Különös figyelmet fordít a könnyen összetéveszthető fajokra, bemutatva az ehető gombák és mérgező hasonmásaik közötti apró megkülönböztető jegyeket (például a mezei csiperke és a gyilkos galóca esetében). A részletes leírások kiegészítéséhez az alkalmazás a Wikipedia REST API-t használja.
+</li></ul>
+<span id="h.q5hmo71sk1qz"></span><h3 id="5.1.3"><strong>5.1.3 Edukációs és biztonsági modul (Közepes prioritás)</strong></h3>
+<ul><li>
+A szolgáltatás leírása: A kezdő gombászok és túrázók tájékoztatását szolgáló modul, amely segít eloszlatni a gombákkal kapcsolatos leggyakoribb tévhiteket (például a megérintés kockázataival vagy a rágott gombákkal kapcsolatban).
+</li><li>
+Tudatos gyűjtés támogatása: Útmutatást ad a gombák kíméletes leszedéséhez, felhívja a figyelmet a védett fajok óvására, valamint tájékoztatást nyújt a legközelebbi lakossági gombavizsgáló helyekről.
+</li></ul>
+<span id="h.ge6mgxdl77am"></span><h3 id="5.1.4"><strong>5.1.4 Kedvencek és saját gyűjtemény (Alacsony prioritás)</strong></h3>
+<ul><li>
+A szolgáltatás leírása: Lehetővé teszi a felhasználók számára a gyakran keresett fajok elmentését a gyorsabb elérés érdekében, valamint saját fotók és megjegyzések hozzáadását a megtalált példányokhoz.
+</li></ul>
+<span id="h.8zo4d8fgpl9k"></span><h2 id="5.2"><strong>5.2 Szolgáltatások összefoglaló táblázat</strong>a</h2>
+<div class="table-scroll"><table border="1" cellpadding="4" cellspacing="3" width="90%"><tbody>
+<tr>
+<th scope="col"><p><strong>Szolgáltatás / Funkció</strong></p></th>
+<th scope="col"><p><strong>Prioritás</strong></p></th>
+<th scope="col"><p><strong>Célcsoport</strong></p></th>
+<th scope="col"><p><strong>Elsődleges haszon</strong></p></th>
+</tr>
+<tr>
+<td><p>Kamerás gombafelismerés</p></td>
+<td><p>Magas (P1)</p></td>
+<td><p>Kezdő gombászok, túrázók</p></td>
+<td><p>Gyors előzetes tájékozódás a helyszínen</p></td>
+</tr>
+<tr>
+<td><p>Gombahatározó lexikon</p></td>
+<td><p>Magas (P1)</p></td>
+<td><p>Minden felhasználó</p></td>
+<td><p>Részletes morfológiai leírások és hasonmások</p></td>
+</tr>
+<tr>
+<td><p>Edukációs és biztonsági modul</p></td>
+<td><p>Közepes (P2)</p></td>
+<td><p>Kezdő gombászok, családok</p></td>
+<td><p>Téves azonosítások és mérgezések megelőzése</p></td>
+</tr>
+<tr>
+<td><p>Kedvencek és gyűjtemény</p></td>
+<td><p>Alacsony (P3)</p></td>
+<td><p>Rendszeres túrázók</p></td>
+<td><p>Saját megfigyelések rögzítése és tanulás</p></td>
+</tr>
+</tbody></table></div>
+<span id="h.7tbamys1dwtc"></span><h2 id="5.3"><strong>5.3 A szolgáltatások használatának főbb előnyei</strong></h2>
+<ul><li>
+A biztonság növelése: A helyszínen elérhető információk és a veszélyes hasonmások kiemelése csökkentik a téves felismerésből eredő gombamérgezések kockázatát.
+</li><li>
+Kényelmes használat: A nehéz gombahatározó könyvek cipelése helyett a legfontosabb adatok közvetlenül a felhasználók okostelefonján érhetők el.
+</li><li>
+A szakértők támogatása: A felkészültebb gyűjtők kevesebb feleslegesen leszedett gombát viszenek be a vizsgálókra, így csökken a gombaszakértők leterheltsége.
+</li><li>
+Természetvédelem: A védett fajok ismerete és a tudatosabb gyűjtési szokások hozzájárulnak az erdei élővilág megóvásához.
+</li></ul>
+<span id="h.pjytxxd4gkdw"></span><h1 id="6"><strong>6. Korlátozások</strong></h1>
+<p>Ebben a fejezetben azokat a technikai, hardveres, környezeti, jogi és gazdálkodási korlátokat rögzítjük, amelyek keretek közé szorítják a GombApp fejlesztését, valamint meghatározzák annak mindennapi működését és használatát.</p>
+<span id="h.8vzin4nyhbil"></span><h2 id="6.1"><strong>6.1 Jogi és szabályozási korlátozások</strong></h2>
+<span id="h.96jgsqepvo2r"></span><h3 id="6.1.1"><strong>6.1.1 Felelősségkizárás a gombaazonosításban</strong></h3>
+<p>A hatályos jogszabályok és a lakossági gombavizsgálat rendjéről szóló előírások értelmében az alkalmazás által nyújtott képalapú fajmeghatározás kizárólag tájékoztató jellegű lehet. A szoftver egyetlen gombát sem nyilváníthat hivatalosan emberi fogyasztásra alkalmasnak. A rendszer minden azonosítási felületen kötelezően megjeleníti a jogi felelősségkizárást és a gombaszakértői vizsgálat szükségességét.</p>
+<span id="h.334w05oxj5iq"></span><h3 id="6.1.2"><strong>6.1.2 Természetvédelmi előírások (Védett gombafajok)</strong></h3>
+<p>A védett és fokozottan védett növény- és állatfajokról, valamint a védett gombákról szóló jogszabályoknak megfelelően az alkalmazás köteles egyértelműen jelölni a védett fajokat, felhívva a felhasználók figyelmét arra, hogy azok gyűjtése, elpusztítása vagy termőhelyük károsítása törvénybe ütközik.</p>
+<span id="h.4poc669jc3r4"></span><h3 id="6.1.3"><strong>6.1.3 Adatvédelem (GDPR)</strong></h3>
+<p>A felhasználók által mentett helyadatok és személyes fotók kezelése során teljes mértékben meg kell felelni az Európai Unió általános adatvédelmi rendeletének (GDPR). A képek EXIF helyadatai kizárólag a felhasználó kifejezett hozzájárulásával tárolhatók a lokális adatbázisban, és biztosítani kell az adatok törlésének lehetőségét.</p>
+<span id="h.n6rjpnn57jn8"></span><h2 id="6.2"><strong>6.2 Technológiai és platform korlátozások</strong></h2>
+<span id="h.42dpao8pyuuq"></span><h3 id="6.2.1"><strong>6.2.1 Mobil operációs rendszer</strong></h3>
+<p>Az alkalmazás kizárólag Android operációs rendszerre készül, így iOS vagy egyéb mobil platformokon nem futtatható. A megcélzott minimális verzió az Android 8.0 (API Level 26), amely biztosítja a megfelelő piaci lefedettséget, miközben támogatja a modern kamerakezelést és hálózati funkciókat.</p>
+<span id="h.p635cfetqlvz"></span><h3 id="6.2.2"><strong>6.2.2 Hardveres követelmények</strong></h3>
+<p>A rendszer megfelelő működéséhez a célkészüléknek rendelkeznie kell működőképes, autófókusszal ellátott hátlapi kamerával (a gombák makró/közeli fotózásához).</p>
+<span id="h.519bw61tr99d"></span><h3 id="6.2.3"><strong>6.2.3 Tárhely- és memóriakorlát</strong></h3>
+<p>Mivel az alkalmazás régebbi vagy belépő kategóriás okostelefonokon is futhat, a helyi gyorsítótár (cache) és a mentett képek mérete szigorúan korlátozott (legfeljebb 100 MB), megelőzve az eszköz tárhelyének túlzott igénybevételét és az alkalmazás lassulását. </p>
+<span id="h.lqwacibenmq9"></span><h2 id="6.3"><strong>6.3 Hálózati és külső szolgáltatási korlátok</strong></h2>
+<span id="h.sr5m40gxmqdf"></span><h3 id="6.3.1"><strong>6.3.1 Mobilinternet függőség</strong></h3>
+<p>A gépi tanuláson alapuló képfelismerés (iNaturalist API) és a részletes leírások lekérése (Wikipedia REST API) felhőalapú szolgáltatásokon keresztül zajlik, így a fajazonosítás elvégzéséhez elengedhetetlen az aktív internetkapcsolat. </p>
+<span id="h.70vs4sm3eb73"></span><h3 id="6.3.2"><strong>6.3.2 Külső API korlátozások és kvóták</strong></h3>
+<p>A iNaturalist és a Wikipédia nyilvános, ingyenesen elérhető szolgáltatásaiként rate-limit (lekérdezésszám-korlát) alá eshetnek. A backendnek úgy kell felépülnie, hogy kezelni tudja az esetleges időszakos hálózati kieséseket és a várakozási időket. </p>
+<span id="h.5rqmorpcrppt"></span><h2 id="6.4"><strong>6.4 Erőforrás és projektkorlátok</strong></h2>
+<span id="h.lu0zhvx9xh8p"></span><h3 id="6.4.1"><strong>6.4.1 Költségvetési korlát</strong></h3>
+<p>A projekt nulla pénzügyi büdzsével, kizárólag ingyenes, nyílt forráskódú és közösségi technológiákra épül.</p>
+<span id="h.k7x2yfcmihdj"></span><h3 id="6.4.2"><strong>6.4.2 Idő- és határidőkeret</strong></h3>
+<p>A fejlesztést egy 12 hetes egyetemi ciklusban, vízesés modellben kell megvalósítani az ötfős hallgatói csapatnak, a 12. heti végső határidőre és bemutatóra szállítva a működő rendszert.</p>
+<span id="h.ay19hbikahhs"></span><h1 id="7"><strong>7. Minőségi elvárások</strong></h1>
+<p>A minőségi elvárások (nem-funkcionális követelmények) határozzák meg, hogy a GombApp milyen működési tulajdonságok, teljesítményszintek és minőségi paraméterek mellett kell, hogy ellássa a feladatait. </p>
+<span id="h.b9thvd57jwe2"></span><h2 id="7.1"><strong>7.1 Teljesítmény és válaszidők</strong></h2>
+<span id="h.qjfgvjta9kzo"></span><h3 id="7.1.1"><strong>7.1.1 Képalapú felismerés válaszideje</strong></h3>
+<p>Normál térerő és hálózati kapcsolat mellett a kép rögzítésétől és elküldésétől a iNaturalAPI által adott találati lista megjelenítéséig eltelt idő nem haladhatja meg a 3–5 másodpercet </p>
+<span id="h.e49r8f97g4r8"></span><h3 id="7.1.2"><strong>7.1.2 Helyi felületi reakcióidő</strong></h3>
+<p>Az alkalmazás képernyői közötti navigáció, menüváltás és a helyileg tárolt adatok (például a Logbook) betöltése 1 másodpercen belül meg kell, hogy történjen.</p>
+<span id="h.qhzlb4x9e4g3"></span><h3 id="7.1.3"><strong>7.1.3 Képoptimalizálás</strong></h3>
+<p>A beküldött fotók automatikus tömörítésen és átméretezésen esnek át a feltöltés előtt, így a hálózati adatforgalom minimális marad, csökkentve a felhőbe küldött adatmennyiséget és a lekérdezési időt.</p>
+<span id="h.wvx4ushcxsh2"></span><h3 id="7.1.4"><strong>7.1.4 Alkalmazás mérete és memóriaigénye</strong></h3>
+<p>A telepített alkalmazás mérete optimalizált, memóriahasználata pedig futás közben folyamatosan 150–200 MB alatt marad, biztosítva az akadozásmentes működést átlagos hardverű telefonokon is. </p>
+<span id="h.8i2wv99iwo60"></span><h2 id="7.2"><strong>7.2 Felismerési pontosság és megbízhatóság</strong></h2>
+<span id="h.6kjldyd6nt5c"></span><h3 id="7.2.1"><strong>7.2.1 Felismerési pontosság</strong></h3>
+<p>A iNaturalist növény- és gombarendszertani adatbázisára és algoritmusára támaszkodva a rendszer célja, hogy megfelelő minőségű fotók esetén elérje a 91%-os megbízhatóságot az elsődleges találatok pontosságában.</p>
+<span id="h.m830dqbjukql"></span><h3 id="7.2.2"><strong>7.2.2 Hibakezelés és hálózati stabilitás</strong></h3>
+<p>Internetkapcsolat megszakadása vagy gyenge térerő esetén az alkalmazás nem omolhat össze, hanem egyértelmű hibaüzenettel tájékoztatja a felhasználót. A fotó későbbi azonosításhoz történő helyi mentését csak akkor ajánlja fel, ha az opcionális UC-08 funkció elkészült.</p>
+<span id="h.8ma9738g9z3s"></span><h3 id="7.2.3"><strong>7.2.3 Kódminőség és tesztlefedettség</strong></h3>
+<p>A megbízható működés garantálása érdekében a backend modulokra és az integrációs rétegre vonatkozóan a minimális elvárás a legalább 80%-os tesztkód-lefedettség (unit és integrációs tesztekkel alátámasztva). </p>
+<span id="h.rtearlnx8ggs"></span><h2 id="7.3"><strong>7.3 Felhasználóbarátság és használhatóság</strong></h2>
+<span id="h.mobj17dfqyel"></span><h3 id="7.3.1"><strong>7.3.1 Intuitív kezelőfelület (UI/UX)</strong></h3>
+<p>A felület letisztult, egyértelmű ikonokkal és magyar nyelvű feliratokkal rendelkezik, hogy digitális tapasztalattal kevésbé rendelkező kezdő gombászok vagy idősebb túrázók is betanítás nélkül használni tudják. </p>
+<span id="h.dccc5zeoupbo"></span><h3 id="7.3.2"><strong>7.3.2 Terepi olvashatóság</strong></h3>
+<p>A dizájn kialakításánál fontos szempont az erős kontrasztarány, hogy a képernyő tartalma közvetlen napfényben, erdei környezetben is jól olvasható maradjon. </p>
+<span id="h.ll7fuv1mvl3t"></span><h2 id="7.4"><strong>7.4 Biztonság és adatvédelem</strong></h2>
+<span id="h.ohl7jx7x6y3f"></span><h3 id="7.4.1"><strong>7.4.1 Adatbiztonság</strong></h3>
+<p>A mobil kliens és a Python backend, valamint a backend és a külső API-k közötti kommunikáció titkosított HTTPS protokollon keresztül zajlik.</p>
+<span id="h.qy2xi0tjqul3"></span><h3 id="7.4.2"><strong>7.4.2 Jogi és életvédelmi biztonság</strong></h3>
+<p>A téves fajazonosításból fakadó mérgezések elkerülése érdekében az alkalmazás szigorú biztonsági irányelveket követ: a veszélyes hasonmások kiemelése és a kötelező jogi felelősségkizáró nyilatkozat minden egyes találati lapon hangsúlyosan, félreérthetetlenül jelenik meg. </p>
+<span id="h.gmqc0nlqj2no"></span><h1 id="8"><strong>8. Dokumentációkkal kapcsolatos követelmények</strong></h1>
+<p>A GombApp fejlesztése során többféle dokumentációra lesz szükség, hiszen a felhasználóknak, a fejlesztőknek és az alkalmazás üzemeltetőinek más-más információkra van szükségük. Fontos, hogy mindenki könnyen megtalálja a számára szükséges leírásokat, és azok érthetőek, naprakészek legyenek.</p>
+<span id="h.voja0g2njv9k"></span><h2 id="8.1"><strong>8.1 A dokumentációk típusai</strong></h2>
+<span id="h.n7363ml00u4r"></span><h3 id="8.1.1"><strong>8.1.1 Felhasználói dokumentáció (bevezető és súgó)</strong></h3>
+<p>Mivel a GombApp elsősorban kezdő és hobbi gombászoknak készül, fontos, hogy már az első használat során könnyen megérthető legyen a működése. Ehhez egy rövid, alkalmazáson belüli útmutató nyújt segítséget, amely lépésről lépésre bemutatja a legfontosabb funkciókat.</p>
+<p>Külön figyelmet kap a gombák helyes lefotózása, amelyhez képes útmutató is készül. Emellett egy gyakori kérdéseket összegyűjtő súgó is elérhető lesz, ahol a felhasználók gyorsan választ találhatnak a felmerülő problémákra.</p>
+<span id="h.kcgvm3mwy737"></span><h3 id="8.1.2"><strong>8.1.2 Fejlesztői dokumentáció</strong></h3>
+<p>Ez a dokumentáció a program működését és felépítését mutatja be a fejlesztők számára. Tartalmazza az alkalmazás felépítését, az adatbázis működését, valamint a külső adatforrásokkal, például a iNaturalist-al és a Wikipédiával való kapcsolat leírását. A forráskódot is megfelelő megjegyzésekkel látjuk el, hogy más fejlesztők számára is könnyen követhető és később is egyszerűen módosítható legyen.</p>
+<span id="h.zhven6pb7bmd"></span><h3 id="8.1.3"><strong>8.1.3 Üzemeltetői dokumentáció</strong></h3>
+<p>Ez a leírás az alkalmazás működtetéséhez szükséges tudnivalókat tartalmazza. Bemutatja többek között a backend kezelését, a külső szolgáltatások kapcsolatainak ellenőrzését, az új verziók telepítését és az adatok biztonsági mentését. Célja, hogy az alkalmazás későbbi üzemeltetése és karbantartása is gördülékenyen történjen.</p>
+<span id="h.2l2b21jo7tzw"></span><h2 id="8.2"><strong>8.2 A dokumentációk formátuma és elérhetősége</strong></h2>
+<span id="h.housg7yxwmrx"></span><h3 id="8.2.1"><strong>8.2.1 A felhasználók számára</strong></h3>
+<p>A dokumentáció kizárólag digitális formában lesz elérhető. A legfontosabb útmutatók közvetlenül az alkalmazásba épülnek be, így a felhasználóknak nem kell külön dokumentumokat keresniük. Emellett a GombApp weboldalán is elérhetők lesznek a szükséges információk, például a használati útmutatók és a gyakori kérdések.</p>
+<span id="h.d8kw2xe13zdk"></span><h3 id="8.2.2"><strong>8.2.2 A fejlesztők és az üzemeltetők számára</strong></h3>
+<p>A technikai dokumentációkat online, közösen használható felületen, például Notionben vagy Confluence-ben tároljuk. A fontosabb leírások a projekt forráskódja mellett is elérhetők lesznek Markdown-formátumú fájlokként, például a GitHubon vagy a GitLabon. Így a csapattagok könnyen hozzáférhetnek az információkhoz, és szükség esetén egyszerűen frissíthetik azokat. Nyomtatott dokumentáció készítésére nem lesz szükség.</p>
+<span id="h.ujvveyj6sw7h"></span><h2 id="8.3"><strong>8.3 Nyelvezet és a dokumentációk karbantartása</strong></h2>
+<span id="h.b2jdhzfarmpu"></span><h3 id="8.3.1"><strong>8.3.1 Nyelvezet</strong></h3>
+<p>A felhasználóknak szánt alkalmazás és a hozzá tartozó súgó magyar nyelvű, egyszerűen érthető megfogalmazást használ. Kerüljük a bonyolult informatikai kifejezéseket és a nehezen értelmezhető gombászati szakkifejezéseket, hogy a kezdők is könnyen eligazodjanak. A fejlesztői és üzemeltetői dokumentáció magyarul vagy angolul is készülhet, a csapat igényei szerint.</p>
+<span id="h.eoxox2175qzk"></span><h3 id="8.3.2"><strong>8.3.2 Karbantartás és verziókövetés</strong></h3>
+<p>Fontos, hogy a dokumentáció mindig megfeleljen az alkalmazás aktuális állapotának. Ha új funkciók jelennek meg, vagy jelentősebb változtatások történnek, a kapcsolódó leírásokat is frissíteni kell.</p>
+<p>Az új verziók megjelenésekor a felhasználók egy rövid összefoglalót is kapnak a változásokról, például egy „Mi az újdonság?” című részben. Ez segít abban, hogy könnyen megismerjék az új funkciókat, és mindig naprakész információk alapján használhassák a GombAppot.</p>
+<span id="h.yzic71wb27hm"></span><h1 id="9"><strong>9. Kockázat lista</strong></h1>
+<span id="h.1z278ub28hpp"></span><h2 id="9.1"><strong>9.1 A projekt túlnövekedése (Magas prioritás</strong>)</h2>
+<span id="h.ial4jisin54v"></span><h3 id="9.1.1"><strong>9.1.1 A kockázat leírása</strong></h3>
+<p>A fejlesztés során könnyen felmerülhetnek új ötletek, például közösségi funkciók, egy olyan felület, ahol a gombászok megoszthatják egymással a tapasztalataikat. Ezek önmagukban hasznos fejlesztések lehetnek, de ha folyamatosan új funkciókkal bővül a projekt, az könnyen elhúzhatja a fejlesztést. Így fennáll a veszélye annak, hogy az alkalmazás alapvető funkciói sem készülnek el időben.</p>
+<span id="h.syy203xhlnl8"></span><h3 id="9.1.2"><strong>9.1.2 Kockázatcsökkentési intézkedések</strong></h3>
+<p>Már a fejlesztés elején meg kell határozni, hogy mi kerüljön bele az alkalmazás első verziójába. Kezdetben csak a legfontosabb funkciókra koncentrálunk: a kamera használatára, a gombák képfelismerésére és az eredmények megjelenítésére. A további ötleteket egy későbbi fejlesztési listára gyűjtjük össze, és csak akkor foglalkozunk velük, ha az alapvető funkciók már megfelelően működnek.</p>
+<span id="h.ho025d57ioc0"></span><h2 id="9.2"><strong>9.2 Problémák a külső szolgáltatások összekapcsolásánál (Magas prioritás</strong>)</h2>
+<span id="h.a589c3woc9zu"></span><h3 id="9.2.1"><strong>9.2.1 A kockázat leírása</strong></h3>
+<p>A GombApp működéséhez szükség lehet külső adatforrásokra, például a iNaturalist-ra vagy a Wikipédiára, amelyekből a gombafajokról szerezhetünk információkat.</p>
+<p>Előfordulhat azonban, hogy ezek a szolgáltatások nem úgy működnek, ahogyan azt a fejlesztés során várjuk, megváltozik az adatok formátuma, vagy túl sok lekérdezés miatt ideiglenesen korlátozzák a hozzáférést. Ezek a problémák megnehezíthetik a fejlesztést, és késleltethetik az alkalmazás elkészültét.</p>
+<span id="h.c6g4y6us0mdv"></span><h3 id="9.2.2"><strong>9.2.2 Kockázatcsökkentési intézkedések</strong></h3>
+<p>A fejlesztés elején létrehozunk egy saját, tesztelésre alkalmas adathalmazt, amellyel a funkciók akkor is kipróbálhatók, ha a külső szolgáltatások éppen nem érhetők el.</p>
+<p>A külső adatforrások összekapcsolását külön kezeljük a program többi részétől, így ha valamelyik szolgáltatással probléma adódik, könnyebb lesz javítani vagy másikra cserélni. A valódi szolgáltatásokat csak a szükséges tesztek során használjuk, így a túl sok lekérdezésből adódó problémák is elkerülhetők.</p>
+<span id="h.lwdiljeyz20"></span><h2 id="9.3"><strong>9.3 A tesztelés nehézségei a gombák szezonális megjelenése miatt (Közepes prioritás</strong>)</h2>
+<span id="h.mqptq8pp5tl7"></span><h3 id="9.3.1"><strong>9.3.1 A kockázat leírása</strong></h3>
+<p>A GombAppot a természetben is ki kell próbálni, hiszen fontos, hogy a kamera különböző fényviszonyok mellett is használható legyen, és az alkalmazás a valós körülmények között is megfelelően működjön. Ez azonban nehézséget jelenthet, ha a fejlesztés olyan időszakra esik, amikor kevés gomba található az erdőben. Ilyenkor a terepi tesztelés korlátozottabb, és nehezebb ellenőrizni, hogyan teljesít az alkalmazás a gyakorlatban.</p>
+<span id="h.43bxw0rbbh2w"></span><h3 id="9.3.2"><strong>9.3.2 Kockázatcsökkentési intézkedések</strong></h3>
+<p>A fejlesztés során különböző minőségű gombafotókat használunk a teszteléshez, például homályos, rossz fényviszonyok között készült vagy esőben lefotózott képeket. Így az alkalmazás akkor is kipróbálható, amikor éppen nincs lehetőség erdei tesztelésre.</p>
+<p><strong>9.4 Késések a felhasználói felület és a telefon funkcióinak összekapcsolásakor (Közepes prioritás</strong>)</p>
+<span id="h.w1xc8it0nilj"></span><h3 id="9.4.1"><strong>9.4.1 A kockázat leírása</strong></h3>
+<p>Az alkalmazásnak megfelelően kell együttműködnie a telefon kamerájával és helymeghatározó rendszerével. Ez nem minden készüléken működik feltétlenül ugyanúgy, hiszen az egyes gyártók, például a Samsung vagy a Xiaomi telefonjai között is lehetnek különbségek. Emiatt előfordulhat, hogy bizonyos készülékeken hibák jelentkeznek, vagy a kamera megfelelő működésének kialakítása több időt vesz igénybe a tervezettnél.</p>
+<span id="h.dhelva90tgd1"></span><h3 id="9.4.2"><strong>9.4.2 Kockázatcsökkentési intézkedések</strong></h3>
+<p>A fejlesztés során már bevált megoldásokat és könyvtárakat használunk, például az Android CameraX rendszerét, ahelyett, hogy minden funkciót teljesen saját magunk fejlesztenénk le. Emellett a projekt ütemtervében külön időtartalékot hagyunk a különböző telefonokon történő tesztelésre és az esetleges hibák javítására. Így kisebb az esélye annak, hogy egy váratlan technikai probléma jelentősen késleltesse a projektet.</p>
+<span id="h.r7xbvvsluyfr"></span><h2 id="9.5"><strong>9.5 Lassulás és tárhelyproblémák az adatok mentésekor (Alacsony prioritás</strong>)</h2>
+<span id="h.qm9l42sf9atu"></span><h3 id="9.5.1"><strong>9.5.1 A kockázat leírása</strong></h3>
+<p>Ha az alkalmazásban lehetőség lesz korábban felismert gombák, képek vagy találatok mentésére, idővel jelentős mennyiségű adat gyűlhet össze a telefonon. Ez növelheti az alkalmazás tárhelyigényét, és nagyobb adatmennyiség esetén akár a működését is lelassíthatja. A probléma főként akkor jelentkezhet, ha a felhasználók hosszabb időn keresztül használják az alkalmazást, és sok képet mentenek el.</p>
+<span id="h.2231wafmmhxw"></span><h3 id="9.5.2"><strong>9.5.2 Kockázatcsökkentési intézkedések</strong></h3>
+<p>A képeket úgy tároljuk, hogy azok a lehető legkevesebb helyet foglalják el, miközben a felismeréshez szükséges részletek megmaradnak.</p>
+<p>Emellett korlátozzuk az alkalmazás által használt gyorsítótár méretét, például legfeljebb 100 MB-ra, és gondoskodunk arról, hogy a régebbi, már nem szükséges ideiglenes adatok automatikusan törlődjenek. Ezzel csökkenthető a tárhely túlzott használata, és hosszabb távon is biztosítható az alkalmazás megfelelő működése.</p>
+<span id="h.6ztx35frvqk3"></span><h1 id="10"><strong>10. Szótár</strong></h1>
+<p>Ez a fejezet adja meg az alapját annak a fogalomtárnak, amely egységesíti a dokumentációban és a fejlesztés során használt kifejezéseket. A könnyebb áttekinthetőség érdekében a fogalmakat két külön kategóriába rendeztük: gombászati és természettudományi, valamint informatikai és szoftverfejlesztési kifejezésekre. </p>
+<span id="h.ozs19q47qo2b"></span><h2 id="10.1"><strong>10.1 Gombászati és természettudományi fogalmak</strong></h2>
+<div class="table-scroll"><table border="1" cellpadding="4" cellspacing="3" width="90%"><tbody>
+<tr>
+<th scope="col"><p><strong>Kifejezés </strong></p></th>
+<th scope="col"><p><strong>Meghatározás </strong></p></th>
+</tr>
+<tr>
+<td><p>Gombavizsgáló szakértő </p></td>
+<td><p>Hatósági bizonyítvánnyal rendelkező szakember, aki a lakosság vagy a piacok számára hivatalosan bevizsgálja a leszedett gombákat, és hitelesen megállapítja azok fogyaszthatóságát. </p></td>
+</tr>
+<tr>
+<td><p>Hasonmás faj </p></td>
+<td><p>Olyan gombafaj, amely külső megjelenésében, méretében vagy színében megtévesztésig hasonlít egy másik fajra. Kiemelt veszélyt jelent, ha egy ehető fajnak mérgező hasonmása létezik (például mezei csiperke és a halálosan mérgező gyilkos galóca). </p></td>
+</tr>
+<tr>
+<td><p>Morfológiai bélyegek </p></td>
+<td><p>A gombatest külső alakbeli és szerkezeti sajátosságai, amelyek alapján az azonosítás történik (kalap formája, színe, felülete; lemezek/csövek illeszkedése; tönk alakja, gallér és bocskor megléte vagy hiánya) </p></td>
+</tr>
+<tr>
+<td><p>Micélium (Gombafonal-hálózat) </p></td>
+<td><p>A gomba föld alatti, vékony fonalakból álló vegetatív része. A helyes gombagyűjtési technika célja a micélium épségének megóvása a jövőbeli termőtest-képződés érdekében. </p></td>
+</tr>
+<tr>
+<td><p>Termőtest </p></td>
+<td><p>A gomba felszínen megjelenő, spóraképző része, amelyet a köznyelvben gombaként ismerünk és gyűjtünk. </p></td>
+</tr>
+<tr>
+<td><p>Védett gombafaj </p></td>
+<td><p>Jogszabály által védettnek vagy fokozottan védettnek nyilvánított gombafaj, amelynek gyűjtése, károsítása vagy elpusztítása törvényileg tilos, és természetvédelmi bírságot von maga után. </p></td>
+</tr>
+<tr>
+<td><p>Toxikológia (Gombatoxikológia) </p></td>
+<td><p>A gombamérgek emberi szervezetre gyakorolt hatásaival, a mérgezések tüneteivel és orvosi kezelésével foglalkozó szakterület. </p></td>
+</tr>
+</tbody></table></div>
+<span id="h.djvknrsk6owx"></span><h2 id="10.2"><strong>10.2 Informatikai és szoftverfejlesztési fogalmak</strong></h2>
+<div class="table-scroll"><table border="1" cellpadding="4" cellspacing="3" width="90%"><tbody>
+<tr>
+<th scope="col"><p><strong>Kifejezés </strong></p></th>
+<th scope="col"><p><strong>Meghatározás </strong></p></th>
+</tr>
+<tr>
+<td><p>API (Application Programming Interface)  </p></td>
+<td><p>Alkalmazásprogramozási felület; olyan előre meghatározott szabályrendszer és interfész, amely lehetővé teszi két különböző szoftverkomponens közötti automatikus kommunikációt és adatcserét. </p></td>
+</tr>
+<tr>
+<td><p>APK (Android Package Kit) </p></td>
+<td><p>Az Android operációs rendszer telepítőfájl-formátuma, amely tartalmazza az alkalmazás futtatásához szükséges lefordított kódot és erőforrásokat. </p></td>
+</tr>
+<tr>
+<td><p>Backend</p></td>
+<td><p>A rendszer kiszolgáló oldali része (Python alapon), amely a háttérben futva felelős az üzleti logikáért, az adatbázis-kezelésért és a külső lekérdezések koordinálásáért. </p></td>
+</tr>
+<tr>
+<td><p>Frontend </p></td>
+<td><p>A szoftver közvetlenül látható és interaktív felhasználói felülete, amellyel a mobiltelefon tulajdonosa kapcsolatba lép. </p></td>
+</tr>
+<tr>
+<td><p>DBMS (Database Management System) </p></td>
+<td><p>Adatbázis-kezelő rendszer; olyan szoftverréteg (a projektben a MySQL), amely strukturáltan tárolja, lekérdezi és karbantartja a felhasználói és rendszeradatokat. </p></td>
+</tr>
+<tr>
+<td><p>iNaturalist</p></td>
+<td><p>Nemzetközi, nyílt hozzáférésű biodiverzitási adatbázis és infrastruktúra; a projekt ennek képalapú fajfelismerő API-ját használja a gombák beazonosítására. </p></td>
+</tr>
+<tr>
+<td><p>GDPR (General Data Protection Regulation) </p></td>
+<td><p>Az Európai Unió általános adatvédelmi rendelete, amely kötelező előírásokat tartalmaz a személyes adatok (pl.: fényképek) biztonságos és átlátható kezelésére. </p></td>
+</tr>
+<tr>
+<td><p>Képfelismerő / Gépi látás modell </p></td>
+<td><p>Olyan mesterséges intelligencia alapú algoritmus, amely a kép vizuális sajátosságait (mintázatok, formák, színek) elemezve valószínűségi találatokat ad a fotón látható alanyra. </p></td>
+</tr>
+<tr>
+<td><p>Kódlefedettség (Code Coverage) </p></td>
+<td><p>Szoftvertesztelési mutatószám, amely megadja, hogy az automatizált tesztek a forráskód hány százalékát ellenőrzik futás közben.</p></td>
+</tr>
+<tr>
+<td><p>MVP (Minimum Viable Product) </p></td>
+<td><p>A termék legkisebb működőképes változata, amely a leglényegesebb alapfunkciókat biztosítja a teszteléshez és az alapkoncepció igazolásához. </p></td>
+</tr>
+<tr>
+<td><p>REST API (Representational State Transfer) </p></td>
+<td><p>Webszolgáltatások építésére szolgáló architektúra, amely szabványos HTTP-kéréseken (GET, POST) keresztül, leggyakrabban JSON formátumban cserél adatot a kliens és a szerver között. </p></td>
+</tr>
+<tr>
+<td><p>Vízesés modell (Waterfall) </p></td>
+<td><p>Klasszikus, lépcsőzetes szoftverfejlesztési megközelítés, amelyben az egyes szakaszok (tervezés, fejlesztés, tesztelés, átadás) szigorú sorrendben követik egymást. </p></td>
+</tr>
+</tbody></table></div>
+</main>
+</body>
 </html>

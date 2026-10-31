@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szoftverkövetelmény-specifikáció</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        margin: 30px 20px ;
+      }
+      h2 {
+        margin: 20px 30px ;
+      }
+      h3 {
+        margin: 10px 40px;
+      }
+      p {
+        margin: 10px 40px;
+      }
+      table {
+        margin: 10px 40px;
+      }
+      ol {
+        margin: 5px 10px;
+      }
+      ul {
+        margin: 5px 10px;
+      }
+      li {
+        margin: 5px 10px;
+      }
+      .under_dev {
+        color: gray;
+      }
+      h4 { margin: 10px 40px; }
+      img { display: block; max-width: 100%; height: auto; }
+      li p { margin: 0; }
+      h1, h2, h3 { overflow-wrap: anywhere; }
+      .source-note { overflow-wrap: anywhere; }
+      .cover-title { overflow-wrap: anywhere; }
+      @media (max-width: 640px) {
+        p, table { margin-left: 16px; margin-right: 16px; }
+        h1 { margin-left: 16px; margin-right: 16px; }
+        h2, h3, h4 { margin-left: 20px; margin-right: 16px; }
+        table { width: calc(100% - 32px); table-layout: fixed; overflow-wrap: anywhere; }
+        td p { margin: 0; }
+      }
+
+      h4 { margin: 10px 40px; }
+      .table-scroll { overflow-x: auto; }
+      img { max-width: 100%; height: auto; }
+      figure { margin: 20px 40px; }
+      figcaption { margin-top: 10px; }
+      td p, th p, li p { margin: 0; }
+      main p, main li { overflow-wrap: anywhere; }
+      @media (max-width: 640px) { figure { margin: 16px; } }
+    </style>
+    <link rel="stylesheet" href="../navigation.css">
+</head>
+  <body>
+<nav class="site-nav" aria-label="Fő navigáció">
+  <div class="site-nav__inner">
+    <a class="site-nav__brand" href="../index.html">GombApp · BKV</a>
+    <div class="site-nav__links">
+      <a href="../index.html">Feladatok</a>
+      <a href="projektterv.html">Projektterv</a>
+      <a href="vizio.html">Vízió</a>
+      <a href="szoftver-kovetelmeny.html" aria-current="page">Követelményspecifikáció</a>
+      <a href="felhasznaloi-dokumentacio.html">Felhasználói dokumentáció</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="left" lang="hu-HU"><font style="font-size: 22pt;" size="6">Csoport
+neve: Boldog Kicsi Vendégmunkások (BKV)</font></p>
+
+<p style="margin-bottom: 0cm;" align="left"><font style="font-size: 22pt;" size="6">Feladat
+sorszáma: H3</font></p>
+
+<p style="margin-bottom: 0cm;" align="left"><font style="font-size: 22pt;" size="6">Feladat
+címe: Szoftverkövetelmény-specifikáció</font></p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="center" lang="hu-HU"><font style="font-size: 26pt;" size="6"><b><span class="cover-title">SZOFTVERKÖVETELMÉNY-SPECIFIKÁCIÓ</span></b></font></p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="center" lang="hu-HU"><font size="4">Gyakorlatvezető::</font></p>
+
+<p style="margin-bottom: 0cm;" align="center" lang="hu-HU"><font style="font-size: 22pt;" size="6">Sátán Ádám</font></p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="left" lang="hu-HU"><font style="font-size: 16pt;" size="4">Csoport
+tagok:</font></p>
+
+<p style="margin-bottom: 0cm;" align="left"><br>
+
+</p>
+
+<table border="1" cellpadding="4" cellspacing="3" width="90%">
+
+	<colgroup><col width="118">
+	<col width="75">
+	<col width="264">
+	</colgroup><tbody >
+    <tr valign="top">
+
+		<td width="118">
+
+      <p align="left" lang="hu-HU"><font size="3">Biliczki Bence</font></p>
+
+		</td>
+
+		<td width="75" >
+
+      <p align="left" lang="hu-HU"><font size="3">EY25VM</font></p>
+
+		</td>
+
+		<td width="264" >
+
+      <p align="left" lang="hu-HU"><font size="3">bence.biliczki@student.uni-miskolc.hu</font></p>
+
+		</td>
+
+	</tr>
+
+	<tr valign="top">
+
+		<td width="118" >
+
+      <p align="left" lang="hu-HU"><font size="3">Jancsurák Napsugár</font></p>
+
+		</td>
+
+		<td width="75" >
+
+      <p align="left" lang="hu-HU"><font size="3">DBANML</font></p>
+
+		</td>
+
+		<td width="264" >
+
+      <p align="left" lang="hu-HU"><font size="3">napsugar.jancsurak@student.uni-miskolc.hu</font></p>
+
+		</td>
+
+	</tr>
+
+	<tr valign="top">
+
+		<td width="118" >
+
+      <p align="left" lang="hu-HU"><font size="3">Boda Noémi</font></p>
+
+		</td>
+
+		<td width="75" >
+
+      <p align="left" lang="hu-HU"><font size="3">HLNWIU</font></p>
+
+		</td>
+
+		<td width="264" >
+
+      <p align="left" lang="hu-HU"><font size="3">noemi.boda@student.uni-miskolc.hu</font></p>
+
+		</td>
+
+	</tr>
+
+	<tr valign="top" >
+
+		<td width="118" >
+
+      <p align="left" lang="hu-HU"><font size="3">Gaál Botond</font></p>
+
+		</td>
+
+		<td width="75" >
+
+      <p align="left" lang="hu-HU"><font size="3">COP0ZM</font></p>
+
+		</td>
+
+		<td width="264" >
+
+      <p align="left" lang="hu-HU"><font size="3">botond.gaal@student.uni-miskolc.hu</font></p>
+
+		</td>
+
+	</tr>
+
+	<tr valign="top" >
+
+		<td width="118" >
+
+      <p align="left" lang="hu-HU"><font size="3">Tóth Sebestyén Bence</font></p>
+
+		</td>
+
+		<td width="75" >
+
+      <p align="left" lang="hu-HU"><font size="3">EEBYCX</font></p>
+
+		</td>
+
+		<td width="264" >
+
+      <p align="left" lang="hu-HU"><font size="3">sebestyen.bence.toth@student.uni-miskolc.hu</font></p>
+
+		</td>
+
+	</tr>
+
+  </tbody>
+</table>
+
+<p style="margin-bottom: 0cm;" align="left"><br>
+
+</p>
+
+<p style="margin-bottom: 0cm;" align="right" lang="hu-HU"><font size="4">2026. 10. 27.</font></p>
+
+<p style="margin-bottom: 0cm;" align="center"><br>
+
+</p>
+
+
+
+
+
+    <hr>
+    <p style="text-align: center;"><strong>Történet</strong></p>
+    <table border="1" cellpadding="4" cellspacing="3" width="90%" style="margin: auto;">
+      <thead><tr><th scope="col">Dátum</th><th scope="col">Verzió</th><th scope="col">Leírás</th><th scope="col">Szerző</th></tr></thead>
+      <tbody><tr><td>2026.10.27.</td><td>1.0</td><td>A szoftverkövetelmény-specifikáció webes változata a közös dokumentum alapján.</td><td>BKV</td></tr></tbody>
+    </table>
+    <hr>
+    <h2>Tartalomjegyzék</h2>
+<nav aria-label="Tartalomjegyzék"><ul>
+<li><a href="#1">1. Bevezetés</a></li>
+<li><a href="#2">2. Áttekintés</a></li>
+<li><a href="#3">3. A rendszer funkciói</a><ul>
+<li><a href="#3.1">3.1. Rendszerhatár, szereplők és use case áttekintés</a></li>
+<li><a href="#3.2">3.2. UC-01 – Képalapú gombafelismerés</a></li>
+<li><a href="#3.3">3.3. UC-02 – Gombafaj részletes adatlapjának megtekintése</a></li>
+<li><a href="#3.4">3.4. UC-03 – Gombalexikon böngészése és keresés</a></li>
+<li><a href="#3.5">3.5. UC-04 – Találat rögzítése a személyes gyűjteménynaplóban</a></li>
+<li><a href="#3.6">3.6. UC-05 – Kedvenc gombafajok kezelése</a></li>
+<li><a href="#3.7">3.7. UC-06 – Offline fényképrögzítés és későbbi feldolgozás</a></li>
+<li><a href="#3.8">3.8. UC-07 – Adminisztrációs felület</a></li>
+<li><a href="#3.9">3.9. Use case kapcsolatok, prioritások és nyitott függőségek</a></li></ul>
+</li>
+<li><a href="#4">4. Használhatóság</a><ul>
+<li><a href="#4.1">4.1. Feladatvégrehajtási idő összehasonlítása</a></li>
+<li><a href="#4.2">4.2. Betanulási idő</a></li>
+<li><a href="#4.3">4.3. A gyors betanulást segítő rendszertulajdonságok</a></li>
+<li><a href="#4.4">4.4. Hasonlóság a felhasználók által korábban használt alkalmazásokkal</a></li>
+<li><a href="#4.5">4.5. Összhang a terepi munka során párhuzamosan használt alkalmazásokkal</a></li></ul>
+</li>
+<li><a href="#5">5. Megbízhatóság</a><ul>
+<li><a href="#5.1">5.1. Rendelkezésre állás</a></li>
+<li><a href="#5.2">5.2. MTBF – A hibák között eltelt átlagos idő</a></li>
+<li><a href="#5.3">5.3. MTTR – A hibák kijavításához szükséges átlagos idő</a></li>
+<li><a href="#5.4">5.4. A rendszer eredményeinek pontossága</a></li></ul>
+</li>
+<li><a href="#6">6. Teljesítmény</a><ul>
+<li><a href="#6.1">6.1. Válaszidők</a></li>
+<li><a href="#6.2">6.2. Áteresztőképesség (Throughput)</a></li>
+<li><a href="#6.3">6.3. Kapacitás</a></li>
+<li><a href="#6.4">6.4. Korlátozott használhatóság idején elvárható mutatók</a></li>
+<li><a href="#6.5">6.5. Erőforrásigények</a></li></ul>
+</li>
+<li><a href="#7">7. Támogatottság</a><ul>
+<li><a href="#7.1">7.1. Kódolási szabályok és elnevezések</a></li>
+<li><a href="#7.2">7.2. Karbantartói és üzemeltetői funkciók</a></li>
+<li><a href="#7.3">7.3. Rendszernaplózás</a></li>
+<li><a href="#7.4">7.4. A karbantartást segítő eszközök</a></li></ul>
+</li>
+<li><a href="#8">8. Tervezési korlátozások</a><ul>
+<li><a href="#8.1">8.1. A rendszer felépítésére vonatkozó előírások</a></li>
+<li><a href="#8.2">8.2. Programozási nyelvek</a></li>
+<li><a href="#8.3">8.3. Fejlesztőeszközök és munkakörnyezetek</a></li>
+<li><a href="#8.4">8.4. Újrafelhasználható elemek és külső szolgáltatások (API)</a></li>
+<li><a href="#8.5">8.5. Fejlesztési módszertan</a></li></ul>
+</li>
+<li><a href="#9">9. On-line dokumentáció és Help rendszer</a></li>
+<li><a href="#10">10. Felhasznált kész komponensek</a></li>
+<li><a href="#11">11. Interfészek</a><ul>
+<li><a href="#11.1">11.1. Felhasználói interfészek</a></li>
+<li><a href="#11.2">11.2. Hardware interfészek</a></li>
+<li><a href="#11.3">11.3. Software interfészek</a></li>
+<li><a href="#11.4">11.4. Kommunikációs interfészek</a></li></ul>
+</li>
+<li><a href="#12">12. Alkalmazott szabványok</a><ul>
+<li><a href="#12.1">12.1. Kötelezően alkalmazandó szabványok</a></li>
+<li><a href="#12.2">12.2. Választás alapján alkalmazott szabványok</a></li></ul>
+</li>
+<li><a href="#13">13. Mellékletek</a></li></ul></nav>
+<main id="document-content">
+<span id="h.vr8xkwdugy25"></span><h1 id="1">1. Bevezetés</h1>
+<p>Ez a szoftverkövetelmény-specifikáció a GombApp mobil- és webes rendszer fejlesztésének alapdokumentuma, amely pontosan rögzíti a rendszerrel szemben támasztott funkcionális és nem funkcionális követelményeket, biztosítva a fejlesztők, a megrendelő és a tesztelők számára a tiszta, egyértelmű kereteket.</p>
+<ul><li>
+<strong>A termék célja és hatóköre:</strong> A GombApp egy okostelefonos alkalmazásból és backendből álló rendszer, amely a mesterséges intelligencia és a külső adatbázisok, mint a iNaturalist API integrálásával támogatja a terepen gyűjtött gombák gyors azonosítását. A rendszer fő funkciói közé tartozik a kamerás felismerés, a részletes fajleírások megjelenítése és az ehetőségi figyelmeztetések biztosítása.
+</li><li>
+<strong>Célközönség és felhasználói kör:</strong>
+<ul><li>
+<strong>Fejlesztők és tesztelők:</strong> A fejlesztéshez pontos specifikációt nyújt, a tesztelők pedig ez alapján dolgozzák ki a teszteseteket és az ellenőrzési folyamatokat.
+</li><li>
+<strong>Projektmenedzserek és megrendelők:</strong> Elsődleges viszonyítási alap a projekt terjedelméhez, a határidők tartásához, valamint az átadás-átvételi elvárások ellenőrzéséhez.
+</li><li>
+<strong>Üzemeltetők és karbantartók:</strong> Átláthatóvá teszi a backendet és az adatbázist, ami elengedhetetlen a felügyelethez, a hibaelhárításhoz és a későbbi skálázáshoz.<strong></strong>
+</li></ul>
+</li></ul>
+<span id="h.uzse89azh3ev"></span><h1 id="2">2. Áttekintés</h1>
+<ul><li>
+ <strong>A termék környezete:</strong> A GombApp egy olyan rendszer, amely egy Android operációs rendszerre fejlesztett mobilalkalmazásból (kliens), egy Python alapú backendből, egy MySQL adatbázisból, valamint a gombafelismerést biztosító külső iNaturalist API-ból épül fel.
+</li><li>
+ <strong>Legfontosabb funkciók:</strong> Fénykép alapú kamerás online gombafelismerés, az offline készített képek eltárolása későbbi elemzésre, a fajok részletes leírása és ehetőségi/biztonsági státuszainak megjelenítése.
+</li><li>
+ <strong>A felhasználók jellemzői:</strong>
+</li></ul>
+<p>o   <strong>Kezdő gombászok:</strong> Alacsonyabb informatikai és szakmai ismerettel rendelkeznek; számukra az egyszerű, gyors, egy kézzel kezelhető felület és az egyértelmű vizuális figyelmeztetések a legfontosabbak.</p>
+<p>o   <strong>Tapasztalt gombászok:</strong> Magasabb gombászati tudású felhasználók, akik részletes szűrőket és bővített adatrögzítési lehetőségeket igényelnek.</p>
+<p>o   <strong>Rendszerüzemeltetők:</strong> Technikai szakemberek. A naplók, a felhasználói fiókok és az API-keretek felügyeletét végzik.</p>
+<ul><li>
+ <strong>Korlátozások:</strong> A mobilalkalmazás kizárólag Android platformra készül; a működéséhez mobilinternet-kapcsolat szükséges a külső lekérdezésekhez; szigorúan be kell tartani a GDPR adatvédelmi előírásokat (különösen a helyadatoknál); és igazodni kell az iNaturalist API által megadott lekérdezési limitekhez.
+</li><li>
+ <strong>Feltételezések és függőségek:</strong> Feltételezzük, hogy a felhasználó eszköze rendelkezik működő kamerával, a terepen biztosított a stabil internetkapcsolat, valamint a külső iNaturalist szolgáltatás folyamatosan és zavartalanul elérhető.
+</li><li>
+<strong>A követelmények csoportosításának szempontjai:</strong> A követelmények strukturálása a rendszer fő funkcionális moduljai, a nem funkcionális minőségi mutatók (használhatóság, megbízhatóság, teljesítmény), a karbantarthatósági és kódolási elvek, valamint a technikai interfészek és tervezési korlátozások mentén történik.
+</li></ul>
+<span id="h.4eeykgv65tc9"></span><h1 id="3">3. A rendszer funkciói</h1>
+<p>A fejezet a GombApp funkcionális követelményeit a felhasználók által kezdeményezett műveletek (use case-ek) szerint rögzíti. Minden esetnél megadjuk a szereplőket, az elő- és utófeltételeket, a fő folyamatot, az alternatív és kivételes eseteket, valamint a tesztelhető követelményeket. A funkciók tervezett képességeket jelölnek, nem már implementált szolgáltatásokat.</p>
+<span id="h.r5ecnpsjdhyj"></span><h2 id="3.1">3.1. Rendszerhatár, szereplők és use case áttekintés</h2>
+<p>A rendszerhatáron belül található az Android-kliens, a backend, a személyes gyűjtemény funkciói és a webes adminisztráció. A külső azonosító és lexikon- a GombAppot kiszolgáló, de attól független rendszerek.</p>
+<ul><li>
+<strong>Elsődleges aktor – Felhasználó</strong>: a mobilalkalmazást használó hobbi gombász vagy természetjáró. Fotót készít, a javasolt fajokat és adatlapokat áttekinti, a lexikonban és a saját találatait rögzíti.
+</li><li>
+<strong>Elsődleges aktor – Adminisztrátor</strong>: jogosultsággal rendelkező rendszerüzemeltető, aki ellenőrzi a rendszer állapotát és elvégzi a megengedett karbantartási műveleteket.
+</li><li>
+<strong>Másodlagos aktor – Külső azonosító szolgáltatás</strong>: a feltöltött kép alapján lehetséges taxonokat vagy felismerési eredményt szolgáltató külső komponens. A tervezett iNaturalist-integráció pontos képfelismerési interfészét a megvalósítás előtt ellenőrizni kell.
+</li><li>
+<strong>Másodlagos aktor – Lexikonadat-forrás</strong>: gombafajok leírásait és kapcsolódó ismeretterjesztő információkat szolgáltató külső adatforrás (a tervben a Wikipédia API).
+</li></ul>
+<figure><img src="assets/gombapp-use-case.png" alt="A GombApp tervezett use case modellje" loading="lazy"><figcaption>1. ábra – A GombApp tervezett use case modellje. Az UC-k jelölése a következő alfejezetek azonosítóival egyezik.</figcaption></figure>
+<span id="h.krpvzh9vgj0y"></span><h2 id="3.2">3.2. UC-01 – Képalapú gombafelismerés</h2>
+<ul><li>
+<strong>Prioritás</strong>: Magas.
+</li><li>
+<strong>Aktorok</strong>: Felhasználó; külső azonosító szolgáltatás.
+</li><li>
+<strong>Rövid leírás</strong>: A felhasználó fényképet készít vagy meglévő képet választ, a rendszer pedig lehetséges gombafajokat ajánl fel. Az eredmény nem tekinthető biztos azonosításnak.
+</li><li>
+<strong>Prekondíciók (előfeltételek)</strong>: A kliens elindult; a kép elérhető; online felismeréshez van hálózat és működő külső szolgáltatás. Kamerás felvételhez szükséges a kameraengedély.
+</li><li>
+<strong>Postkondíciók (utófeltételek)</strong>: Siker esetén megjelenik a találati lista, a rendelkezésre álló bizonytalansági információ és a kötelező szakértői figyelmeztetés. Sikertelen kérés esetén nem keletkezik igazolt fajazonosítás, a felhasználó erről tájékoztatva van.
+</li></ul>
+<p><strong>Szokásos működés (Main Flow):</strong></p>
+<ol><li>
+A felhasználó kiválasztja a „Gomba felismerése” műveletet.
+</li><li>
+A kliens fényképet készít, illetve felkínálja egy meglévő fénykép kiválasztását.
+</li><li>
+A rendszer megmutatja a képet, és jóváhagyást kér a feldolgozáshoz.
+</li><li>
+A backend továbbítja az azonosításhoz szükséges adatokat a konfigurált szolgáltatásnak.
+</li><li>
+A rendszer feldolgozza a visszaadott fajjelölteket, és megjeleníti a lehetséges találatokat.
+</li><li>
+A felhasználó a választott jelölt adatlapját megnyithatja (UC-02).
+</li></ol>
+<p><strong>Alternatív esetek (Alternate Flows):</strong></p>
+<ul><li>
+A1. Ha több lehetséges faj érkezik, a rendszer rendezett jelöltlistát mutat, nem választ automatikusan biztos fajazonosságot.
+</li><li>
+A2. Ha a kép nem alkalmas felismerésre vagy nincs használható jelölt, a rendszer új fényképet, jobb megvilágítást vagy további nézetet javasol.
+</li></ul>
+<p><strong>Kivételes esetek (Exception Flows):</strong></p>
+<ul><li>
+E1. A kameraengedély hiányakor az alkalmazás magyarázatot jelenít meg; a felhasználó visszatérhet és a képfeltöltést választhatja.
+</li><li>
+E2. Kapcsolat-, szolgáltatás- vagy időtúllépési hiba esetén a művelet sikertelen állapotba kerül, és a rendszer egyértelmű tájékoztatást ad. A kép offline mentését csak akkor ajánlja fel, ha az opcionális UC-08 funkció megvalósult.
+</li><li>
+E3. Nem támogatott vagy sérült képfájl esetén a rendszer nem küld értelmezhetetlen adatot a szolgáltatásnak.
+</li></ul>
+<p><strong>Részletes funkcionális követelmények:</strong></p>
+<ul><li>
+FR-01.1 A rendszernek lehetővé kell tennie kép készítését vagy kiválasztását, a feldolgozás előtti előnézettel.
+</li><li>
+FR-01.2 A rendszer csak felhasználói jóváhagyás után indíthat külső képfeldolgozást.
+</li><li>
+FR-01.3 A találatoknál egyértelműen jelezni kell az azonosítás bizonytalanságát; bizalmi érték csak akkor jeleníthető meg, ha azt a szolgáltatás értelmezhetően biztosítja.
+</li><li>
+FR-01.4 A felismerési képernyőn kötelező figyelmeztetést kell megjeleníteni arról, hogy fogyasztás előtt szakértői vizsgálat szükséges.
+</li></ul>
+<p><strong>Ellenőrzési/elfogadási feltétel</strong>: Érvényes képnél a felhasználó találatot vagy értelmezhető „nincs találat” üzenetet kap; hiba esetén nincs hamis pozitív, fogyaszthatóságot igazoló állapot.</p>
+<span id="h.y1qhjmwv27tb"></span><h2 id="3.3">3.3. UC-02 – Gombafaj részletes adatlapjának megtekintése</h2>
+<ul><li>
+<strong>Prioritás</strong>: Magas.
+</li><li>
+<strong>Aktorok</strong>: Felhasználó; lexikonadat-forrás.
+</li><li>
+<strong>Rövid leírás</strong>: A felhasználó a felismerés eredményéből vagy a lexikonból megnyitja egy gombafaj információs oldalát.
+</li><li>
+<strong>Prekondíciók (előfeltételek)</strong>: A fajhoz létezik rekord vagy beazonosítható fajazonosító; a kívánt részletes külső tartalom lekéréséhez hálózati kapcsolat áll rendelkezésre.
+</li><li>
+<strong>Postkondíciók (utófeltételek)</strong>: Megjelenik a fajlap; a felhasználó megismerheti a jellemzőket és a lehetséges veszélyes hasonmásokat, de nem kap fogyasztási engedélyt.
+</li></ul>
+<p><strong>Szokásos működés (Main Flow):</strong></p>
+<ol><li>
+A felhasználó megnyit egy fajjelöltet vagy lexikonbejegyzést.
+</li><li>
+A rendszer betölti a faj nevét (magyar és tudományos elnevezés, ha elérhető), képeit és rövid leírását.
+</li><li>
+Megjeleníti az azonosításhoz fontos külső jegyeket és az összetéveszthető fajokra vonatkozó információt, ha van megbízható forrásadat.
+</li><li>
+A rendszer elkülönítve megjeleníti az elérhető ehetőségi/toxikológiai információkat és azok bizonytalanságát.
+</li><li>
+Az adatlapon elérhető marad a kötelező szakértői figyelmeztetés; a felhasználó továbbléphet a kedvencekhez (UC-05).
+</li></ol>
+<p><strong>Alternatív esetek (Alternate Flows):</strong></p>
+<ul><li>
+A1. A hiányzó mezők „Nincs adat” jelzéssel szerepelnek, a nem ismert toxikológiai státusz nem minősül ehetőnek.
+</li><li>
+A2. Amennyiben több forrás eltérő besorolást ad, a rendszer nem oldja fel automatikusan az ellentmondást fogyaszthatósági ajánlássá.
+</li></ul>
+<p><strong>Kivételes esetek (Exception Flows):</strong></p>
+<ul><li>
+E1. Külső adatforrás elérhetetlenségekor a korábban hitelesen betöltött, rendelkezésre álló információk megjeleníthetők a forrás és frissesség jelzésével.
+</li><li>
+E2. Ismeretlen vagy érvénytelen fajazonosító esetén hibaüzenetet és visszalépési lehetőséget kell adni.
+</li></ul>
+<p><strong>Részletes funkcionális követelmények:</strong></p>
+<ul><li>
+FR-02.1 Minden fajlapnak tartalmaznia kell a faj azonosítóját és a ténylegesen rendelkezésre álló alapinformációkat.
+</li><li>
+FR-02.2 A mérgezőségre, fogyaszthatóságra és veszélyes hasonmásokra vonatkozó adatokat elkülönített, jól felismerhető blokkokban kell megjeleníteni.
+</li><li>
+FR-02.3 Hiányzó adatok esetén a rendszer nem pótolhatja találgatással a faj- vagy biztonsági jellemzőket.
+</li></ul>
+<p><strong>Ellenőrzési/elfogadási feltétel</strong>: Hiányos rekord esetén is használható és félreérthetetlen adatlap látható; szakértői ellenőrzést helyettesítő állítás soha nem jelenik meg.</p>
+<span id="h.qjl92clppkrv"></span><h2 id="3.4">3.4. UC-03 – Gombalexikon böngészése és keresés</h2>
+<ul><li>
+<strong>Prioritás</strong>: Magas.
+</li><li>
+<strong>Aktorok</strong>: Felhasználó; lexikonadat-forrás.
+</li><li>
+<strong>Rövid leírás</strong>: A felhasználó képfelismerés nélkül is fajokat kereshet a GombApp gombahatározó lexikonjában.
+</li><li>
+<strong>Prekondíciók (előfeltételek)</strong>: A lexikon adatforrása vagy helyi gyorsítótára elérhető.
+</li><li>
+<strong>Postkondíciók (utófeltételek)</strong>: A keresési feltételeknek megfelelő találatok megjelennek, és bármelyik faj adatlapja megnyitható.
+</li></ul>
+<p><strong>Szokásos működés (Main Flow):</strong></p>
+<ol><li>
+ A felhasználó megnyitja a „Lexikon” menüpontot.
+</li><li>
+ A rendszer megjeleníti a rendelkezésre álló gombafajokat vagy az induló keresőfelületet.
+</li><li>
+ A felhasználó nevet vagy keresőkifejezést ad meg.
+</li><li>
+ A rendszer a keresési feltétel alapján találatokat listáz, és az elérhető jellemzők szerint szűrést tesz lehetővé.
+</li><li>
+ A felhasználó kiválaszt egy fajt, a rendszer megnyitja az adatlapját (UC-02).
+</li></ol>
+<p><strong>Alternatív esetek (Alternate Flows):</strong></p>
+<ul><li>
+A1. Üres keresés esetén a rendszer az alapértelmezett fajlistát mutatja.
+</li><li>
+A2. Nincs egyezés esetén a rendszer egyértelmű „Nincs találat” visszajelzést ad, és felkínálja a keresés módosítását.
+</li><li>
+A3. Ahol a forrás engedi, a magyar és tudományos név alapján történő keresés egyaránt támogatott.
+</li></ul>
+<p><strong>Kivételes esetek (Exception Flows):</strong></p>
+<ul><li>
+E1. Adatforrás-hiba esetén a rendszer jelzi a korlátozott elérhetőséget, és szükség esetén a már helyben eltárolt elemeket ajánlja fel.
+</li></ul>
+<p><strong>Részletes funkcionális követelmények:</strong></p>
+<ul><li>
+FR-03.1 A rendszernek biztosítania kell szöveges keresést és a találati lista megnyitását.
+</li><li>
+FR-03.2 A listában a faj neve mellett azonosítást segítő képi vagy rövid leíró adat jelenhet meg, amennyiben a forrásban elérhető.
+</li><li>
+FR-03.3 A lexikonnak a felhasználó által választott fajlapot ugyanazon az azonosítón keresztül kell megnyitnia, mint a felismerési találatoknál.
+</li></ul>
+<p><strong>Ellenőrzési/elfogadási feltétel</strong>: Ismert névre a rendszer releváns rekordot mutat; üres és hibás keresés nem eredményez téves fajadatlapot.</p>
+<span id="h.m60exp87dig7"></span><h2 id="3.5">3.5. UC-04 – Találat rögzítése a személyes gyűjteménynaplóban</h2>
+<ul><li>
+<strong>Prioritás</strong>: Magas.
+</li><li>
+<strong>Aktorok</strong>: Felhasználó.
+</li><li>
+<strong>Rövid leírás</strong>: A felhasználó a Logbookban saját megfigyelést hoz létre fényképpel, lehetséges fajnévvel és dátummal.
+</li><li>
+<strong>Prekondíciók (előfeltételek)</strong>: A felhasználó megnyitotta a naplót vagy egy felismerési eredményt; van elérhető helyi tároló.
+</li><li>
+<strong>Postkondíciók (utófeltételek)</strong>: A naplóbejegyzés mentésre kerül a felhasználó saját gyűjteményében, és később visszakereshető.
+</li></ul>
+<p><strong>Szokásos működés (Main Flow):</strong></p>
+<ol><li>
+ A felhasználó a felismerési eredményből vagy a naplóból kiválasztja az „Új találat” műveletet.
+</li><li>
+ A rendszer felajánlja a fénykép, a lehetséges faj, a dátum és egy rövid megjegyzés megadását.
+</li><li>
+ A rendszer ellenőrzi a szükséges adatok meglétét és elmenti a bejegyzést.
+</li><li>
+ Az új elem megjelenik a Logbook listájában, ahol megtekinthető és a tervezett kezelőfunkciókkal módosítható vagy törölhető.
+</li></ol>
+<p><strong>Alternatív esetek (Alternate Flows):</strong></p>
+<ul><li>
+A1. A felhasználó saját, nem igazolt fajmegnevezést is rögzíthet; ezt külön kell megkülönböztetni az automatikus jelöltektől.
+</li></ul>
+<p><strong>Kivételes esetek (Exception Flows):</strong></p>
+<ul><li>
+E1. Helyi tárhelyhiány vagy mentési hiba esetén az alkalmazás egyértelmű hibát jelez, és nem állítja, hogy a bejegyzés mentése sikerült.
+</li></ul>
+<p><strong>Részletes funkcionális követelmények:</strong></p>
+<ul><li>
+FR-05.1 A naplóbejegyzésnek tartalmaznia kell egyedi azonosítót, rögzítési dátumot és a rendelkezésre álló megfigyelési adatokat.
+</li><li>
+FR-05.2 A felhasználónak vissza kell tudnia keresni és törölni saját bejegyzéseit.
+</li><li>
+FR-05.3 A naplóba mentett lehetséges faj nem válhat automatikusan ellenőrzött azonosítássá.
+</li></ul>
+<p><strong>Ellenőrzési/elfogadási feltétel: </strong>A mentett találat visszakereshető, és a helyengedély megtagadása nem akadályozhatja a helyadat nélküli naplózást. A hálózat nélküli mentés tesztelése csak az opcionális offline funkció megvalósítása esetén követelmény.</p>
+<span id="h.p8rt0f9tgart"></span><h2 id="3.6">3.6. UC-05 – Kedvenc gombafajok kezelése</h2>
+<ul><li>
+<strong>Prioritás</strong>: Alacsony.
+</li><li>
+<strong>Aktorok</strong>: Felhasználó.
+</li><li>
+<strong>Rövid leírás</strong>: A felhasználó a gyakran megtekintett vagy számára érdekes gombafajokat külön listába mentheti.
+</li><li>
+<strong>Prekondíciók (előfeltételek)</strong>: A felhasználó megnyitott egy fajadatlapot vagy a kedvencek nézetét.
+</li><li>
+<strong>Postkondíciók (utófeltételek)</strong>: A kijelölt faj bekerül a kedvencek közé, illetve eltávolítás esetén kikerül onnan; a faj alapadatai változatlanok maradnak.
+</li></ul>
+<p><strong>Szokásos működés (Main Flow):</strong></p>
+<ol><li>
+ A felhasználó a fajlapon kiválasztja a „Kedvencekhez adás” műveletet.
+</li><li>
+ A rendszer a kiválasztott fajazonosítót a személyes kedvenclistához rendeli.
+</li><li>
+ A felhasználó megnyitja a „Kedvencek” nézetet.
+</li><li>
+ A rendszer felsorolja a korábban jelölt fajokat, és biztosítja az adatlapjuk megnyitását (UC-02).
+</li></ol>
+<p><strong>Alternatív esetek (Alternate Flows):</strong></p>
+<ul><li>
+A1. Ha a faj már szerepel a kedvencek között, a rendszer nem hoz létre második, azonos bejegyzést.
+</li><li>
+A2. A felhasználó a jelölést visszavonva eltávolíthatja a fajt a listából.
+</li></ul>
+<p><strong>Kivételes esetek (Exception Flows):</strong></p>
+<ul><li>
+E1. Sikertelen mentés esetén a felület visszajelzést ad, és nem jelez végleges hozzáadást.
+</li></ul>
+<p><strong>Részletes funkcionális követelmények:</strong></p>
+<ul><li>
+FR-07.1 A rendszernek fajazonosító alapján kell kezelnie a kedvenceket.
+</li><li>
+FR-07.2 Egyazon faj személyes kedvenclistában legfeljebb egyszer szerepelhet.
+</li><li>
+FR-07.3 A kedvencbe mentés nem módosíthatja a faj toxikológiai vagy szakértői státuszát.
+</li></ul>
+<p><strong>Ellenőrzési/elfogadási feltétel</strong>: A jelölés hozzáadás után visszakereshető és eltávolítható, duplikáció nélkül.</p>
+<span id="h.dem3ozbymyyy"></span><h2 id="3.7">3.7. UC-06 – Offline fényképrögzítés és későbbi feldolgozás</h2>
+<ul><li>
+<strong>Prioritás: </strong>Közepes
+</li><li>
+<strong>Aktorok</strong>: Felhasználó; külső azonosító szolgáltatás (csak a kapcsolat helyreállása után).
+</li><li>
+<strong>Rövid leírás: </strong>Opcionális, az alapváltozatban nem kötelező bővítés. Megvalósítása esetén a felhasználó hálózat nélkül elmentheti a képet és a kapcsolódó adatokat, majd később külön jóváhagyással online azonosítást indíthat.
+</li><li>
+<strong>Prekondíciók (előfeltételek)</strong>: Az eszközön használható kamera vagy meglévő kép áll rendelkezésre, a helyi tárolás engedélyezett; internet nem szükséges.
+</li><li>
+<strong>Postkondíciók (utófeltételek)</strong>: A kép és a kapcsolódó adatok biztonságosan helyben tárolódnak függőben lévő státusszal; felismerési eredmény csak sikeres későbbi online feldolgozáskor keletkezik.
+</li></ul>
+<p><strong>Szokásos működés (Main Flow):</strong></p>
+<ol><li>
+ A felhasználó internetkapcsolat nélkül fényképet készít.
+</li><li>
+ A rendszer észleli, hogy online fajazonosítás nem végezhető.
+</li><li>
+ A felhasználó az „Elmentés későbbre” műveletet választja.
+</li><li>
+ A rendszer helyben eltárolja a képet, a dátumot és a felhasználó által megadott további adatokat.
+</li><li>
+ Kapcsolat helyreállásakor a rendszer jelzi, hogy vannak feldolgozásra váró képek.
+</li><li>
+ A felhasználó külön jóváhagyással elindítja az online azonosítást (UC-01).
+</li></ol>
+<p><strong>Alternatív esetek (Alternate Flows):</strong></p>
+<ul><li>
+A1. A felhasználó dönthet úgy, hogy a képet csak megfigyelésként őrzi meg, és nem küldi el azonosításra.
+</li><li>
+A2. Sikeres feldolgozás után a kép és az eredmény naplóbejegyzésként is rögzíthető (UC-05).
+</li></ul>
+<p><strong>Kivételes esetek (Exception Flows):</strong></p>
+<ul><li>
+E1. Tárhelyhiány vagy sérült fájl esetén hibaüzenet jelenik meg; a rendszer nem törölheti észrevétlenül az eredeti képet.
+</li><li>
+E2. Ha a kapcsolat a küldés közben újra megszakad, a tétel nem kaphat „Sikeresen azonosítva” állapotot.
+</li></ul>
+<p><strong>Részletes funkcionális követelmények:</strong></p>
+<ul><li>
+FR-08.1 Ha az offline képmentés megvalósul, a rendszernek internetkapcsolat nélkül is biztosítania kell a fényképek helyi mentését.
+</li><li>
+FR-08.2 Megvalósítása esetén a függő tételekhez egyértelmű feldolgozási állapotot kell rendelni.
+</li><li>
+FR-08.3 Ha a későbbi online továbbítás funkció megvalósul, ahhoz külön felhasználói megerősítés szükséges; észrevétlen automatikus adatfeltöltés nem indítható. Az UC-01 általános jóváhagyási követelménye ettől függetlenül kötelező (FR-01.2).
+</li><li>
+FR-08.4 Az offline bővítés nem állíthat elő online azonosításként megjelenített, nem létező találatot.
+</li></ul>
+<p><strong>Ellenőrzési/elfogadási feltétel: </strong>Amennyiben az offline mentés megvalósul, internetkapcsolat nélkül a mentett fotó visszakereshető, és a későbbi online feldolgozás csak külön felhasználói jóváhagyással indul.</p>
+<span id="h.4b1ng59bqc0m"></span><h2 id="3.8">3.8. UC-07 – Adminisztrációs felület</h2>
+<ul><li>
+<strong>Prioritás</strong>: Közepes.
+</li><li>
+<strong>Aktorok</strong>: Adminisztrátor; külső azonosító szolgáltatás (állapotlekérdezésekhez).
+</li><li>
+<strong>Rövid leírás</strong>: Az arra jogosult üzemeltető egy külön felületen ellenőrizheti a háttérrendszer elérhetőségét, a hibákat és a külső integrációkat.
+</li><li>
+<strong>Prekondíciók (előfeltételek)</strong>: Az adminisztrációs szolgáltatás elérhető; az adminisztrátor megfelelő jogosultsággal hitelesítette magát.
+</li><li>
+<strong>Postkondíciók (utófeltételek)</strong>: A rendszer állapotadatai megjelennek, és a jóváhagyott felügyeleti műveletek naplózott módon hajtódnak végre.
+</li></ul>
+<p><strong>Szokásos működés (Main Flow):</strong></p>
+<ol><li>
+ Az adminisztrátor megnyitja az adminfelületet.
+</li><li>
+ A rendszer hitelesíti a felhasználót és ellenőrzi a hozzáférési jogosultságait.
+</li><li>
+ Megjeleníti az alkalmazás backendjének és a külső API-integrációknak az állapotát.
+</li><li>
+ Az adminisztrátor megtekinti a megfelelően szűrt működési naplókat és hibastatisztikákat.
+</li><li>
+ Szükség esetén jogosult üzemeltetési műveletet kezdeményez; a rendszer a művelet eredményét és végrehajtóját naplózza.
+</li></ol>
+<p><strong>Alternatív esetek (Alternate Flows):</strong></p>
+<ul><li>
+A1. A rendszergazda csak megtekinti az állapotjelzőket, módosítást nem végez.
+</li><li>
+A2. Nem elérhető külső szolgáltatás esetén a felület az állapotot hibásként vagy ismeretlenként jelzi, és nem mutat félrevezető „Működik” állapotot.
+</li></ul>
+<p><strong>Kivételes esetek (Exception Flows):</strong></p>
+<ul><li>
+E1. Sikertelen hitelesítés vagy jogosultsághiány esetén az adminisztrációs adatokhoz való hozzáférést meg kell tagadni.
+</li><li>
+E2. Backend hiba vagy hibás naplóforrás esetén a felület hibajelzést ad, de nem tár fel érzékeny hitelesítő vagy személyes adatot.
+</li></ul>
+<p><strong>Részletes funkcionális követelmények:</strong></p>
+<ul><li>
+FR-09.1 Az adminisztrációs funkciók kizárólag megfelelő jogosultság ellenőrzése után érhetők el.
+</li><li>
+FR-09.2 A rendszernek biztosítania kell a szolgáltatásállapot és a hibák áttekintését.
+</li><li>
+FR-09.3 A kritikus adminisztrációs műveletekhez auditnaplót kell vezetni.
+</li><li>
+FR-09.4 A megjelenített naplókban a személyes adatok és hitelesítési titkok hozzáférését korlátozni kell.
+</li></ul>
+<p><strong>Ellenőrzési/elfogadási feltétel</strong>: Jogosulatlan felhasználó nem látja az adminfelület tartalmát; jogosult felhasználó ellenőrizhető állapotokat és naplózott műveleteket kap.</p>
+<span id="h.uo5vlcs71bi"></span><h2 id="3.9">3.9. Use case kapcsolatok, prioritások és nyitott függőségek</h2>
+<p><strong>Use case kapcsolatok</strong>: Az UC-01 eredményéből megnyitható az UC-02 fajadatlap; az UC-02-ből elérhető az UC-04. Az UC-03 keresési eredménye szintén az UC-02-höz vezet. Az UC-06 felhasználói jóváhagyás után az UC-01 online folyamatába léphet át. Ezek navigációs vagy feltételes kapcsolatok, nem minden esetben kötelező UML «include» viszonyok.</p>
+<p><strong>Prioritások és kötelező terjedelem: </strong>Magas – UC-01, UC-02, UC-03, UC-04. Közepes – UC-06, UC-07. Alacsony – UC-05. </p>
+<p><strong>Átfogó biztonsági és adatvédelmi szabály: </strong>A kötelező biztonsági figyelmeztetéseket és az ismert veszélyek jelzéseit minden felhasználó számára meg kell jeleníteni. A rendszer egyetlen ponton sem minősítheti a kép alapján talált gombát automatikusan bizonyítottan ehetőnek. A helyadatok kezelése csak megfelelő felhasználói döntéssel történhet, a külső API-k hibája pedig kezelhető állapotot, nem hallgatólagosan sikeres eredményt okozhat.</p>
+<p><strong>Nyitott technikai függőségek: </strong>A tervezett iNaturalist megoldás képalapú azonosítási interfészének elérhetőségét és felhasználási feltételeit, a tényleges lexikon adatforrás, valamint a regisztráció/szinkronizáció konkrét működését az implementáció megkezdése előtt tisztázni kell. Az UC-08 csak választott bővítésként kerülhet be a kötelező fejlesztési tervbe.</p>
+<p><strong>Kapcsolódó fejezetek</strong>: A használhatósági célértékeket a 4., a rendelkezésre állási és hibakezelési elvárásokat az 5., a teljesítményt a 6., a jogosultságkezelési és technikai korlátokat a 7–8., a külső komponenseket és interfészeket a 10–11. fejezet részletezi.</p>
+<span id="h.o3azen6mb0gc"></span><h1 id="4">4. Használhatóság</h1>
+<p>Ebben a fejezetben azokat a használhatósági és felhasználói élményhez kapcsolódó nem-funkcionális követelményeket részletezzük, amelyek biztosítják, hogy az alkalmazás a kezdő természetjáróktól a tapasztalt gombászokig minden célcsoport számára gyorsan megtanulható, hatékony és kényelmesen kezelhető legyen.</p>
+<span id="h.90ywzf42v4k9"></span><h2 id="4.1">4.1. Feladatvégrehajtási idő összehasonlítása</h2>
+<p>A terepen történő gombaazonosítás és leletrögzítés ideje a GombApp segítségével töredékére csökken a hagyományos módszerekhez képest:</p>
+<p><strong>Hagyományos módszer (Nyomtatott határozókönyvvel):</strong></p>
+<p>Egy ismeretlen gomba azonosítása a morfológiai kulcsok fellapozásával, a határozóbélyegek ellenőrzésével és a lehetséges fajok áttekintésével átlagosan <strong>10–20 percet</strong> vesz igénybe a terepen. Ráadásul az összetéveszthető fajok kiszűrése bizonytalan marad, a lelet pontos helyének manuális feljegyzése pedig külön időt igényel.</p>
+<p><strong>GombApp alkalmazással:</strong></p>
+<ul><li>
+Fénykép készítése és beküldése: ~5–10 másodperc.
+</li><li>
+Automatikus gépi azonosítás és találati lista megjelenítése: ~3–5 másodperc.
+</li><li>
+Adatlap megtekintése, mentés a Logbookba: ~15–30 másodperc.
+</li></ul>
+<p>Összesített végrehajtási idő: <strong>kevesebb mint 1 perc</strong>.</p>
+<span id="h.hsv9vfu2rwok"></span><h2 id="4.2">4.2. Betanulási idő</h2>
+<ul><li>
+<strong>Kezdő felhasználók:</strong>
+</li></ul>
+<p>A mobilalkalmazás kezelése nem igényel informatikai vagy biológiai előképzettséget. Egy átlagos okostelefon-használó számára a betanulási idő legfeljebb <strong>5–10 perc</strong>. Ezen idő alatt a felhasználó képes önállóan elkészíteni az első gombafotót, elindítani a képalapú fajmeghatározást, és értelmezni a kapott találati listát a biztonsági figyelmeztetésekkel együtt.</p>
+<ul><li>
+<strong>Gyakorlott felhasználók / rendszeres túrázók:</strong>
+</li></ul>
+<p>A digitális alkalmazásokban jártas vagy a korábbi határozókat ismerő felhasználók számára a rendszer azonnal, intuitív módon kezelhető; a betanulási idő <strong>1–2 percre</strong> korlátozódik. A teljes funkcionalitás – beleértve a szűrést és a Logbook gyűjteménynaplóba való elmentését – azonnal elsajátítható.</p>
+<span id="h.t6ljaoukvoc"></span><h2 id="4.3">4.3. A gyors betanulást segítő rendszertulajdonságok</h2>
+<p>A kezdő felhasználók magabiztos eligazodását a felületen az alábbi beépített tulajdonságok támogatják:</p>
+<ul><li>
+<strong>Minimális kattintásszám (One-Tap indítás):</strong> A kamera és a fotózás funkció közvetlenül a főképernyőről, egyetlen érintéssel elérhető.
+</li><li>
+<strong>Egységes és közérthető nyelvezet:</strong> Kerüljük az absztrakt informatikai szakkifejezéseket és a nehezen megérthető latin taxonómiai leírásokat; a gombák magyar nevei és a köznyelvi morfológiai jellemzők szerepelnek az előtérben.
+</li><li>
+<strong>Vizuális állapot-visszajelzés és ikonográfia:</strong> A toxikológiai státuszok azonnal felismerhető, szabványos színkódokkal jelennek meg (pl. zöld: ehető, piros: mérgező).
+</li></ul>
+<span id="h.7qtlp73745d"></span><h2 id="4.4">4.4. Hasonlóság a felhasználók által korábban használt alkalmazásokkal</h2>
+<ul><li>
+<strong>Konzisztens mobil UX minták:</strong> A GombApp felhasználói felülete szigorúan követi a modern Android operációs rendszereken megszokott elrendezési és tervezési irányelveket.
+</li><li>
+<strong>Kamerakezelési hasonlóság:</strong> A fotózási felület működése teljes mértékben megegyezik a standard Android kameraalkalmazások logikájával, így a felhasználó számára az alkalmazás kezelése már az első pillanattól ismerős és reflexszerű.
+</li></ul>
+<span id="h.dcucdgfqdwy9"></span><h2 id="4.5">4.5. Összhang a terepi munka során párhuzamosan használt alkalmazásokkal</h2>
+<p>A természetjárók és gombászok túrázás közben jellemzően egyéb szabadtéri alkalmazásokat is futtatnak telefonjukon (például túratérképeket, navigációs eszközöket vagy fitneszkövetőket):</p>
+<ul><li>
+<strong>Erőforrás-takarékos háttérműködés:</strong> A GombApp minimális memóriát és processzoridőt használ, és a kamera bezárása után azonnal felszabadítja az erőforrásokat, így a háttérben futó GPS-nyomkövető vagy térképalkalmazás akadozás nélkül képes tovább üzemelni.
+</li><li>
+<strong>Interakciós harmónia:</strong> Az alkalmazás támogatja az Android szabványos többalkalmazásos feladatváltását (multitasking). A felhasználó másodpercek alatt át tud lépni a túratérképből a GombApp kamerájába, majd az azonosítás és mentés után zökkenőmentesen visszatérhet az eredeti navigációs szoftverhez.
+</li><li>
+<strong>Rendszerszintű szabványok:</strong> Az egységes Android jogosultságkezelésnek (kamera, helymeghatározás) köszönhetően a felhasználó nem találkozik váratlan biztonsági értesítésekkel vagy rendszerszintű ütközésekkel a párhuzamos programok futtatása közben.
+</li></ul>
+<span id="h.33s08kt8ezf1"></span><h1 id="5">5. Megbízhatóság</h1>
+<p>Ebben a fejezetben összefoglaljuk, hogy a GombAppnak milyen elvárásoknak kell megfelelnie ahhoz, hogy a felhasználók számára megbízhatóan és stabilan működjön. Fontos, hogy az alkalmazás lehetőség szerint mindig elérhető legyen, a felmerülő hibákat rövid időn belül javítani lehessen, és a gombák felismerése során kapott eredmények a lehető legpontosabbak legyenek.</p>
+<span id="h.91yc12oe3f03"></span><h2 id="5.1">5.1. Rendelkezésre állás</h2>
+<p>·     	<strong>Folyamatos működés:</strong> A GombApp backendjének és az alkalmazást kiszolgáló API-ok végpontjainak éves szinten legalább <strong>99,5%-os rendelkezésre állást</strong> kell biztosítaniuk. Ez azt jelenti, hogy a szolgáltatásnak az év nagy részében elérhetőnek kell lennie.</p>
+<p>·     	<strong>Karbantartás:</strong> A tervezett karbantartásokat lehetőség szerint olyan időszakokra kell időzíteni, amikor várhatóan kevesebben használják az alkalmazást, például éjszaka, 02:00 és 05:00 óra között. A tervezett leállások időtartama havonta összesen nem haladhatja meg a 4 órát.</p>
+<p>·     	Hálózati kiesés kezelése: Ha a külső szolgáltatás vagy az internet nem érhető el, a rendszernek egyértelmű hibajelzést kell adnia, és nem mutathat valótlan sikeres azonosítást. Az offline képmentés, offline lexikon és az internet nélküli további műveletek opcionális bővítések, nem kötelező részei az alapváltozatnak.</p>
+<span id="h.l6ai4a2bz56i"></span><h2 id="5.2">5.2. MTBF – A hibák között eltelt átlagos idő</h2>
+<p>·     	<strong>Szerveroldal (backend):</strong> A háttérrendszer esetében legalább <strong>720 órás</strong>, vagyis megközelítőleg egy hónapos átlagos időtartamot tűzünk ki két olyan meghibásodás között, amely jelentősen befolyásolja a működést.</p>
+<p>·     	<strong>Mobilalkalmazás (Android):</strong> A cél, hogy az alkalmazás a használat során a lehető legritkábban álljon le váratlanul. Elvárás, hogy az összeomlás nélkül lezajló munkamenetek aránya meghaladja a <strong>99%-ot.</strong> Emellett célként legalább 100 óra aktív használati időt határozunk meg két alkalmazásösszeomlás között.</p>
+<span id="h.53mm0h3tfc9e"></span><h2 id="5.3">5.3. MTTR – A hibák kijavításához szükséges átlagos idő</h2>
+<p>·     	<strong>Súlyos szerveroldali hibák:</strong> Ha a backendvagy a MySQL-adatbázis hibája miatt az alkalmazás alapvető szolgáltatásai teljesen leállnak, a helyreállítás célzott időtartama legfeljebb <strong>4 óra</strong>. Ehhez szükség van a hibák gyors felismerésére és a megfelelő javítási lehetőségek biztosítására.</p>
+<p>·     	<strong>Mobilalkalmazás hibái:</strong> Ha az alkalmazásban olyan hiba jelentkezik, amely megnehezíti a használatot, de nem teszi teljesen működésképtelenné, a javításhoz szükséges fejlesztési idő célértéke legfeljebb <strong>24 óra</strong>.</p>
+<span id="h.lw1nslvkt3m4"></span><h2 id="5.4">5.4. A rendszer eredményeinek pontossága</h2>
+<p>·     	<strong>Felismerési pontosság:</strong> A GombApp az iNaturalist szolgáltatását használja a gombafajok felismerésének támogatására, ezért az eredmények a feltöltött kép minőségétől és a szolgáltatás által elérhető adatoktól is függenek.Cél, hogy megfelelő fényviszonyok között, éles, a gomba fontos részeit jól bemutató fénykép esetén az esetek legalább <strong>91%-ában a három felajánlott találat között szerepeljen a helyes faj</strong>. Ezt az értéket teszteléssel kell ellenőrizni, és nem tekinthető előre garantált eredménynek.</p>
+<p>·     	<strong>Biztonsági korlátozások:</strong> A rendszer nem garantálhat 100%-os pontosságot, és szakértői ellenőrzés nélkül nem jelölhet egy gombát biztosan ehetőként. Minden felismerésnél egyértelműen jelezni kell, hogy az alkalmazás nem helyettesíti a szakértői vizsgálatot. A biztonsági figyelmeztetéseknek akkor is meg kell jelenniük, ha a rendszer valamelyik faj felismerését nagy valószínűségűnek ítéli.</p>
+<span id="h.x1qb3a9h65o1"></span><h1 id="6">6. Teljesítmény</h1>
+<p>Ez a fejezet azt mutatja be, milyen gyorsan és mekkora terhelés mellett kell működnie a GombAppnak. Fontos szempont, hogy az alkalmazás a gombaszezon forgalmasabb időszakaiban is megfelelően működjön, és a felhasználók gyengébb hálózati lefedettség mellett is el tudják végezni az alapvető műveleteket.</p>
+<span id="h.s2ja8gz3jn9f"></span><h2 id="6.1">6.1. Válaszidők</h2>
+<p>A kényelmes használat érdekében az alkalmazásnak a legfontosabb műveletekre rövid időn belül reagálnia kell. Az alábbi célértékek megfelelő, 4G- vagy 5G-lefedettség mellett érvényesek.</p>
+<p>·     	<strong>Az alkalmazás indítása:</strong> Az alkalmazás elindításától számítva legfeljebb 3 másodpercen belül meg kell jelennie a nyitóképernyőnek, és elérhetővé kell válnia a kamerának.</p>
+<p>·     	<strong>Navigáció és felhasználói műveletek:</strong> A képernyők közötti váltásnak és a gombnyomásokra adott visszajelzéseknek lehetőleg 0,5 másodpercen belül meg kell történniük, hogy az alkalmazás használata folyamatosnak érződjön.</p>
+<p>·     	<strong>Képfelismerés:</strong> A fénykép elkészítésétől a felismerési eredmény megjelenítéséig a teljes folyamat célideje 5–8 másodperc. Ebbe beletartozik a kép továbbítása, a Python backend feldolgozása és az iNaturalist API lekérdezése is. A várakozás ideje alatt egyértelmű töltésjelzőnek vagy folyamatjelző sávnak kell tájékoztatnia a felhasználót.</p>
+<p>·     	<strong>Adatbázis-műveletek:</strong> A saját MySQL-adatbázisban végzett mentések és lekérdezések válaszideje normál terhelés mellett legfeljebb 1 másodperc lehet.</p>
+<p>Ezek a válaszidők fejlesztési célértékek, amelyeket teszteléssel kell ellenőrizni. A tényleges képfelismerési idő a hálózat sebességétől és a külső szolgáltatás válaszidejétől is függhet.</p>
+<span id="h.t315ulq7d45m"></span><h2 id="6.2">6.2. Áteresztőképesség (Throughput)</h2>
+<p>A GombAppnak nemcsak egy-egy felhasználó kiszolgálására kell alkalmasnak lennie, hanem a forgalmasabb időszakokban jelentkező nagyobb terhelést is kezelnie kell. Ez különösen fontos ősszel és a hétvégéken, amikor sokan indulnak gombászni.</p>
+<p>·     	A Python backendnek normál terhelés mellett másodpercenként 10–20 képfelismerési kérést, a kiemelt őszi időszakokban pedig célként legalább 100 ilyen kérést kell kezelnie. A rendszernek törekednie kell arra, hogy a terhelés növekedése ne okozzon jelentős lassulást vagy elvesző kéréseket.</p>
+<p>·     	Nagyobb forgalom esetén a szervernek képesnek kell lennie a beérkező feladatok szabályozott kezelésére. Ehhez szükség esetén aszinkron feladatkezelés és várakozási sor is alkalmazható, például Celery és RabbitMQ segítségével. Így a túlterhelés kockázata csökkenthető, a kérések pedig rendezett módon dolgozhatók fel.</p>
+<p>A másodpercenként 100 kérés kezelése teljesítménycél, amelynek elérését terheléses tesztekkel kell igazolni. A szükséges szerverkapacitást a tényleges mérési eredmények alapján kell meghatározni.</p>
+<span id="h.59hiudd7agm"></span><h2 id="6.3">6.3. Kapacitás</h2>
+<p>A rendszernek az első évben várható felhasználói és adatmennyiség kezelésére is fel kell készülnie. A cél az, hogy a felhasználók számának és a mentett adatok mennyiségének növekedése ne akadályozza az alkalmazás működését.</p>
+<p>·     	<strong>Egyidejű felhasználók:</strong> A rendszernek célként akár 1000 aktív, műveleteket indító felhasználót is ki kell tudnia szolgálni a csúcsidőszakokban.</p>
+<p>·     	<strong>Regisztrált felhasználók:</strong> Az adatbázisnak 20 000–50 000 felhasználói profil és a hozzájuk tartozó beállítás tárolását kell támogatnia.</p>
+<p>·     	<strong>MySQL-adatbázis:</strong> A felhasználói adatok és a mentett  gombanapló-bejegyzések tárolására kezdetben 50 GB kapacitással kell számolni.</p>
+<p>·     	<strong>Képek tárolása:</strong> A feltöltött és elemzett fényképek számára legalább 500 GB kezdeti tárhelyet kell biztosítani egy bővíthető, S3-kompatibilis fájltárolón.</p>
+<p>A kapacitás megtervezésekor figyelembe kell venni, hogy az egyidejű felhasználók száma nem feltétlenül egyezik meg az egy időben képfelismerést indító felhasználók számával. A szükséges erőforrásokat ezért a várható használati szokások és a terheléses tesztek alapján kell véglegesíteni.</p>
+<span id="h.o3lkrd99f4rh"></span><h2 id="6.4">6.4. Korlátozott használhatóság idején elvárható mutatók</h2>
+<p>A gombászás során a felhasználók gyakran olyan területre jutnak, ahol gyenge vagy hiányzik a mobilhálózat. </p>
+<p>·     	Hálózati kapcsolat hiányának jelzése: Ha megszakad a kapcsolat, az alkalmazásnak egyértelműen jeleznie kell, hogy az online felismerés nem érhető el. A helyi, offline funkciókra való automatikus átváltásnál az 1 másodperc a célérték.</p>
+<p>·     	Offline mentés (UC-06): A fénykép és a kapcsolódó adatok helyben tárolhatók, például Room adatbázisra támaszkodva. A 0,5 másodperces mentési idő fejlesztési célérték. Hálózat helyreállásakor az online feldolgozás csak a felhasználó újabb jóváhagyásával indulhat.</p>
+<p>·     	<strong>Az iNaturalist szolgáltatás elérhetetlensége:</strong> Ha a külső szolgáltatás nem válaszol, és a kérés 10 másodperc alatt időtúllépés miatt megszakad, a backendnek egyértelmű, felhasználóbarát üzenetet kell küldenie. Például: „A szolgáltatás átmenetileg szünetel.” Így a felhasználó tudni fogja, miért nem érkezett eredmény, és nem kell bizonytalan ideig várakoznia.</p>
+<span id="h.dc396np6ppvw"></span><h2 id="6.5">6.5. Erőforrásigények</h2>
+<p>A megfelelő teljesítményhez a mobiltelefonoknak és a szerveroldali környezetnek is elegendő erőforrással kell rendelkeznie. Az alábbi értékek kiindulási követelmények, amelyeket a fejlesztés és a tesztelés során ellenőrizni kell.</p>
+<p>·     	<strong>Kliens – Android-eszközök:</strong></p>
+<p>o	<em>Processzor és memória:</em> Az alkalmazásnak egy átlagos középkategóriás processzorral és legalább 2 GB RAM-mal rendelkező eszközön is használhatónak kell lennie. A kamerakezelést és a fényképek mentését ilyen környezetben is tesztelni kell.</p>
+<p>o	Tárhely: Az alkalmazás alapvető telepítési méretének célértéke legfeljebb 50 MB. Az offline fényképtároláshoz külön tárhelykeret tervezhető; példaként 200 MB állítható be. Ez nem kötelező alapfunkció.</p>
+<p>·     	<strong>Szerver – Backend és adatbázis:</strong></p>
+<p>o	<em>Számítási kapacitás és memória:</em> Kiindulásként legalább 4 virtuális processzormaggal (vCPU) és 8 GB RAM-mal rendelkező szerverkörnyezetet kell tervezni a Python backend és a párhuzamos feladatok futtatásához. A tényleges igény a terheléstől, az alkalmazott feldolgozási módszerektől és az adatbázis elhelyezésétől függ.</p>
+<p>o	<em>Hálózati sávszélesség:</em> A szerverközpontban legalább 1 Gbps hálózati kapcsolat a cél, hogy a jellemzően 1–5 MB méretű képfájlok fogadása ne váljon szűk keresztmetszetté.</p>
+<p>A végleges hardver- és tárhelyigényeket teljesítménytesztek alapján kell meghatározni. Így biztosítható, hogy a GombApp a várható használat mellett is megfelelő sebességgel, megbízhatóan és a rendelkezésre álló erőforrásokat hatékonyan kihasználva működjön.</p>
+<span id="h.l84ajxh4sqrh"></span><h1 id="7">7. Támogatottság</h1>
+<p>A GombApp fejlesztése során fontos szempont, hogy az alkalmazás a későbbiekben is könnyen karbantartható és megbízhatóan működtethető legyen. Ehhez olyan megoldásokat kell alkalmazni, amelyek megkönnyítik a hibák megtalálását, a szükséges javítások elvégzését és az új funkciók beépítését. Az alábbi követelmények ezt a célt szolgálják.</p>
+<span id="h.1nitai4eiemp"></span><h2 id="7.1">7.1. Kódolási szabályok és elnevezések</h2>
+<p>Ahhoz, hogy a fejlesztők könnyen eligazodjanak egymás munkájában, fontos, hogy a programkód egységes formában készüljön. Ez különösen akkor hasznos, ha később más fejlesztőnek kell módosítania vagy továbbfejlesztenie az alkalmazást.</p>
+<p>·     	<strong>A kód nyelve:</strong> A változók, osztályok és függvények neveit, valamint a kódhoz írt megjegyzéseket angolul kell megadni. </p>
+<p>·     	<strong>Androidos alkalmazás (Java/Kotlin):</strong> A fejlesztés során követjük a Google által meghatározott kódolási szabályokat. Így camelCase-t használunk, az osztálynevek nagybetűvel, a változók és metódusok nevei pedig kisbetűvel kezdődnek.</p>
+<p>·     	<strong>Backend (Python):</strong> A Python-kód a PEP 8 stílusirányelvek szerint készül. Ezek meghatározzák többek között a kód formázását és az elnevezések egységes használatát.</p>
+<p>·     	<strong>Adatbázis (MySQL):</strong> Az adatbázis tábláinak és oszlopainak nevei angolul, snake_case-el készülnek. </p>
+<span id="h.ix81074mvw41"></span><h2 id="7.2">7.2. Karbantartói és üzemeltetői funkciók</h2>
+<p>A GombApphoz egy külön adminisztrációs felület készül, amelyet kizárólag az arra jogosult karbantartók és üzemeltetők használhatnak. A felület célja, hogy a rendszer ellenőrzéséhez és kezeléséhez szükséges feladatokat egyszerűbben lehessen elvégezni.</p>
+<p>Az adminisztrációs felület főbb funkciói:</p>
+<p>·     	<strong>Külső szolgáltatások ellenőrzése:</strong> Lehetővé teszi az iNaturalist API kapcsolatának ellenőrzését, a lekérdezések számának követését, valamint figyelmeztetést küldhet, ha közeledik a lekérdezési korlát elérése.</p>
+<p>·     	<strong>Adatbázis kezelése:</strong> Segítségével az üzemeltetők biztonsági mentéseket készíthetnek az adatbázisról, illetve törölhetik az ideiglenesen tárolt adatokat. Ez segít a tárhely megfelelő kihasználásában és az adatok biztonságának megőrzésében.</p>
+<p>·     	<strong>Felhasználók kezelése:</strong> Az adminisztrátorok szükség esetén felfüggeszthetik vagy törölhetik a felhasználói fiókokat, például szabályszegés vagy adatvédelmi kérelem esetén. Ezeket a műveleteket megfelelő jogosultságok mellett és az adatvédelmi előírások betartásával kell elvégezni.</p>
+<span id="h.9ay81l2szozb"></span><h2 id="7.3">7.3. Rendszernaplózás</h2>
+<p>A rendszer működése során különböző események és hibák fordulhatnak elő. Ezek rögzítése segít abban, hogy a fejlesztők és az üzemeltetők később meg tudják állapítani, mi okozta a problémát, és hogyan lehet azt kijavítani.</p>
+<p>·     	<strong>Szerver- és hálózati naplók:</strong> A backend rögzíti a fontosabb hibákat, például a szerveroldali 500-as hibakódokat. Emellett követhető az adatbázis-lekérdezések futási ideje és az iNaturalist API válaszideje is. Ezek az információk segítenek felismerni a lassulásokat és a kapcsolat megszakadásából eredő problémákat.</p>
+<p>·     	<strong>Mobilalkalmazás naplói:</strong> Az alkalmazás rögzíti a fontosabb működési hibákat, például a hálózati kapcsolat megszakadását, a memóriahiány miatt bekövetkező leállásokat és a gombafelismerési folyamat megszakadását. Internetkapcsolat esetén ezek az adatok továbbíthatók a fejlesztők számára, hogy könnyebben megvizsgálhassák a problémákat.</p>
+<p>·     	<strong>Adatvédelem (GDPR):</strong> A naplózás során különös figyelmet kell fordítani a személyes adatok védelmére. A naplók nem tartalmazhatnak szükségtelen személyes azonosítókat, például közvetlenül azonosítható felhasználói adatokat. Az eszközazonosítókat csak indokolt esetben, megfelelő védelemmel és lehetőség szerint anonimizált vagy álnevesített formában szabad tárolni. A naplózott adatokat kizárólag a szükséges ideig lehet megőrizni.</p>
+<span id="h.pw1z8h7cxbvw"></span><h2 id="7.4">7.4. A karbantartást segítő eszközök</h2>
+<p>A hibák felderítését nem szükséges kizárólag a naplófájlok kézi átnézésével végezni. Különböző fejlesztői eszközök is segíthetik a rendszer állapotának ellenőrzését és a problémák gyorsabb megtalálását.</p>
+<p>·     	<strong>Firebase Crashlytics vagy hasonló eszköz:</strong> Segítségével nyomon követhetők a mobilalkalmazás váratlan leállásai. Az eszköz összegyűjti és csoportosítja a hibákat, valamint megmutatja, hogy a program melyik részén történt az összeomlás. Ez megkönnyíti a hibák okának felderítését és javítását.</p>
+<p>·     	<strong>Grafana vagy Kibana:</strong> Ezek az eszközök segítenek a backendés az adatbázis működésének áttekintésében. Grafikonokon és különböző kimutatásokon keresztül követhető például a szerver processzor- és memóriahasználata, valamint a hibák gyakorisága. Így az üzemeltetők hamarabb észrevehetik, ha a rendszer túlterheltté válik, vagy valamilyen probléma jelentkezik.</p>
+<span id="h.gilxf28edybd"></span><h1 id="8">8. Tervezési korlátozások</h1>
+<p>A GombApp fejlesztése során előre meghatározott technológiákat, fejlesztőeszközöket és módszereket használunk. Ezek kijelölik a projekt kereteit, és segítenek abban, hogy az alkalmazás különböző részei megfelelően működjenek együtt. A fejlesztés során az alábbi szempontokat kell figyelembe venni.</p>
+<span id="h.5rwksmp9uoqk"></span><h2 id="8.1">8.1. A rendszer felépítésére vonatkozó előírások</h2>
+<p>A GombApp több, egymással kapcsolatban álló részből épül fel. A felhasználói felület, a háttérben működő programlogika és az adatbázis külön egységet alkot, így mindegyiknek megvan a saját feladata.</p>
+<p>·     	<strong>Kliens réteg:</strong> Ez az a felület, amellyel a felhasználó közvetlenül találkozik. Ezt a használatot egy Androidos mobilalkalmazás biztosítja.</p>
+<p>·     	<strong>Backend réteg:</strong> Ez a rendszer háttérben működő része, amely feldolgozza a kéréseket, kezeli az alkalmazás működéséhez szükséges feladatokat, és kapcsolatot tart a külső szolgáltatásokkal, például az iNaturalist-al.</p>
+<p>·     	<strong>Adatréteg:</strong> Az adatbázis tárolja a rendszer működéséhez szükséges adatokat, például a felhasználókhoz és a felismert gombákhoz kapcsolódó információkat. Ehhez relációs adatbázis-kezelő rendszert használunk.</p>
+<span id="h.u55bh4ogucgz"></span><h2 id="8.2">8.2. Programozási nyelvek</h2>
+<p>A fejlesztés különböző részeihez eltérő programozási nyelveket használunk. Ezeket úgy választjuk meg, hogy az adott feladatot megfelelően lehessen velük megvalósítani.</p>
+<p>·     	<strong>Androidos alkalmazás:</strong> Java vagy Kotlin nyelven készül, mivel ezekkel közvetlenül elérhetők az Android rendszer funkciói.</p>
+<p>·     	<strong>Backend:</strong> Python nyelven készül, amely jól használható az adatok feldolgozására és a külső szolgáltatásokkal való kapcsolattartásra.</p>
+<p>·     	<strong>Adatbázis-kezelés:</strong> SQL segítségével kezeljük és kérdezzük le az adatbázisban tárolt információkat.</p>
+<span id="h.feq5sbs2nenj"></span><h2 id="8.3">8.3. Fejlesztőeszközök és munkakörnyezetek</h2>
+<p>A fejlesztés során különböző programokat használunk a kódoláshoz, a tervezéshez, az adatbázis kialakításához és a feladatok követéséhez. Ezek segítségével a munka átláthatóbbá és könnyebben szervezhetővé válik.</p>
+<p>·     	<strong>Android Studio:</strong> Az Androidos mobilalkalmazás fejlesztésére és tesztelésére szolgál.</p>
+<p>·     	<strong>Visual Studio vagy PyCharm:</strong> A backend és a webes felületek fejlesztését segíti, a választott technológiától függően.</p>
+<p>·     	<strong>XAMPP:</strong> Helyi fejlesztési és tesztelési környezetet biztosít, többek között Apache webszerverrel és MySQL-adatbázissal.</p>
+<p>·     	<strong>Figma:</strong> A felhasználói felületek megtervezésére és a működésüket bemutató prototípusok elkészítésére használjuk.</p>
+<p>·     	<strong>Miro és/vagy ERDPlus:</strong> Az adatbázis felépítésének megtervezését és az adatok közötti kapcsolatok ábrázolását segítik.</p>
+<p>·     	<strong>Trello:</strong> A projekt feladatainak nyomon követésére, a határidők kezelésére és a fejlesztési folyamat megszervezésére szolgál.</p>
+<span id="h.lac9v2kfcypp"></span><h2 id="8.4">8.4. Újrafelhasználható elemek és külső szolgáltatások (API)</h2>
+<p>A fejlesztés során külső szolgáltatásokat is felhasználunk, hogy ne kelljen minden funkciót saját magunknak elkészíteni.</p>
+<ul><li>
+<strong>Gomba- és fajfelismerés:</strong> A GombApp az iNaturalist API-ját használja a gombafajok felismerésének támogatására és a hozzájuk kapcsolódó információk lekérdezésére. Az iNaturalist egy olyan online természetismereti adatbázis, amelyben különböző élőlényekről, többek között gombákról is találhatók adatok és fényképek.
+</li><li>
+A projekt során nem tervezünk készíteni és betanítani saját képfelismerő mesterséges intelligenciát, hanem a már meglévő külső szolgáltatásra támaszkodunk. Ez lehetővé teszi, hogy az alkalmazás a feltöltött kép alapján segítsen a lehetséges fajok azonosításában, majd további információkat jelenítsen meg róluk. A kapott találatok értékelésénél figyelembe vesszük az elérhető fajadatokat és a felismerés bizonytalanságát is.
+</li><li>
+Fontos, hogy az iNaturalist által adott eredmény nem tekinthető minden esetben biztos fajazonosításnak, különösen a mérgező és az ehető gombák megkülönböztetésekor. Ezért a GombApp célja a felismerés támogatása és az ismeretterjesztés, nem pedig a hivatalos gombaszakértői vizsgálat helyettesítése.
+</li></ul>
+<span id="h.1jbtzrx6yjcp"></span><h2 id="8.5">8.5. Fejlesztési módszertan</h2>
+<p>A projekt a hagyományos vízesésmodell alapján valósul meg. Ez azt jelenti, hogy a fejlesztés előre meghatározott, egymásra épülő szakaszokból áll, és minden szakasz lezárása után kezdődik a következő.</p>
+<p>A fejlesztés főbb lépései a következők:</p>
+<ul><li>
+<strong>Követelményelemzés:</strong> Meghatározzuk, hogy milyen problémára nyújt megoldást a GombApp, és milyen funkciókat kell tartalmaznia.
+</li><li>
+<strong>Tervezés:</strong> Elkészítjük az alkalmazás felépítését, a felhasználói felületek terveit Figmában, valamint az adatbázis terveit.
+</li><li>
+<strong>Megvalósítás:</strong> A jóváhagyott tervek alapján elkezdődik a programozás és a különböző funkciók kialakítása.
+</li><li>
+<strong>Tesztelés:</strong> Ellenőrizzük, hogy az alkalmazás megfelelően működik-e, és javítjuk az esetlegesen felmerülő hibákat.
+</li><li>
+<strong>Üzembe helyezés:</strong> Elkészítjük az alkalmazás használatra szánt változatát, és elérhetővé tesszük a felhasználók számára.
+</li><li>
+<strong>Karbantartás:</strong> A kiadás után szükség szerint javítjuk a hibákat, és elvégezzük a működés fenntartásához szükséges módosításokat.
+</li></ul>
+<p>A vízesésmodell alkalmazásakor minden szakaszt dokumentálunk, és a következő szakasz csak az előző lezárása után kezdődik meg. Például a tényleges programozás a felhasználói felület és az adatbázis terveinek véglegesítése után indul el. Ez a megközelítés segít abban, hogy a fejlesztés rendezett keretek között, előre meghatározott lépések mentén haladjon.</p>
+<span id="h.nrt6mafvvgr9"></span><h1 id="9">9. On-line dokumentáció és Help rendszer</h1>
+<p>A rendszerhez nem készül nyomtatott kézikönyv; minden információ kizárólag digitális formátumban, az alkalmazáson belül, a projekt weboldalán és a fejlesztői felületeken érhető el.</p>
+<p><strong>Felhasználói Help rendszer (Alkalmazáson belül és weben)</strong></p>
+<ul><li>
+<strong>Közérthetőség:</strong> Az alkalmazás teljesen magyar nyelvű, amely kerüli a bonyolult informatikai és gombászati szakkifejezéseket, így bárki számára könnyen érthető és használható.
+</li><li>
+<strong>Beépített útmutató (Onboarding):</strong> Lépésről lépésre haladó, rövid bemutató az első használatkor a fő funkciókról, amely később bármikor újraindítható.
+</li><li>
+<strong>Képes segédlet:</strong> Vizuális útmutató a helyes, felismerésre alkalmas gombafotók elkészítéséhez (fényviszonyok, élesség, kalap, lemezek és tönk láthatósága).
+</li><li>
+<strong>Beépített Súgó / GYIK:</strong> Gyakori kérdéseket és megoldásokat tartalmazó, kereshető modul az appban és a weboldalon, beleértve a veszélyhelyzeti teendőket is.
+</li></ul>
+<p><strong>Fejlesztői és Üzemeltetői on-line dokumentáció</strong></p>
+<ul><li>
+<strong>Kollaboratív felületek:</strong> A technikai leírások, API-kapcsolatok, adatbázis-sémák és az üzemeltetési lépések (például biztonsági mentések, frissítések) online tudásbázisban (pl. Notion, Confluence) tárolva.
+</li><li>
+<strong>Repozitórium alapú dokumentáció:</strong> A forráskód mellett elhelyezett, a kóddal együtt frissülő Markdown fájlok (pl. README.md a GitHubon/GitLabon) a fejlesztési környezet beállításaihoz és a verziónaplókhoz.
+</li></ul>
+<span id="h.7i8rkjgt8j56"></span><h1 id="10">10. Felhasznált kész komponensek</h1>
+<ul><li>
+iNaturalist API
+<ul><li>
+Típus: Szabad felhasználású (nyílt API)
+</li><li>
+Forrás:<a href="http://api.inaturalist.org/"> </a><a href="http://api.inaturalist.org/">iNaturalist API</a>
+</li><li>
+Felhasználás szabályai: Ingyenes, de szigorú rate-limit vonatkozik rá. Kereskedelmi túlterhelés esetén a hozzáférést letiltják.
+</li><li>
+Kötelezettségek és következmények: A hálózati hibákat és a korlátozások túllépését a kódnak kezelnie kell. A találatoknál a forrásmegjelölés etikai és sok esetben licencszabályi elvárás.
+</li></ul>
+</li><li>
+Wikipedia REST API v1
+<ul><li>
+Típus: Szabad felhasználású
+</li><li>
+Forrás:<a href="http://wikimedia.org/"> </a><a href="http://wikimedia.org/">Wikimedia</a>
+</li><li>
+Felhasználás szabályai: Ingyenes, regisztrációt nem igényel. A tartalmak Creative Commons licence alatt állnak.
+</li><li>
+Kötelezettségek és következmények: A lekérdezéseknél kötelező egyedi, beszédes ‘User-agent’ fejléc használata. A megjelenített szövegeknél fel kell tüntetni a forrást (Wikipédia) és a CC licencet.
+</li></ul>
+</li><li>
+Android CameraX API és SDK
+<ul><li>
+Típus: Szabad felhasználású
+</li><li>
+Forrás:<a href="https://developer.android.com/"> </a><a href="https://developer.android.com/">Android Developer Page</a>
+</li><li>
+Felhasználás szabályai: Apache License 2.0. Ingyenesen, korlátozás nélkül felhasználható kereskedelmi célokra is.
+</li><li>
+Kötelezettségek és következmények: A licence minimális kötelezettségekkel jár (eredeti licencefájl mellékelése forráskód-terjesztéskor). A Google Play Store irányelveit be kell tartani a publikáláskor.
+</li></ul>
+</li><li>
+MySQL
+<ul><li>
+Típus: Community Edition: Szabad felhasználású
+</li><li>
+Forrás:<a href="https://www.mysql.com/"> </a><a href="https://www.mysql.com/">MySQL</a> - Oracle
+</li><li>
+Felhasználás szabályai: GNU GPL
+</li><li>
+Kötelezettségek és következmények: Mivel az adatbázis csak a szerveroldalon fut, és a mobilalkalmazás webalapú API-n (REST) keresztül kommunikál vele, nem érvényes a mobil appra a GPL licence (kliens-szerver szeparáció), így ingyenesen használható egyéb feltételek nélkül.
+</li></ul>
+</li><li>
+Python futtatókörnyezet és keretrendszer
+<ul><li>
+Típus: Szabad felhasználású
+</li><li>
+Forrás:<a href="https://www.python.org/"> </a><a href="https://www.python.org/">Python</a>
+</li><li>
+Felhasználás szabályai: Python Software Foundation (PSF) licence, a keretrendszerek (pl. Flask, FastAPI) általában MIT vagy BSD licencűek.
+</li><li>
+Kötelezettségek és következmények: Kereskedelmi célra is teljesen ingyenes és szabadon módosítható. Kötelezettség lényegében nincs, csupán a szerveroldali környezet (requirements.txt) megfelelő karbantartása.
+</li></ul>
+</li><li>
+XAMPP
+<ul><li>
+Típus: Szabad felhasználású.
+</li><li>
+Forrás:<a href="https://www.apachefriends.org/"> </a><a href="https://www.apachefriends.org/">XAMPP</a>
+</li><li>
+Felhasználás szabályai: GNU GPL ingyenes fejlesztési célokra
+</li><li>
+Kötelezettségek és következmények: Csak a fejlesztés és a demó idejére szolgál; élesítéskor külön webszervert és adatbázis-szolgáltatást kell konfigurálni.
+</li></ul>
+</li><li>
+Kindwise API (alternatív külső azonosító szolgáltatás)
+<ul><li>
+Forrás:<a href="https://www.kindwise.com/mushroom-id"> </a><a href="https://www.kindwise.com/mushroom-id">Kindwise Mushroom.id</a>
+</li><li>
+Típus: Vásárolt elem (ha az iNaturalist nem megfelelő).
+</li><li>
+ Beszerzés és költségek: Az API-hozzáférés feltételeit, kvótáit és üzemeltetési költségeit a fejlesztés második fázisában fel kell mérni.
+</li><li>
+Szabályok és kötelezettségek: Szigorú ÁSZF, a kiadott titkos API kulcsok védelme kötelező. A szolgáltatás elérhetetlensége vagy az API-kvóta kimerülése esetén az alkalmazásnak egyértelmű hibajelzést kell adnia.
+</li></ul>
+</li></ul>
+<span id="h.i6x2k7yust33"></span><h1 id="11">11. Interfészek</h1>
+<p>Ez a fejezet a GombApp és környezete közötti kapcsolódási pontokat specifikálja. Rögzíti, hogyan lép interakcióba az alkalmazás a végfelhasználókkal (felhasználói interfészek), milyen fizikai eszközökre támaszkodik (hardware interfészek), miként integrálódik a külső szolgáltatásokkal (software interfészek), és milyen hálózati csatornákon keresztül zajlik az adatcsere (kommunikációs interfészek). </p>
+<span id="h.fv3mhei8e7w4"></span><h2 id="11.1">11.1. Felhasználói interfészek<br></h2>
+<p><strong>A GombApp rendszer két fő felülettel rendelkezik:</strong> egy Android mobilalkalmazással a lakossági felhasználók számára, valamint egy webes adminisztrációs felülettel a rendszerüzemeltetők számára.</p>
+<ul><li>
+<strong>Szabványok és stílus</strong>: A mobilalkalmazás a Google Material Design 3 irányelveit követi természetközeli földszínekkel, világos és sötét (Dark) témával, valamint akadálymentesített, legalább 48x48 dp-s érintési felületekkel. A webes adminisztrációs felület reszponzív, adatközpontú Dashboard elrendezést használ az asztali böngészőkhöz.<br>
+</li><li>
+<strong>Felhasználói csoportok elvárásai:</strong>
+<ul><li>
+<strong>Kezdő gombász</strong>: Egyszerű, egy kézzel is kezelhető felület, gyors kamerás felismerés és azonnali vizuális visszajelzések.
+</li><li>
+<strong>Tapasztalt gombász:</strong> Részletes keresési szűrők és bővített adatbeviteli opciók.
+</li><li>
+<strong>Rendszerüzemeltető:</strong> Áttekinthető, adatközpontú műszerfalak és hatékony, szűrhető napló- és táblázatkezelés.<br>
+</li></ul>
+</li><li>
+<strong>A leglényegesebb UI elemek tervei:</strong>
+<ul><li>
+<strong>Mobilalkalmazás</strong>: Alsó navigációs sáv a fő modulok eléréséhez, segédkeretes kamera valós idejű fényviszony-ellenőrzéssel, valamint egy részletes határozókártya, ami szöveges státuszcímkékkel (pl. „Ehető” vagy „Mérgező”), szabványos ikonos jelölésekkel és egy kiemelt biztonsági figyelmeztető sávval (amely emlékeztet a szakellenőri vizsgálat kötelezettségére) mutatja az eredményt.
+</li><li>
+<strong>Adminisztráció:</strong> iNaturalist API keretfigyelő műszerfal, szerverterheltség-statisztikák, valamint felhasználókezelő és naplószűrő felületek.
+</li><li>
+<strong>Rendszervisszajelzések:</strong> Technikai kivételkódok helyett közérthető, magyar nyelvű hibaüzenetek, a sikeres mentéseknél pedig diszkrét, felbukkanó (toast) értesítések.
+</li></ul>
+</li></ul>
+<span id="h.216zyp2h2cma"></span><h2 id="11.2">11.2. Hardware interfészek</h2>
+<ul><li>
+<strong>Hátlapi kamera:</strong> A gombák makró fotózására szolgál. A rendszer az Android CameraX API-t használja az egységes kezelés és az automatikus fókusz érdekében.
+</li><li>
+<strong>Helyi háttértár:</strong> A mentett képek és az alkalmazás gyorsítótárának tárolására szolgál. Az eszköz lelassulásának és a tárhely túlzott igénybevételének elkerülése érdekében a mérete szigorúan korlátozott (max 100 MB).
+</li></ul>
+<span id="h.rqmehzm38u40"></span><h2 id="11.3">11.3. Software interfészek</h2>
+<ul><li>
+<strong>iNaturalist API (Képfelismerő szolgáltatás):</strong> A backend HTTPS/REST hívásokkal (JSON formátumban) kommunikál a külső szolgáltatással. A rendszer a felküldött fotók alapján ezen az interfészen keresztül kapja meg a valószínűsített gombafajok listáját és a találati pontosságot.
+</li><li>
+<strong>Wikipedia REST API v1 (Lexikon adatforrás):</strong> A backend ezen a szabványos REST interfészen keresztül kéri le a nyilvános adatbázisból a gombafajokhoz tartozó részletes morfológiai leírásokat. Az integráció biztosítja a naprakész információk megjelenítését az alkalmazáson belül.
+</li><li>
+<strong>Külső szolgáltatások hibakezelése: </strong>A sikertelen API-hívásokat egyértelmű felhasználói visszajelzéssel és megfelelő naplózással kell kezelni.
+</li></ul>
+<span id="h.vp4szc286y9b"></span><h2 id="11.4">11.4. Kommunikációs interfészek</h2>
+<ul><li>
+Mobiltelefonos kliens: A felhasználóval való kapcsolattartás elsődleges csatornája egy natív Android mobilkliens. Biztosítja a grafikus felületet, és eléri a használt hardveres perifériákat (kamera). Az adatokat lokálisan előkészíti, majd aszinkron REST hívásokkal továbbítja a backend felé.
+</li><li>
+Vezeték nélküli hálózat: A kliens, a backend és a külső API-k közötti adatforgalom mobilinterneten vagy Wi-Fi-n keresztül, HTTPS protokollal titkosítva zajlik. A kommunikáció szabványos JSON alapú, a sávszélességet pedig a képek kliensoldali előtömörítése optimalizálja.
+</li><li>
+Szerveren belüli csatorna: A Python backend és a MySQL adatbázis közötti kommunikáció LAN-on fut. Ez a belső csatorna biztosítja az adatlekérdezések alacsony késleltetésű, internettől elszigetelt, biztonságos végrehajtását SQL-en keresztül.
+</li></ul>
+<span id="h.r87h4c68mczh"></span><h1 id="12">12. Alkalmazott szabványok</h1>
+<p>Ebben a fejezetben rögzítjük a fejlesztési folyamat, az architektúra tervezése, a tesztelés, valamint az alkalmazás mindennapi üzemeltetése és használata során betartandó kötelező jogi előírásokat, hatósági rendeleteket és az önként vállalt technológiai szabványokat.</p>
+<span id="h.q8bshmcfhzdv"></span><h2 id="12.1">12.1. Kötelezően alkalmazandó szabványok</h2>
+<p>Ezek az előírások jogszabályi kötelezettségből, hatósági felügyeletből vagy közvetlen élet- és adatvédelmi követelményekből fakadnak:</p>
+<p>I   	Adatvédelmi és adatbiztonsági jogszabályok:</p>
+<ul><li>
+GDPR (EU 2016/679 általános adatvédelmi rendelet): A felhasználók személyes adatainak (pl. fiókadatok, feltöltött fényképek és azok beágyazott EXIF koordinátái) kezelése során a beépített és alapértelmezett adatvédelem , a célhoz kötöttség, valamint az adattakarékosság elvének betartása kötelező.
+</li></ul>
+<ul><li>
+2011. évi CXII. törvény (Infotv.): Az információs önrendelkezési jogról és az információszabadságról szóló hazai jogszabály maradéktalan érvényesítése.
+</li></ul>
+<p>II	Élelmiszerlánc-biztonsági és gombaellenőrzési rendeletek:</p>
+<ul><li>
+107/2011. (XI. 10.) VM rendelet (és kapcsolódó jogszabályok): Az étkezési célra forgalomba kerülő vadon termett gombák gyűjtéséről, feldolgozásáról és forgalomba hozataláról. Az alkalmazás nem tekinthető hivatalos bevizsgáló eszköznek; a jogszabályi keretek miatt kötelező rögzíteni és minden határozási képernyőn kötelezően megjeleníteni, hogy az alkalmazás kizárólag előzetes tájékozódásra szolgál, és nem helyettesíti a hatósági gombavizsgáló szakértő vizsgálatát.
+</li></ul>
+<p>III.     Természetvédelmi jogszabályok:</p>
+<ul><li>
+1996. évi LIII. törvény (Tktv.): A természet védelméről szóló törvény, különös tekintettel a védett természeti területeken való gyűjtési szabályokra.
+</li><li>
+13/2001. (V. 9.) KöM rendelet: A védett és a fokozottan védett növény- és állatfajokról, valamint a védett gombafajokról. Az alkalmazás taxonómiai adatbázisában kötelező jelölni a védett fajokat és a gyűjtési tilalmakat.
+</li></ul>
+<span id="h.zbaoddik9q9b"></span><h2 id="12.2">12.2. Választás alapján alkalmazott szabványok</h2>
+<p>A fejlesztőcsapat a magas szoftverminőség, a karbantarthatóság és a szabványos interfészek biztosítása érdekében az alábbi iparági és technológiai ajánlásokat veszi alapul:</p>
+<ul><li>
+Kommunikációs és adatcsere-szabványok:
+<ul><li>
+REST (Representational State Transfer) vezérelvek: Állapotmentes, kliens-szerver típusú kommunikáció szabványos HTTP/HTTPS metódusokkal (GET, POST).
+</li><li>
+JSON (RFC 8259): Strukturált, szöveges adatcsere-formátum a mobil kliens, a backendés a külső szolgáltatók (iNaturalist API, Wikipedia REST API) között.
+</li><li>
+TLS 1.2 / TLS 1.3 (RFC 8446): Titkosított hálózati adatátvitel kötelező alkalmazása a backend és a mobil kliens között a HTTPS protokollon keresztül.
+</li></ul>
+</li><li>
+Dokumentációs és modellezési szabványok:
+<ul><li>
+IEEE 830-1998 / ISO/IEC/IEEE 29148: Szoftverkövetelmény-specifikációk (SRS) készítésére vonatkozó nemzetközi szabvány felépítése és formai követelményei.
+</li><li>
+UML 2.5 (Unified Modeling Language): Szabványos modellezési nyelv a funkcionális Use Case diagramok, folyamatok és architektúra rögzítéséhez.
+</li></ul>
+</li><li>
+Minőségbiztosítási és tesztelési normák:
+<ul><li>
+Vízesésmodell : A klasszikus szakaszos fejlesztési folyamat követése világosan elhatárolt tervezési, implementációs és tesztelési mérföldkövekkel.
+</li><li>
+80%-os kódlefedettség (Code Coverage): Belső minőségbiztosítási célkitűzés az automatizált unit és integrációs tesztek végrehajtásánál a backend és az API integrációs modulok stabilitásának garantálására.
+</li></ul>
+</li></ul>
+</p>
+</main>
+</body>
+</html>

@@ -2,6 +2,7 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GombApp projektterv</title>
   <style>
     body {
@@ -76,8 +77,22 @@
       margin-bottom: 32px;
     }
   </style>
+  <link rel="stylesheet" href="../navigation.css">
 </head>
-<body>
+<body class="project-page">
+<nav class="site-nav" aria-label="Fő navigáció">
+  <div class="site-nav__inner">
+    <a class="site-nav__brand" href="../index.html">GombApp · BKV</a>
+    <div class="site-nav__links">
+      <a href="../index.html">Feladatok</a>
+      <a href="projektterv.html" aria-current="page">Projektterv</a>
+      <a href="vizio.html">Vízió</a>
+      <a href="szoftver-kovetelmeny.html">Követelményspecifikáció</a>
+      <a href="felhasznaloi-dokumentacio.html">Felhasználói dokumentáció</a>
+    </div>
+  </div>
+</nav>
+<main class="project-document">
 
   <h1>GombApp projektterv</h1>
 
@@ -105,5 +120,6 @@
   <h2 class="forrasok">Információforrások</h2>
   <p>A projekt működésének hátterét két információforrás biztosítja. Az egyik az iNaturalist API dokumentáció, ami a növény- és gombarendszertani adatok, fajmeghatározó algoritmusok és a biológiai referencia-adatbázis integrálásának hivatalos technikai útmutatója. A másik pedig a Wikipédia API, ami a felismert gombafajokhoz tartozó leírások, jellegzetességek dinamikus lekérdezésére szolgáló adatforrás.</p>
 
+</main>
 </body>
 </html>

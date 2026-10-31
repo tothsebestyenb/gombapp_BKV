@@ -8,10 +8,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style> body { font-family: 'Inter', sans-serif; } </style>
+  <link rel="stylesheet" href="navigation.css">
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen py-10 px-4 sm:px-6">
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+<nav class="site-nav" aria-label="Fő navigáció">
+  <div class="site-nav__inner">
+    <a class="site-nav__brand" href="index.html">GombApp · BKV</a>
+    <div class="site-nav__links">
+      <a href="index.html" aria-current="page">Feladatok</a>
+      <a href="feladat_weblapok/projektterv.html">Projektterv</a>
+      <a href="feladat_weblapok/vizio.html">Vízió</a>
+      <a href="feladat_weblapok/szoftver-kovetelmeny.html">Követelményspecifikáció</a>
+      <a href="feladat_weblapok/felhasznaloi-dokumentacio.html">Felhasználói dokumentáció</a>
+    </div>
+  </div>
+</nav>
 
-    <div class="max-w-3xl mx-auto bg-white border border-gray-200 rounded-lg p-6 sm:p-10 shadow-sm">
+    <div class="home-document max-w-3xl mx-auto bg-white border border-gray-200 rounded-lg p-6 sm:p-10 shadow-sm">
         
         <!-- Navigációs visszalépés -->
         <div class="mb-6 flex justify-between items-center border-b border-gray-200 pb-4">
@@ -40,9 +53,18 @@
             </li>
 
             <li class="border-b border-gray-100 pb-4">
-                <a href="/gombapp_BKV/feladat_weblapok/szoftver-kovetelmeny.html" class="group flex items-center justify-between text-gray-800 hover:text-blue-600 transition">
+                <a href="feladat_weblapok/szoftver-kovetelmeny.html" class="group flex items-center justify-between text-gray-800 hover:text-blue-600 transition">
                     <span class="font-medium text-base sm:text-lg">
-                        <span class="text-blue-600 font-semibold mr-2">H3 részhatáridő:</span> Teljesítendő feladatok (Szoftver követelmény)
+                        <span class="text-blue-600 font-semibold mr-2">H3 részhatáridő:</span> Szoftverkövetelmény-specifikáció
+                    </span>
+                    <span class="text-gray-400 group-hover:text-blue-600 ml-2">&rarr;</span>
+                </a>
+            </li>
+
+            <li class="border-b border-gray-100 pb-4">
+                <a href="feladat_weblapok/felhasznaloi-dokumentacio.html" class="group flex items-center justify-between text-gray-800 hover:text-blue-600 transition">
+                    <span class="font-medium text-base sm:text-lg">
+                        <span class="text-blue-600 font-semibold mr-2">H3 részhatáridő:</span> Felhasználói dokumentáció
                     </span>
                     <span class="text-gray-400 group-hover:text-blue-600 ml-2">&rarr;</span>
                 </a>
